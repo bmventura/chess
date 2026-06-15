@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt;
+      color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    font-size: 10.3pt;
+    line-height: 1.5;
+    color: #232323;
+    margin: 0;
+  }
+  /* ---------- CAPA ---------- */
+  .cover {
+    background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 46px 38px;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip {
+    display: inline-block; background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px;
+  }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+
+  /* ---------- QUESTÃO ---------- */
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead {
+    background: linear-gradient(90deg, #6a11cb, #ff2e92);
+    color: #fff; border-radius: 12px 12px 0 0;
+    padding: 11px 16px; font-size: 12.5pt; font-weight: 700;
+  }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody {
+    border: 1px solid #e7e7ef; border-top: none;
+    border-radius: 0 0 12px 12px; padding: 16px 18px;
+  }
+  .enun {
+    background: #f6f4fc; border-left: 4px solid #6a11cb;
+    padding: 11px 14px; border-radius: 6px; margin-bottom: 13px;
+    font-size: 10pt;
+  }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+
+  .answer {
+    background: #1d6e37; color: #fff; border-radius: 8px;
+    padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0;
+  }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+
+  .box {
+    border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt;
+  }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+
+  .ascii {
+    background: #2b2b3a; color: #e6e6f0; border-radius: 8px;
+    padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace;
+    font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; overflow-x: auto;
+  }
+
+  /* ---------- TABELA RESUMO ---------- */
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+  .emoji { font-size: 11pt; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro: Princípios, Processos e Habilidades</h2>
+  <div>
+    <span class="chip">6 questões comentadas</span>
+    <span class="chip">Resposta certa + por que as erradas</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 15/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Indicadores Econômicos <span class="tag">TLP • IGP-M • IPCA • CDI</span></div>
+  <div class="qbody">
+    <div class="enun">
+      Analise as afirmações sobre indicadores econômicos:<br>
+      <b>I</b> – A TLP incide nos financiamentos concedidos pelo BACEN.<br>
+      <b>II</b> – Quando ocorrer aumento nos preços do atacado, irá afetar mais o IGP-M do que o IPCA.<br>
+      <b>III</b> – A taxa CDI é resultado das operações entre instituições financeiras lastreadas em títulos públicos.
+    </div>
+    <ul class="opts">
+      <li>I, apenas</li>
+      <li class="wrong">I e II &nbsp;←(marcada por você)</li>
+      <li class="correct">II, apenas &nbsp;✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>II, apenas</div>
+
+    <h3 class="sec">Por que cada item está certo ou errado</h3>
+    <div class="why">
+      <p><span class="no">I — ERRADO.</span> A <b>TLP (Taxa de Longo Prazo)</b> remunera os financiamentos do <b>BNDES</b>, não do BACEN. O BACEN regula a moeda (Selic); o BNDES é quem faz fomento (crédito de longo prazo). Trocaram o banco.</p>
+      <p><span class="ok">II — CERTO.</span> O IGP-M tem 60% de preços de atacado (IPA); o IPCA tem 0% de atacado. Logo um choque no atacado bate muito mais forte no IGP-M.</p>
+      <p><span class="no">III — ERRADO.</span> O CDI nasce de empréstimos entre bancos lastreados em <b>títulos privados</b> (os próprios CDIs). Quem é lastreado em <b>títulos públicos</b> é a <b>Selic</b>. Inverteram o lastro.</p>
+    </div>
+
+    <div class="ascii">RECEITA DE CADA ÍNDICE
+  IGP-M (FGV) = 60% IPA  + 30% IPC + 10% INCC
+                 ^atacado   ^consumidor ^construção
+  IPCA (IBGE) = 100% preços ao CONSUMIDOR (inflação oficial)
+
+LASTRO DAS TAXAS
+  SELIC -> operações entre bancos com TÍTULOS PÚBLICOS (Tesouro)
+  CDI   -> operações entre bancos com TÍTULOS PRIVADOS (CDI)</div>
+
+    <div class="box parable"><b>🏦 Parábola da Vizinhança dos Bancos:</b> No fim do dia, bancos com sobra emprestam aos que precisam fechar o caixa. Se a garantia é um título do <i>governo</i> → o juro vira <b>Selic</b>. Se é um papel do próprio condomínio (CDI) → vira <b>CDI</b>. Andam colados, mas o lastro é diferente.</div>
+    <div class="box insight"><b>💡 Insight:</b> "BNDES financia, BACEN regula." E "Atacado = IGP-M; Consumidor = IPCA."</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Leasing (Arrendamento Mercantil) <span class="tag">Quem pode operar leasing</span></div>
+  <div class="qbody">
+    <div class="enun">No leasing financeiro ou operacional, uma das partes precisa ser, obrigatoriamente:</div>
+    <ul class="opts">
+      <li>Um banco de desenvolvimento com carteira de crédito imobiliário</li>
+      <li class="wrong">Um banco múltiplo &nbsp;←(marcada por você)</li>
+      <li class="correct">Uma sociedade ou banco de arrendamento mercantil &nbsp;✓</li>
+      <li>Um banco com carteira comercial e de crédito, financiamento e investimento</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Uma sociedade ou banco de arrendamento mercantil</div>
+
+    <h3 class="sec">Entendendo o Leasing "do zero"</h3>
+    <p>Leasing = <b>arrendamento mercantil</b> = "aluguel com opção de compra". A arrendadora compra o bem que VOCÊ escolheu e te aluga; no fim você pode comprar pelo valor residual (VRG), devolver ou renovar.</p>
+    <div class="ascii">  ARRENDADORA --- compra o bem ---> VENDEDOR
+       (dona)
+         | aluga (contraprestações)
+         v
+   ARRENDATÁRIO  (usa o bem; no fim pode comprar pelo VRG)</div>
+    <div class="why">
+      <p><span class="no">Banco de desenvolvimento</span> ❌ faz fomento, não leasing.</p>
+      <p><span class="no">Banco múltiplo (sozinho)</span> ❌ só faz leasing se tiver a <b>carteira de arrendamento mercantil</b> — a alternativa não cita isso.</p>
+      <p><span class="no">Banco comercial / CFI</span> ❌ concede crédito, mas leasing exige a carteira/sociedade de arrendamento mercantil.</p>
+      <p><span class="ok">Sociedade/banco de arrendamento mercantil</span> ✓ é exatamente quem a lei autoriza a arrendar.</p>
+    </div>
+    <div class="box parable"><b>🚗 Parábola da Locadora Premium:</b> Uma locadora sem carro nenhum compra o carro específico que você pediu e te aluga por 36 meses, oferecendo a compra no fim. Só uma empresa com "licença de arrendar" pode fazer isso — um banco comum não improvisa de locadora.</div>
+    <div class="box insight"><b>💡 Insight:</b> Se a alternativa não menciona "arrendamento mercantil", desconfie. Quem arrenda precisa ter "arrendamento" no nome ou na carteira.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Insider Trading <span class="tag">Uso de informação privilegiada</span></div>
+  <div class="qbody">
+    <div class="enun">O analista Kleber recomendou a compra das ações da TopTech aos clientes. Antes da divulgação oficial, enviou o documento por engano a Patrícia (colega). Pediu que ela apagasse o e-mail, mas ela comprou ações em nome próprio e recomendou a terceiros. Após a divulgação, lucrou.</div>
+    <ul class="opts">
+      <li class="correct">Kleber e Patrícia devem ser penalizados criminal e administrativamente pelo ganho obtido com base em informação não pública ✓</li>
+      <li class="wrong">Patrícia poderia ter comprado, mas não deveria recomendar a terceiros</li>
+      <li class="wrong">Kleber não pode ser responsabilizado</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Kleber e Patrícia respondem criminal e administrativamente</div>
+
+    <h3 class="sec">Entendendo "do zero": Informação Privilegiada</h3>
+    <p>Informação <b>relevante</b> e <b>ainda não divulgada</b> não pode ser usada nem repassada. É <b>crime</b> (Lei 6.385/76, art. 27-D) <b>e</b> infração administrativa punida pela <b>CVM</b>.</p>
+    <div class="ascii">  INFORMAÇÃO RELEVANTE + AINDA NÃO PÚBLICA
+        |                          |
+     USAR p/ lucrar          REPASSAR a alguém
+     (insider)               (tipper -> tippee)
+        \__________ CRIME + punição CVM _________/</div>
+    <div class="why">
+      <p><span class="no">"Patrícia só não podia recomendar"</span> ❌ — ela não podia <b>nem comprar</b>: usar info não pública para si já é ilícito.</p>
+      <p><span class="no">"Kleber não responde"</span> ❌ — ele vazou informação sensível; pedir para apagar o e-mail não apaga a responsabilidade.</p>
+      <p><span class="ok">Ambos respondem</span> ✓ — Kleber (tipper) e Patrícia (tippee) participaram da cadeia de uso indevido.</p>
+    </div>
+    <div class="box parable"><b>📝 Parábola do Gabarito Vazado:</b> Um professor deixa cair o gabarito na mochila do aluno e pede que apague. O aluno fotografa, gabarita e ainda vende as respostas. Punem o aluno (Patrícia) — mas o professor negligente (Kleber) também responde. Ninguém sai limpo de um vazamento explorado.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Informação não pública = não usa e não passa." Punição dupla: criminal (Justiça) + administrativa (CVM).</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Código de Ética da Planejar <span class="tag">Penalidades / reincidência</span></div>
+  <div class="qbody">
+    <div class="enun">Kleber, planejador financeiro CFP®, mentiu a um cliente dizendo ser especialista em direito tributário internacional, com formação nos EUA — o que não é verdade. Já havia registro de infração ética anterior por outro motivo. Considerando o código de ética, Kleber poderá ser penalizado com:</div>
+    <ul class="opts">
+      <li class="correct">Suspensão temporária do quadro de associados OU revogação do direito de uso das Marcas CFP®, sendo excluído do quadro (infração gravíssima) ✓</li>
+      <li class="wrong">Apenas multa, que não poderá exceder a 50 vezes o valor da anuidade</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Infração gravíssima → suspensão ou exclusão (perda das Marcas CFP®)</div>
+
+    <h3 class="sec">A escada de penalidades da Planejar</h3>
+    <div class="ascii">  1. ADVERTÊNCIA (reservada) ........... falta leve
+  2. CENSURA + MULTA ................... falta média
+  3. SUSPENSÃO temporária .............. falta GRAVE
+  4. EXCLUSÃO / revogação das Marcas ... falta GRAVÍSSIMA
+     CFP®</div>
+    <div class="why">
+      <p>Mentir sobre qualificação fere os princípios de <b>Integridade, Honestidade e Competência</b>. Há ainda <b>agravante de reincidência</b> (já tinha infração anterior). Mentira sobre competência + reincidência = topo da escada.</p>
+      <p><span class="no">"Apenas multa"</span> ❌ — multa sozinha é punição de gravidade menor; é branda demais para infração gravíssima com reincidência.</p>
+    </div>
+    <div class="box parable"><b>🩺 Parábola do Diploma Falso:</b> Um "médico" pendura na parede um diploma de Harvard que nunca cursou e atende pacientes. Não basta uma multinha — ele precisa <b>perder o direito de exercer</b>. Perder as Marcas CFP® é exatamente isso. E se já tinha sido pego antes, a casa cai.</div>
+    <div class="box insight"><b>💡 Insight:</b> Citou <b>reincidência</b> ou <b>mentira sobre qualificação</b>? Suba na escada — nunca pare na "multinha".</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 5 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 5 — Perfil do Investidor (Suitability) <span class="tag">Averso • Propenso • Indiferente</span></div>
+  <div class="qbody">
+    <div class="enun">
+      <b>I</b> – Quanto maior a propensão ao risco, mais agressivo deve ser o perfil.<br>
+      <b>II</b> – A caderneta de poupança é característica de investidor indiferente ao risco.<br>
+      <b>III</b> – Cliente conservador apresenta alta aversão ao risco.<br>
+      <b>IV</b> – Investidor indiferente ao risco pode ter perfil moderado.<br>
+      <b>V</b> – Investidor conservador prefere fundos alavancados.
+    </div>
+    <ul class="opts">
+      <li class="wrong">II e V</li>
+      <li class="wrong">I, II, III e IV</li>
+      <li class="correct">I e III ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>I e III</div>
+
+    <h3 class="sec">Os 3 perfis × as atitudes ao risco</h3>
+    <div class="ascii">  PERFIL                ATITUDE AO RISCO
+  CONSERVADOR  <----->  AVERSO    (foge do risco; poupança, Tesouro)
+  MODERADO     <----->  pondera risco x retorno (mistura)
+  AGRESSIVO    <----->  PROPENSO  (busca risco; ações, alavancagem)
+  ---------------------------------------------------------------
+  INDIFERENTE/NEUTRO -> decide SÓ pelo retorno; ignora o risco</div>
+    <div class="why">
+      <p><span class="ok">I — CERTO.</span> Maior propensão ao risco → perfil mais agressivo.</p>
+      <p><span class="no">II — ERRADO.</span> Poupança é do <b>conservador/averso</b>, não do "indiferente". Trocaram averso por indiferente.</p>
+      <p><span class="ok">III — CERTO.</span> Conservador = alta aversão ao risco.</p>
+      <p><span class="no">IV — ERRADO.</span> Indiferente ignora o risco; moderado pondera. Não são sinônimos.</p>
+      <p><span class="no">V — ERRADO.</span> Conservador jamais prefere fundos alavancados (risco elevado = agressivo).</p>
+    </div>
+    <div class="box parable"><b>👨‍👨‍👦 Parábola dos Três Irmãos:</b> O Conservador põe tudo na poupança ("durmo tranquilo"); o Moderado divide renda fixa + ações; o Agressivo joga em alavancagem ("ou vai ou racha"). O Indiferente é o "robô calculista": escolhe só o maior retorno, sem ligar para o tombo — por isso não é o moderado nem o poupador.</div>
+    <div class="box insight"><b>💡 Insight:</b> A banca adora trocar "averso" por "indiferente" e pôr conservador gostando de alavancagem. Marcou isso, errou.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 6 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 6 — Custo Efetivo Total (CET) de Empréstimo <span class="tag">Matemática financeira • IOF + TAC</span></div>
+  <div class="qbody">
+    <div class="enun">Klebão tomou um empréstimo de R$ 2.000, a ser pago em parcela única daqui a 5 meses, com taxa de 2% a.m. Junto incidiram IOF de R$ 20,00 e TAC de R$ 70,00 (ambos financiados pela instituição). Qual o valor total a pagar e a taxa de juros efetiva (CET)?</div>
+    <ul class="opts">
+      <li class="wrong">R$ 2.208,16 e 2,00%</li>
+      <li class="wrong">R$ 2.208,16 e 2,90%</li>
+      <li class="correct">R$ 2.307,53 e 2,90% ✓</li>
+      <li class="wrong">R$ 2.307,53 e 2,00%</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 2.307,53 e 2,90% a.m.</div>
+
+    <h3 class="sec">Resolvendo passo a passo</h3>
+    <p>Como o IOF e a TAC são <b>financiados</b>, eles entram no montante que rende juros. O <b>valor financiado</b> passa a ser:</p>
+    <div class="box calc">Valor financiado = 2.000 + 20 (IOF) + 70 (TAC) = R$ 2.090
+
+Valor total (5 meses a 2% a.m.):
+  FV = 2.090 x (1,02)^5
+  FV = 2.090 x 1,104081 = R$ 2.307,53   <- valor a pagar</div>
+    <p>Agora a <b>taxa efetiva (CET)</b>: o cliente recebeu só R$ 2.000 "na mão", mas paga R$ 2.307,53. Achamos a taxa <i>i</i> que liga esses dois valores:</p>
+    <div class="box calc">2.000 x (1 + i)^5 = 2.307,53
+  (1 + i)^5 = 1,153765
+  1 + i = 1,153765^(1/5) = 1,02903
+  i = 2,90% a.m.   <- CET (maior que os 2% "de vitrine")</div>
+    <div class="why">
+      <p><span class="no">R$ 2.208,16</span> ❌ é o montante de só R$ 2.000 a 2% por 5 meses (ignora o IOF e a TAC financiados).</p>
+      <p><span class="no">Taxa de 2,00%</span> ❌ é a taxa "de vitrine" (nominal). Os custos (IOF + TAC) elevam o custo real para 2,90%.</p>
+      <p><span class="ok">R$ 2.307,53 e 2,90%</span> ✓ incorpora os encargos financiados no valor e na taxa.</p>
+    </div>
+    <div class="box parable"><b>🏷️ Parábola da Etiqueta da Loja:</b> A loja anuncia "só 2% ao mês!" em letras garrafais. Mas no caixa embute "taxinhas" (IOF, TAC) no financiamento. O preço da vitrine (2%) não é o que você paga de verdade — o CET (2,90%) é o preço real. <b>Sempre olhe o CET, não a taxa anunciada.</b></div>
+    <div class="box insight"><b>💡 Insight:</b> Tarifas <b>financiadas</b> entram no valor que rende juros → aumentam tanto o montante quanto a taxa efetiva. CET sempre ≥ taxa nominal.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 7 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 7 — Retorno Real Líquido de uma NTN-B <span class="tag">Tesouro IPCA+ • IR • Equação de Fisher</span></div>
+  <div class="qbody">
+    <div class="enun">Considere uma NTN-B com vencimento em um ano (252 dias úteis / 365 dias corridos), com taxa de 5,55% a.a. A inflação medida pelo IPCA esperada para o período é de 10,45% a.a. Qual o retorno real líquido que um cliente teria ao investir nesse título?</div>
+    <ul class="opts">
+      <li class="wrong">13,68% &nbsp;(retorno nominal LÍQUIDO — após IR, mas ainda com inflação)</li>
+      <li class="wrong">16,58% &nbsp;(retorno nominal BRUTO — sem IR e sem inflação)</li>
+      <li class="wrong">16,00% &nbsp;(soma ingênua 10,45 + 5,55)</li>
+      <li class="correct">2,92% &nbsp;(retorno real líquido) ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>2,92% — retorno real líquido</div>
+
+    <h3 class="sec">Resolvendo em 3 camadas (descascando a cebola)</h3>
+    <p>A NTN-B (Tesouro IPCA+) paga <b>IPCA + cupom</b>. Os dois se <b>multiplicam</b>, não se somam (equação de Fisher).</p>
+    <div class="box calc">1) RETORNO NOMINAL BRUTO  (junta inflação + cupom)
+   (1 + 0,1045) x (1 + 0,0555) - 1
+   = 1,1045 x 1,0555 - 1 = 16,58%   <- opção 16,58%
+
+2) DESCONTA O IMPOSTO DE RENDA
+   Prazo 365 dias -> faixa 17,5% (361 a 720 dias)
+   IR sobre o ganho: 17,5% x 16,58% = 2,90%
+   Retorno nominal LÍQUIDO = 16,58% - 2,90% = 13,68%  <- opção 13,68%
+
+3) TIRA A INFLAÇÃO (retorno REAL líquido)
+   (1 + 0,1368) / (1 + 0,1045) - 1
+   = 1,1368 / 1,1045 - 1 = 2,92%   <- RESPOSTA</div>
+
+    <div class="ascii">  TABELA REGRESSIVA DO IR (renda fixa)
+  ate 180 dias ........ 22,5%
+  181 a 360 dias ...... 20,0%
+  361 a 720 dias ...... 17,5%   <- nosso caso (365 dias)
+  acima de 720 dias ... 15,0%</div>
+
+    <div class="why">
+      <p><span class="no">16,00%</span> ❌ é a <b>soma ingênua</b> (10,45 + 5,55). Inflação e juros se multiplicam — essa é a pegadinha clássica.</p>
+      <p><span class="no">16,58%</span> ❌ é o retorno <b>nominal bruto</b> (antes do IR e antes de tirar a inflação).</p>
+      <p><span class="no">13,68%</span> ❌ é o retorno <b>nominal líquido</b> (já tirou o IR, mas ainda embute a inflação).</p>
+      <p><span class="ok">2,92%</span> ✓ é o que sobra de verdade no bolso, em poder de compra, depois de IR <i>e</i> inflação.</p>
+    </div>
+    <div class="box parable"><b>🧅 Parábola da Cebola (3 camadas):</b> O retorno bruto é a cebola inteira. Primeiro o Leão (IR) come uma casca → sobra o nominal líquido. Depois a inflação corrói outra camada → o que resta no centro é o <b>ganho real</b>. Só o miolo (2,92%) aumenta de verdade o seu poder de compra.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Real líquido" = desconte SEMPRE nesta ordem: (1) junte inflação+cupom multiplicando → (2) tire o IR → (3) divida pela inflação. E nunca some juros com inflação: use Fisher → (1+i)/(1+π) − 1.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<div class="pagebreak"></div>
+<h3 class="sec" style="font-size:14pt;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Indicadores</td><td>BNDES financia (TLP) ≠ BACEN regula. Atacado → IGP-M; Consumidor → IPCA. CDI = título privado; Selic = título público.</td></tr>
+  <tr><td>2</td><td>Leasing</td><td>Só opera quem tem <b>sociedade/carteira de arrendamento mercantil</b>.</td></tr>
+  <tr><td>3</td><td>Insider trading</td><td>Info não pública: <b>não usa e não passa</b>. Crime + CVM. Tipper e tippee respondem.</td></tr>
+  <tr><td>4</td><td>Ética Planejar</td><td>Mentir sobre competência + reincidência = <b>gravíssima</b> = suspensão/exclusão (perde as Marcas CFP®).</td></tr>
+  <tr><td>5</td><td>Perfil do investidor</td><td>Conservador = averso; Agressivo = propenso; Indiferente = só olha o retorno.</td></tr>
+  <tr><td>6</td><td>CET de empréstimo</td><td>Tarifas financiadas (IOF, TAC) entram no valor → CET &gt; taxa nominal. (1,02)^5 sobre R$ 2.090.</td></tr>
+  <tr><td>7</td><td>Retorno real líquido</td><td>(1) Fisher multiplica inflação+cupom → (2) tira IR (17,5% p/ 365 dias) → (3) divide pela inflação. Real ≠ soma ingênua.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
