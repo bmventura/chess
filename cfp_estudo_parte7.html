@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 7)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 7)</h2>
+  <div>
+    <span class="chip">2 questões comentadas</span>
+    <span class="chip">Estrutura de capital • PIB</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Estrutura de capital ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Relação Capital de Terceiros / Capital Próprio <span class="tag">Equação patrimonial</span></div>
+  <div class="qbody">
+    <div class="enun">Uma empresa possui relação capital de terceiros / capital próprio igual a <b>0,5</b>. Sabendo que o PL (patrimônio líquido / capital próprio) é de <b>R$ 100 milhões</b>, qual o valor do <b>ativo total</b>?</div>
+    <ul class="opts">
+      <li class="correct">R$ 150 milhões ✓</li>
+      <li class="wrong">R$ 200 milhões</li>
+      <li class="wrong">R$ 100 milhões</li>
+      <li class="wrong">R$ 50 milhões</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 150 milhões</div>
+
+    <h3 class="sec">A equação que resolve tudo</h3>
+    <p>O balanço sempre obedece à <b>equação fundamental da contabilidade</b>:</p>
+    <div class="ascii">  ATIVO  =  PASSIVO  +  PATRIMÔNIO LÍQUIDO
+  (bens)   (cap. terceiros)  (cap. próprio)
+            = o que você DEVE   = o que é SEU</div>
+    <p>A "relação capital de terceiros / capital próprio" (alavancagem, D/E) é a divisão entre o que a empresa deve e o que é dela:</p>
+    <div class="box calc">  D/E = Terceiros / Próprio = 0,5
+
+  Terceiros (D) = 0,5 × Próprio (E)
+              = 0,5 × 100 milhões = R$ 50 milhões
+
+  ATIVO = Terceiros + Próprio
+        = 50 + 100 = R$ 150 milhões  ✓</div>
+    <div class="why">
+      <p><span class="no">R$ 200 milhões</span> ❌ — usaria D/E = 1 (terceiros = 100). Mas a relação é 0,5, então terceiros = 50, não 100.</p>
+      <p><span class="no">R$ 100 milhões</span> ❌ — é só o capital próprio (PL); esqueceu de somar os terceiros.</p>
+      <p><span class="no">R$ 50 milhões</span> ❌ — é só o capital de terceiros, sem o próprio.</p>
+      <p><span class="ok">R$ 150 milhões</span> ✓ — terceiros (50) + próprio (100).</p>
+    </div>
+    <div class="box parable"><b>🏠 Parábola da Casa Financiada:</b> Você tem uma casa de R$ 150 mil (o ATIVO). Desse total, R$ 100 mil é dinheiro <b>seu</b> (capital próprio/PL) e R$ 50 mil você <b>deve</b> ao banco (capital de terceiros). A "relação 0,5" diz que sua dívida é metade do que é seu. O valor da casa (ativo) é sempre a soma das duas partes: o que é seu + o que você deve.</p></div>
+    <div class="box insight"><b>💡 Insight:</b> Memorize: <b>Ativo = Terceiros + Próprio</b>. A relação D/E = 0,5 significa "para cada R$ 1 próprio, R$ 0,50 de dívida". Transforme a relação em valor (0,5 × 100 = 50) e some ao próprio.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — PIB / Valor adicionado ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — PIB e o Conceito de Valor Adicionado <span class="tag">Macroeconomia</span></div>
+  <div class="qbody">
+    <div class="enun">Uma indústria gasta R$ 4.000 de matéria-prima por unidade e vende cada peça por R$ 7.200. Sobre o valor de venda paga 15% de impostos e R$ 1.000 de comissão de vendas. No cálculo do PIB, a contribuição dessa indústria por peça vendida (conceito de <b>valor adicionado</b>) é:</div>
+    <ul class="opts">
+      <li class="wrong">R$ 1.120,00</li>
+      <li class="correct">R$ 3.200,00 ✓</li>
+      <li class="wrong">R$ 2.120,00</li>
+      <li class="wrong">R$ 7.200,00</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 3.200,00</div>
+
+    <h3 class="sec">O que é "valor adicionado"?</h3>
+    <p>O PIB soma o <b>valor que cada etapa ACRESCENTA</b> ao produto — para não contar a mesma coisa duas vezes. O valor adicionado é simplesmente:</p>
+    <div class="box calc">  VALOR ADICIONADO = Valor de venda − Consumo intermediário
+                                       (insumos/matéria-prima)
+
+                   = 7.200 − 4.000 = R$ 3.200  ✓</div>
+    <p>A matéria-prima (R$ 4.000) já foi produzida e contada por <b>outra</b> empresa (o fornecedor). Se contássemos o valor cheio (R$ 7.200), estaríamos contando a matéria-prima duas vezes. Por isso subtraímos só o <b>consumo intermediário</b>.</p>
+    <div class="box ascii">  POR QUE NÃO SUBTRAIR IMPOSTOS E COMISSÃO?
+   • Impostos sobre o produto → fazem parte do PIB
+     (o PIB é medido a PREÇO DE MERCADO, com impostos)
+   • Comissão de vendas → não é "consumo intermediário"
+     de matéria-prima; é remuneração (entra na renda)
+   → Só a MATÉRIA-PRIMA (insumo) é descontada.</div>
+    <div class="why">
+      <p><span class="no">R$ 7.200</span> ❌ — é o valor BRUTO de venda; contaria a matéria-prima em duplicidade.</p>
+      <p><span class="no">R$ 2.120</span> ❌ — subtraiu também os impostos (3.200 − 15%×7.200 = 3.200 − 1.080). Imposto não se desconta no valor adicionado.</p>
+      <p><span class="no">R$ 1.120</span> ❌ — descontou TUDO (matéria-prima + comissão + impostos): 7.200 − 4.000 − 1.000 − 1.080. Exagero.</p>
+      <p><span class="ok">R$ 3.200</span> ✓ — apenas venda menos a matéria-prima (consumo intermediário).</p>
+    </div>
+    <div class="box parable"><b>🍞 Parábola do Pão na Padaria:</b> O agricultor vende trigo ao moinho; o moinho vende farinha à padaria; a padaria vende o pão. Se somássemos trigo + farinha + pão, contaríamos o trigo <b>três vezes</b>! Por isso o PIB conta só o <b>que cada um adicionou</b>: a padaria comprou farinha por R$ 4 e vendeu pão por R$ 7,20 → adicionou R$ 3,20 (o trabalho de transformar farinha em pão). Imposto e comissão são "molho por cima" — não mudam o valor que a padaria criou a partir do insumo.</div>
+    <div class="box insight"><b>💡 Insight:</b> Valor adicionado = <b>Venda − Insumos (consumo intermediário)</b>. NÃO desconte impostos (PIB é a preço de mercado) nem comissões/salários (são renda, não insumo). A função do conceito é evitar a <b>dupla contagem</b>.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Estrutura de capital</td><td>Ativo = Terceiros + Próprio. D/E=0,5 → terceiros = 0,5×100 = 50; Ativo = 50+100 = <b>R$ 150 mi</b>.</td></tr>
+  <tr><td>2</td><td>PIB / valor adicionado</td><td>Valor adicionado = Venda − Insumos = 7.200 − 4.000 = <b>R$ 3.200</b>. Não desconta imposto nem comissão. Evita dupla contagem.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
