@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 2)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt;
+      color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    font-size: 10.3pt;
+    line-height: 1.5;
+    color: #232323;
+    margin: 0;
+  }
+  .cover {
+    background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 46px 38px;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip {
+    display: inline-block; background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px;
+  }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead {
+    background: linear-gradient(90deg, #6a11cb, #ff2e92);
+    color: #fff; border-radius: 12px 12px 0 0;
+    padding: 11px 16px; font-size: 12.5pt; font-weight: 700;
+  }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody {
+    border: 1px solid #e7e7ef; border-top: none;
+    border-radius: 0 0 12px 12px; padding: 16px 18px;
+  }
+  .enun {
+    background: #f6f4fc; border-left: 4px solid #6a11cb;
+    padding: 11px 14px; border-radius: 6px; margin-bottom: 13px;
+    font-size: 10pt;
+  }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+
+  .answer {
+    background: #1d6e37; color: #fff; border-radius: 8px;
+    padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0;
+  }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+
+  .ascii {
+    background: #2b2b3a; color: #e6e6f0; border-radius: 8px;
+    padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace;
+    font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0;
+  }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 2)</h2>
+  <div>
+    <span class="chip">5 questões comentadas</span>
+    <span class="chip">CAPM • Comportamental • CMN</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 16/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — CAPM ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — CAPM / Custo de Capital Próprio <span class="tag">Matemática financeira • Beta</span></div>
+  <div class="qbody">
+    <div class="enun">A taxa livre de risco está em 10% a.a. O retorno esperado para o mercado de ações é de 15% a.a. Qual deveria ser o custo de capital próprio para uma empresa de Beta igual a 0,8?</div>
+    <ul class="opts">
+      <li class="wrong">12% a.a.</li>
+      <li class="correct">14% a.a. ✓</li>
+      <li class="wrong">15% a.a.</li>
+      <li class="wrong">22% a.a.</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>14% a.a.</div>
+
+    <h3 class="sec">A fórmula do CAPM (decore esta!)</h3>
+    <p>O <b>CAPM</b> (Capital Asset Pricing Model) calcula o retorno exigido de um ativo a partir do seu risco (Beta):</p>
+    <div class="box calc">  Ke = Rf + β × (Rm − Rf)
+
+  Rf = taxa livre de risco ......... 10%
+  Rm = retorno esperado do mercado . 15%
+  β  = beta (sensibilidade ao risco) 0,8
+
+  Ke = 10% + 0,8 × (15% − 10%)
+  Ke = 10% + 0,8 × 5%
+  Ke = 10% + 4%  =  14%  ✓</div>
+    <p>O termo <b>(Rm − Rf) = 5%</b> é o <b>prêmio de risco de mercado</b> (o "extra" que o mercado paga por se arriscar acima do ativo seguro). O Beta de 0,8 diz que essa empresa oscila <b>menos</b> que o mercado (80% da variação) — por isso seu prêmio é menor (4% em vez de 5%).</p>
+
+    <h3 class="sec">Por que as outras estão erradas (são os erros clássicos)</h3>
+    <div class="why">
+      <p><span class="no">12%</span> ❌ = 0,8 × 15% — multiplicou o Beta pelo retorno do mercado e <b>esqueceu de somar a taxa livre de risco</b>.</p>
+      <p><span class="no">15%</span> ❌ = apenas o retorno do mercado — <b>ignorou o Beta</b> (tratou a empresa como se fosse o mercado inteiro, β = 1).</p>
+      <p><span class="no">22%</span> ❌ = 10% + 0,8 × 15% — usou <b>Rm inteiro</b> em vez do prêmio (Rm − Rf). Esqueceu de subtrair a Rf dentro do parêntese.</p>
+      <p><span class="ok">14%</span> ✓ = aplicou a fórmula completa e correta.</p>
+    </div>
+    <div class="box parable"><b>🎢 Parábola da Montanha-Russa:</b> A taxa livre de risco (10%) é o "chão firme" — o mínimo que todos exigem. O prêmio de mercado (5%) é a emoção extra por subir na montanha-russa. O <b>Beta</b> é o tamanho da sua montanha-russa: β = 1 é a do mercado; β = 0,8 é uma "mais suave" (sobe 80% da emoção) → você exige menos emoção extra (4%). β &gt; 1 seria uma radical, exigindo prêmio maior.</div>
+    <div class="box insight"><b>💡 Insight:</b> O erro nº 1 da banca é trocar <b>(Rm − Rf)</b> por <b>Rm</b>. Memorize: o Beta multiplica o <u>prêmio de risco</u>, nunca o retorno do mercado sozinho. E sempre <b>some a Rf</b> no final.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Perfil de Competência ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Componentes do Planejamento Financeiro (Planejar) <span class="tag">Perfil de Competência</span></div>
+  <div class="qbody">
+    <div class="enun">Calcular a taxa de retorno requerida para atingir os objetivos do cliente faz parte do Componente do Planejamento Financeiro, referenciado no Perfil de Competência da Planejar, denominado:</div>
+    <ul class="opts">
+      <li>Gestão Financeira</li>
+      <li>Planejamento de Aposentadoria</li>
+      <li class="correct">Gestão de Ativos ✓</li>
+      <li>Gestão de Riscos e Seguros</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Gestão de Ativos (e Investimentos)</div>
+
+    <h3 class="sec">Os componentes do Planejamento Financeiro</h3>
+    <p>O Perfil de Competência da Planejar divide o planejamento em grandes áreas. Cada uma cuida de uma "frente" da vida financeira:</p>
+    <div class="ascii">  GESTÃO FINANCEIRA ...... fluxo de caixa, orçamento, reserva,
+                           dívidas, índices (liquidez/endividamento)
+  GESTÃO DE ATIVOS ....... investimentos, carteira, RISCO x RETORNO,
+                           taxa de retorno requerida p/ os objetivos  <—
+  GESTÃO DE RISCOS/SEGUROS proteção patrimonial e de vida (seguros)
+  PLANEJ. APOSENTADORIA .. acumulação e renda para a aposentadoria
+  PLANEJ. FISCAL ......... otimização de impostos
+  PLANEJ. SUCESSÓRIO ..... transmissão de patrimônio (herança)</div>
+    <div class="why">
+      <p><span class="ok">Gestão de Ativos</span> ✓ — "taxa de <b>retorno requerida</b>" é assunto de <b>investimentos</b>: quanto a carteira precisa render para o cliente bater suas metas. Isso é o coração da gestão de ativos.</p>
+      <p><span class="no">Gestão Financeira</span> ❌ — cuida do dia a dia (orçamento, dívidas, reserva), não da rentabilidade-alvo da carteira.</p>
+      <p><span class="no">Planejamento de Aposentadoria</span> ❌ — foca na meta de longo prazo da aposentadoria; o cálculo de retorno da carteira é ferramenta da gestão de ativos.</p>
+      <p><span class="no">Gestão de Riscos e Seguros</span> ❌ — trata de proteção (seguros), não de rentabilidade de investimentos.</p>
+    </div>
+    <div class="box parable"><b>🏥 Parábola do Hospital:</b> Pense no planejamento como um hospital com especialidades. A <b>Gestão Financeira</b> é o "clínico geral" (cuida da saúde do dia a dia: orçamento e dívidas). A <b>Gestão de Ativos</b> é o "cardiologista do investimento" — mede a "pressão" de retorno que a carteira precisa bater. Quando a pergunta fala em <b>taxa de retorno</b>, é caso para o cardiologista (Gestão de Ativos).</div>
+    <div class="box insight"><b>💡 Insight:</b> Palavras-chave: "retorno", "carteira", "risco x retorno", "rentabilidade-alvo" → <b>Gestão de Ativos</b>. "Orçamento", "reserva", "dívida", "fluxo de caixa" → <b>Gestão Financeira</b>.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Comportamental ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Finanças Comportamentais (Heurísticas) <span class="tag">Viés da Disponibilidade</span></div>
+  <div class="qbody">
+    <div class="enun">Um investidor, ao ler o jornal pela manhã, se depara com a notícia de um acidente ambiental envolvendo uma empresa da qual é acionista há anos. Com base na notícia, decide desfazer a posição, sem fazer análises financeiras ou considerar relatórios de analistas. Segundo a Teoria de Finanças Comportamentais, ele agiu seguindo a heurística da:</div>
+    <ul class="opts">
+      <li class="wrong">Ancoragem &nbsp;←(marcada por você)</li>
+      <li class="correct">Disponibilidade ✓</li>
+      <li>Excesso de confiança</li>
+      <li>Status quo</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Heurística da Disponibilidade</div>
+
+    <h3 class="sec">Entendendo as heurísticas (atalhos mentais)</h3>
+    <p>Heurísticas são "atalhos" que o cérebro usa para decidir rápido — e que geram <b>vieses</b> (erros sistemáticos). As principais:</p>
+    <div class="ascii">  DISPONIBILIDADE → decide pela informação MAIS FÁCIL de lembrar
+                    (recente, marcante, vívida). Ex.: a notícia de hoje.
+  ANCORAGEM ....... fixa-se em um NÚMERO/referência inicial.
+                    Ex.: "comprei a R$ 50, não vendo abaixo disso".
+  EXCESSO DE
+  CONFIANÇA ....... superestima a própria capacidade/acertos.
+  STATUS QUO ...... INÉRCIA: prefere NÃO mudar, deixar como está.</div>
+    <div class="why">
+      <p><span class="ok">Disponibilidade</span> ✓ — ele decidiu com base na <b>notícia recente e marcante</b> que acabou de ler, sem buscar dados aprofundados. Deu peso excessivo à informação "disponível na cabeça" naquele momento.</p>
+      <p><span class="no">Ancoragem</span> ❌ — exigiria ele se fixar em um <b>valor de referência</b> (ex.: preço de compra). Não há âncora numérica na história.</p>
+      <p><span class="no">Excesso de confiança</span> ❌ — seria se ele confiasse demais no próprio "faro"; aqui ele só reagiu a uma notícia externa.</p>
+      <p><span class="no">Status quo</span> ❌ — é o oposto: status quo é <b>não mexer</b>. Ele justamente <b>mudou</b> a posição.</p>
+    </div>
+    <div class="box parable"><b>🦈 Parábola do Medo de Tubarão:</b> Você vê no jornal a notícia de um ataque de tubarão e desiste de entrar no mar nas férias — mesmo sendo estatisticamente raríssimo. Você não consultou dados; agiu pela imagem <b>vívida e recente</b> que estava "à mão" na memória. Isso é a heurística da <b>disponibilidade</b>: o que é fácil de lembrar parece mais provável/importante do que realmente é.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Notícia recente / fato marcante / decisão no calor do momento" → <b>Disponibilidade</b>. "Preso a um número de referência" → <b>Ancoragem</b>. "Não quis mudar nada" → <b>Status quo</b>.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 6 — Insider ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Insider Trading <span class="tag">Uso de informação privilegiada</span></div>
+  <div class="qbody">
+    <div class="enun">Um grupo de funcionários da mineradora TopInvest Minerais SA negociou grande volume de compra de ações um dia antes do anúncio de que a companhia havia descoberto novas jazidas de minério de ferro. Esse grupo de pessoas:</div>
+    <ul class="opts">
+      <li class="correct">Cometeu uma irregularidade conhecida como "insider trading" ✓</li>
+      <li class="wrong">Cometeu uma irregularidade chamada "money laundry" (lavagem de dinheiro)</li>
+      <li class="wrong">Cometeu uma irregularidade chamada "front running"</li>
+      <li class="wrong">Não cometeu nenhuma irregularidade</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Insider trading</div>
+
+    <h3 class="sec">Por que é insider trading?</h3>
+    <p>Os funcionários usaram uma <b>informação relevante e ainda não pública</b> (a descoberta das jazidas) para comprar ações <b>antes</b> do anúncio — lucrando na alta que viria. Essa é a definição exata de <b>insider trading</b>. É <b>crime</b> (Lei 6.385/76, art. 27-D) <b>e</b> infração administrativa punida pela <b>CVM</b>.</p>
+    <div class="why">
+      <p><span class="no">Money laundry (lavagem de dinheiro)</span> ❌ — é dar aparência legal a dinheiro de origem <b>ilícita</b>. Não há crime anterior "esquentando" dinheiro aqui.</p>
+      <p><span class="no">Front running</span> ❌ — é o operador correr na frente de uma <b>ordem grande de um cliente</b>. Aqui a vantagem veio de <b>informação sobre a empresa</b>, não de uma ordem alheia.</p>
+      <p><span class="no">"Não cometeu irregularidade"</span> ❌ — usar informação não pública para lucrar é sempre ilícito.</p>
+    </div>
+    <div class="ascii">  A "ARMA" DE CADA IRREGULARIDADE
+  Insider trading → informação RELEVANTE e NÃO pública (da empresa)
+  Front running  → conhecimento de uma ORDEM grande de cliente
+  Lavagem        → esconder a ORIGEM ilícita do dinheiro</div>
+    <div class="box parable"><b>🔦 Parábola do Garimpeiro com Mapa Secreto:</b> Quem sabia das jazidas antes de todos é como um garimpeiro que viu o mapa do tesouro escondido e correu comprar o terreno barato antes do dono saber do ouro embaixo. Ganhou usando um segredo que ninguém mais tinha acesso — vantagem injusta = insider trading.</div>
+    <div class="box insight"><b>💡 Insight:</b> Pergunte "qual foi a vantagem injusta?". Informação não pública da <b>empresa</b> → insider. Saber de uma <b>ordem</b> alheia → front running. Esconder origem suja do dinheiro → lavagem.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 7 — Meta de inflação / CMN ===================== -->
+<div class="q">
+  <div class="qhead">Questão 5 — Quem altera a Meta de Inflação <span class="tag">CMN • BACEN • COPOM</span></div>
+  <div class="qbody">
+    <div class="enun">Kleber perguntou a Tiago como seria possível alterar a meta da inflação brasileira, definida anualmente. Tiago explicou que o processo segue normas específicas e depende do órgão competente. Caso se deseje alterar a meta da inflação, é necessário que:</div>
+    <ul class="opts">
+      <li class="wrong">O ministro da Fazenda se reúna com integrantes do BC que compõem o COPOM e emita um comunicado nacional justificando ao Congresso &nbsp;←(marcada por você)</li>
+      <li class="wrong">O ministro da Fazenda leve a votação na primeira reunião anual do CMN, sendo necessária unanimidade</li>
+      <li class="correct">O CMN, como órgão máximo do sistema financeiro, altere a meta e apenas divulgue o novo valor ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>O CMN define/altera a meta de inflação</div>
+
+    <h3 class="sec">Quem faz o quê na política monetária</h3>
+    <p>O segredo é separar <b>quem DEFINE a meta</b> de <b>quem PERSEGUE a meta</b>:</p>
+    <div class="ascii">  CMN (Conselho Monetário Nacional)  → DEFINE a META de inflação
+       órgão máximo, normativo            (é o "chefe" que dá o alvo)
+            │
+            ▼
+  BACEN / COPOM  → PERSEGUE a meta usando a taxa SELIC
+                   (é o "atirador" que mira no alvo)</div>
+    <p>Logo, para <b>alterar a meta</b>, quem decide é o <b>CMN</b> — ele estabelece o novo valor e o divulga. O Banco Central e o COPOM não mexem na meta; eles apenas trabalham para alcançá-la via Selic.</p>
+    <div class="why">
+      <p><span class="no">Ministro + COPOM + comunicado ao Congresso</span> ❌ — o COPOM define a <b>Selic</b>, não a meta. Confundiu papéis. (O comunicado existe em outra situação: quando a meta é <b>descumprida</b>, o presidente do BC escreve uma <b>carta aberta</b> ao ministro da Fazenda explicando o porquê — coisa diferente de "alterar a meta".)</p>
+      <p><span class="no">Votação no CMN com unanimidade</span> ❌ — o CMN delibera por <b>maioria</b>, não por unanimidade; a exigência de "unanimidade" é inventada.</p>
+      <p><span class="ok">CMN altera e divulga</span> ✓ — é exatamente a competência do CMN.</p>
+    </div>
+    <div class="box parable"><b>🎯 Parábola do Treinador e do Atleta:</b> O <b>CMN é o treinador</b> que define a meta da temporada ("vamos mirar 3% de inflação"). O <b>Banco Central/COPOM é o atleta</b> que treina e ajusta o esforço (a Selic) para bater essa meta. Quem muda o alvo é o treinador (CMN), nunca o atleta. E se o atleta não bate a meta, ele escreve uma "carta" explicando — mas não pode mudar o alvo por conta própria.</div>
+    <div class="box insight"><b>💡 Insight:</b> "DEFINE a meta" = <b>CMN</b>. "PERSEGUE a meta (Selic)" = <b>BACEN/COPOM</b>. "Carta aberta" só aparece quando a meta é <b>descumprida</b> — não para alterá-la.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<div class="pagebreak"></div>
+<h3 class="sec" style="font-size:14pt;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>CAPM</td><td>Ke = Rf + β × (Rm − Rf). Beta multiplica o <b>prêmio</b> (Rm−Rf), não o Rm. 10 + 0,8×5 = <b>14%</b>.</td></tr>
+  <tr><td>2</td><td>Componentes Planejar</td><td>"Taxa de retorno requerida" / investimentos = <b>Gestão de Ativos</b>. Orçamento/dívida = Gestão Financeira.</td></tr>
+  <tr><td>3</td><td>Heurísticas</td><td>Decidir por notícia recente/marcante = <b>Disponibilidade</b>. Preso a número = Ancoragem. Não mudar = Status quo.</td></tr>
+  <tr><td>4</td><td>Insider trading</td><td>Informação relevante e <b>não pública</b> da empresa → insider (crime + CVM). Ordem de cliente → front running.</td></tr>
+  <tr><td>5</td><td>Meta de inflação</td><td><b>CMN define</b> a meta; <b>BACEN/COPOM persegue</b> via Selic. Carta aberta só quando a meta é descumprida.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
