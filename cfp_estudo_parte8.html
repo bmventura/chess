@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 8)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 8)</h2>
+  <div>
+    <span class="chip">4 questões comentadas</span>
+    <span class="chip">Equivalência • BNDES • Seguro MIP</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Equivalência financeira ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Equivalência de Fluxos (Renegociação) <span class="tag">Matemática financeira • data focal</span></div>
+  <div class="qbody">
+    <div class="enun">Larissa tem um empréstimo a 2% a.m. com <b>três parcelas mensais de R$ 520.200,00</b>, a primeira daqui a 30 dias (ou seja, em 30, 60 e 90 dias). Ela propõe pagar: <b>R$ 200.000,00 hoje</b> + uma <b>parcela única X daqui a 60 dias</b>. O valor aproximado de X será:</div>
+    <ul class="opts">
+      <li class="wrong">R$ 1.300.196,08</li>
+      <li class="correct">R$ 1.352.724,00 ✓</li>
+      <li class="wrong">R$ 1.360.600,00</li>
+      <li class="wrong">R$ 1.360.804,00</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 1.352.724,00</div>
+
+    <h3 class="sec">A regra de ouro: trazer tudo para a MESMA data</h3>
+    <p>Dois planos de pagamento são <b>equivalentes</b> quando, levados para uma mesma <b>data focal</b>, têm o mesmo valor. Vou usar <b>hoje (t = 0)</b> como data focal.</p>
+    <div class="box calc">  DÍVIDA ORIGINAL (3 parcelas de 520.200 em t=30, 60, 90 dias)
+  Trazendo cada uma para hoje (÷ 1,02 por mês):
+   520.200 / 1,02¹ = 510.000,00
+   520.200 / 1,02² = 500.000,00
+   520.200 / 1,02³ = 490.196,08
+  ───────────────────────────────────────
+  Valor da dívida hoje = R$ 1.500.196,08</div>
+    <div class="box calc">  NOVO PLANO (200.000 hoje + X em t=60 dias = 2 meses)
+  Valor hoje = 200.000 + X / 1,02²
+
+  IGUALANDO os dois planos na data de hoje:
+   200.000 + X/1,0404 = 1.500.196,08
+   X/1,0404 = 1.300.196,08
+   X = 1.300.196,08 × 1,0404 = R$ 1.352.724,00  ✓</div>
+    <div class="why">
+      <p><span class="no">R$ 1.300.196,08</span> ❌ — é o valor de X <b>na data de hoje</b> (1.500.196 − 200.000). Faltou "empurrar" X para os 60 dias (× 1,0404). Esse é o erro mais comum: esquecer de capitalizar X até a data dele.</p>
+      <p><span class="no">R$ 1.360.600 / R$ 1.360.804</span> ❌ — vêm de errar a data focal ou capitalizar as parcelas pelo número errado de meses.</p>
+      <p><span class="ok">R$ 1.352.724,00</span> ✓ — equivalência correta na mesma data.</p>
+    </div>
+    <div class="box parable"><b>⚖️ Parábola da Balança do Tempo:</b> Dinheiro em datas diferentes é como pesos em lados diferentes de uma gangorra — não dá para comparar direto. Você precisa primeiro "trazer todos para o mesmo ponto de apoio" (a data focal). Só quando os dois lados estão na mesma data é que você pode igualá-los. E lembre: trazer para o passado = dividir (descontar); levar para o futuro = multiplicar (capitalizar).</div>
+    <div class="box insight"><b>💡 Insight:</b> Em renegociação/equivalência: (1) escolha uma data focal; (2) leve TODOS os fluxos (dos dois planos) para ela; (3) iguale. Pagamento no futuro → multiplica por (1+i)^n; no passado → divide. O X está em t=60, então ele PRECISA ser capitalizado.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Componentes do Perfil ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Componentes do Perfil de Competência <span class="tag">FPSB / Planejar</span></div>
+  <div class="qbody">
+    <div class="enun">Quais são os componentes do Perfil de Competência do Planejador Financeiro?</div>
+    <ul class="opts">
+      <li class="wrong">Planejamento Financeiro, Gestão de Ativos e Gestão de Riscos</li>
+      <li class="correct">Capacidades, Habilidades e Conhecimentos ✓</li>
+      <li class="wrong">Comunicação, Cognição e Prática</li>
+      <li class="wrong">Coleta, Análise e Síntese</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Capacidades, Habilidades e Conhecimentos</div>
+
+    <h3 class="sec">Os 3 pilares da competência (o "CHA")</h3>
+    <p>Competência profissional é a soma de três blocos — uma adaptação do clássico <b>CHA</b>:</p>
+    <div class="ascii">  CONHECIMENTOS → o "SABER"      (teoria: tributação, investimentos…)
+  HABILIDADES   → o "SABER FAZER" (aplicar na prática: coletar,
+                                   analisar, sintetizar)
+  CAPACIDADES   → o "QUERER/COMO FAZER" (atitudes, julgamento,
+                                   postura profissional)</div>
+    <div class="why">
+      <p><span class="ok">Capacidades, Habilidades e Conhecimentos</span> ✓ — são os três <b>componentes estruturais</b> do Perfil de Competência.</p>
+      <p><span class="no">Coleta, Análise e Síntese</span> ❌ — são as categorias <b>das Habilidades</b> (um dos componentes), não o perfil inteiro. É um "nível abaixo".</p>
+      <p><span class="no">Comunicação, Cognição e Prática</span> ❌ — são tipos de habilidades profissionais, não os componentes do perfil.</p>
+      <p><span class="no">Planejamento Financeiro, Gestão de Ativos, Gestão de Riscos</span> ❌ — são <b>áreas temáticas</b> do planejamento (o "o quê"), não a estrutura de competência.</p>
+    </div>
+    <div class="box parable"><b>🚗 Parábola do Motorista:</b> Para dirigir bem você precisa de três coisas: <b>conhecer</b> as leis de trânsito (Conhecimento), <b>saber manobrar</b> o carro (Habilidade) e ter a <b>postura/atitude</b> de dirigir com prudência (Capacidade). Falta um dos três e a "competência de dirigir" não se completa. O planejador é igual: saber + saber fazer + querer fazer bem.</div>
+    <div class="box insight"><b>💡 Insight:</b> Cuidado para não confundir NÍVEIS: o perfil tem 3 componentes (<b>Conhecimentos, Habilidades, Capacidades</b>); dentro de "Habilidades" estão <b>Coleta, Análise e Síntese</b>. A banca troca um nível pelo outro.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — BNDES ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — O que o BNDES Financia <span class="tag">Sistema Financeiro Nacional</span></div>
+  <div class="qbody">
+    <div class="enun">São financiados pelo BNDES os investimentos destinados a:<br>
+      <b>I –</b> Implantação, expansão, modernização, ampliação e recuperação da capacidade produtiva de empresas;<br>
+      <b>II –</b> Produção e aquisição de máquinas e equipamentos destinados <b>exclusivamente</b> ao setor agropecuário;<br>
+      <b>III –</b> Produção e aquisição de máquinas e equipamentos <b>importados</b>.<br>
+      Estão corretas apenas:</div>
+    <ul class="opts">
+      <li class="wrong">II e III</li>
+      <li class="wrong">I e III</li>
+      <li class="wrong">I e II &nbsp;←(marcada por você)</li>
+      <li class="correct">I ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Apenas I</div>
+
+    <h3 class="sec">O papel do BNDES</h3>
+    <p>O <b>BNDES</b> é o banco de <b>fomento</b> ao desenvolvimento: financia investimentos que aumentam a <b>capacidade produtiva</b> do país, priorizando a <b>indústria nacional</b>.</p>
+    <div class="why">
+      <p><span class="ok">I — CERTO</span> ✓ — implantar, expandir, modernizar, ampliar e recuperar a capacidade produtiva é exatamente a missão do BNDES.</p>
+      <p><span class="no">II — ERRADO</span> ❌ — a palavra <b>"exclusivamente"</b> derruba o item. O BNDES financia máquinas/equipamentos para <b>vários setores</b>, não só o agropecuário. (Cuidado com "exclusivamente", "somente", "apenas" — quase sempre tornam a frase falsa.)</p>
+      <p><span class="no">III — ERRADO</span> ❌ — o BNDES financia, em regra, bens de <b>fabricação NACIONAL</b> (para fomentar a indústria do país). Máquinas e equipamentos <b>importados</b> em geral não são financiados.</p>
+    </div>
+    <div class="ascii">  PALAVRAS-ARMADILHA NESTE TIPO DE QUESTÃO
+   "exclusivamente / somente / apenas"  → restringe demais → costuma ERRAR
+   "importados"                          → BNDES prioriza NACIONAL → ERRA</div>
+    <div class="box parable"><b>🌱 Parábola do Adubo Nacional:</b> O BNDES é como um governo que dá "adubo" (crédito barato) para as plantas crescerem — mas só rega o <b>jardim de casa</b> (a produção nacional) e não o jardim do vizinho (importados). E ele aduba <b>todo</b> o jardim, não "exclusivamente" o canteiro de hortaliças (agropecuário). Por isso só o item I, abrangente e nacional, está certo.</div>
+    <div class="box insight"><b>💡 Insight:</b> BNDES = fomento à <b>capacidade produtiva</b> e à <b>indústria nacional</b>. Viu "exclusivamente" ou "importados"? Acenda o alerta de pegadinha.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Seguro MIP ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Seguro MIP (Financiamento Imobiliário) <span class="tag">Gestão de Riscos e Seguros</span></div>
+  <div class="qbody">
+    <div class="enun">O seguro imobiliário <b>MIP</b> garante a quitação de uma dívida do segurado nos seguintes casos:<br>
+      <b>I –</b> Morte &nbsp; <b>II –</b> Invalidez &nbsp; <b>III –</b> Incêndio &nbsp; <b>IV –</b> Perda de emprego.<br>
+      Está correto o que se afirma apenas em:</div>
+    <ul class="opts">
+      <li class="wrong">I, II, III e IV</li>
+      <li class="wrong">II, III e IV</li>
+      <li class="correct">I e II ✓</li>
+      <li class="wrong">I, II e III &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>I e II — Morte e Invalidez</div>
+
+    <h3 class="sec">MIP × DFI: os dois seguros do financiamento imobiliário</h3>
+    <p>Todo financiamento imobiliário tem <b>dois seguros obrigatórios</b>, e a sigla já entrega o que cada um cobre:</p>
+    <div class="ascii">  MIP = Morte e Invalidez Permanente
+        → protege a PESSOA (o devedor)
+        → se o segurado MORRE ou fica INVÁLIDO, o seguro QUITA a dívida
+        → a família fica com o imóvel quitado
+
+  DFI = Danos Físicos ao Imóvel
+        → protege o BEM (o imóvel)
+        → cobre INCÊNDIO, desabamento, danos estruturais etc.</div>
+    <div class="why">
+      <p><span class="ok">I — Morte</span> e <span class="ok">II — Invalidez</span> ✓ — é a própria definição do MIP (Morte e Invalidez Permanente).</p>
+      <p><span class="no">III — Incêndio</span> ❌ — é coberto pelo <b>DFI</b> (danos ao imóvel), não pelo MIP. Esse é o item que pega quem marca "I, II e III".</p>
+      <p><span class="no">IV — Perda de emprego</span> ❌ — não é coberto pelo MIP (seria um seguro de proteção financeira à parte, não obrigatório no imobiliário).</p>
+    </div>
+    <div class="box parable"><b>👤🏠 Parábola "Pessoa × Parede":</b> No financiamento há dois "seguros-guarda-costas". O <b>MIP</b> cuida da <b>PESSOA</b> (Morte e Invalidez do devedor) — se algo acontece com você, ele quita a casa para a família. O <b>DFI</b> cuida da <b>PAREDE</b> (o imóvel) — se a casa pega fogo ou desaba, ele paga o reparo. Incêndio é "parede" → DFI, não MIP.</div>
+    <div class="box insight"><b>💡 Insight:</b> A sigla é o macete: <b>MIP = Morte e Invalidez Permanente</b> (pessoa); <b>DFI = Danos Físicos ao Imóvel</b> (bem/incêndio). Perda de emprego não entra em nenhum dos dois obrigatórios.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Equivalência de fluxos</td><td>Traga tudo à mesma data focal e iguale. X em t=60 precisa ser capitalizado: <b>R$ 1.352.724,00</b>.</td></tr>
+  <tr><td>2</td><td>Perfil de Competência</td><td>Componentes = <b>Capacidades, Habilidades e Conhecimentos</b> (CHA). Coleta/Análise/Síntese é nível abaixo (das Habilidades).</td></tr>
+  <tr><td>3</td><td>BNDES</td><td>Financia capacidade produtiva e indústria <b>nacional</b>. "Exclusivamente" e "importados" = erro. Só <b>I</b>.</td></tr>
+  <tr><td>4</td><td>Seguro MIP</td><td><b>M</b>orte e <b>I</b>nvalidez <b>P</b>ermanente (pessoa). Incêndio = DFI (imóvel). Resposta: <b>I e II</b>.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
