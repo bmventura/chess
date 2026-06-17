@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 5)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+  table.cmp { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 10px 0; }
+  table.cmp th { background: #6a11cb; color:#fff; padding: 7px; }
+  table.cmp td { border: 1px solid #e3e3ea; padding: 6px 8px; vertical-align: top; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 5)</h2>
+  <div>
+    <span class="chip">5 questões comentadas</span>
+    <span class="chip">Finanças tradicionais • SFH × SFI</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Concepção tradicional ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Concepção Tradicional × Comportamental de Finanças <span class="tag">Finanças modernas vs behavioral</span></div>
+  <div class="qbody">
+    <div class="enun">Analise as sentenças:<br>
+      <b>I –</b> Aversão a riscos<br>
+      <b>II –</b> Expectativa com viés<br>
+      <b>III –</b> Segregação dos ativos<br>
+      <b>IV –</b> Integração dos ativos<br>
+      Com relação à <b>concepção tradicional</b> de finanças, está correto o que se afirma em:</div>
+    <ul class="opts">
+      <li>I e II</li>
+      <li>II e IV</li>
+      <li>I e III</li>
+      <li class="correct">I e IV ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>I e IV</div>
+
+    <h3 class="sec">O duelo: Finanças Tradicionais × Comportamentais</h3>
+    <p>A <b>concepção tradicional</b> (finanças modernas — Markowitz, CAPM) assume um investidor <b>racional</b>. A <b>concepção comportamental</b> mostra que, na vida real, o investidor é <b>cheio de vieses</b>. Cada sentença pertence a um dos lados:</p>
+    <table class="cmp">
+      <tr><th>Característica</th><th>TRADICIONAL (racional)</th><th>COMPORTAMENTAL (real)</th></tr>
+      <tr><td>Atitude ao risco</td><td><b>Aversão a riscos (I)</b> ✓</td><td>—</td></tr>
+      <tr><td>Expectativas</td><td>Racionais, <b>sem viés</b></td><td><b>Expectativa com viés (II)</b></td></tr>
+      <tr><td>Visão da carteira</td><td><b>Integração dos ativos (IV)</b> ✓<br>(carteira como um todo)</td><td><b>Segregação dos ativos (III)</b><br>(contabilidade mental, "caixinhas")</td></tr>
+    </table>
+    <div class="why">
+      <p><span class="ok">I — Aversão a riscos</span> ✓ — premissa básica da teoria tradicional: o investidor racional foge do risco (só topa mais risco por mais retorno).</p>
+      <p><span class="ok">IV — Integração dos ativos</span> ✓ — a teoria de carteiras (Markowitz) olha o portfólio de forma <b>integrada</b>, considerando correlações entre os ativos.</p>
+      <p><span class="no">II — Expectativa com viés</span> ❌ — viés é conceito <b>comportamental</b>. O tradicional supõe expectativas racionais, sem viés.</p>
+      <p><span class="no">III — Segregação dos ativos</span> ❌ — segregar em "caixinhas mentais" (contabilidade mental) é <b>comportamental</b>, não tradicional.</p>
+    </div>
+    <div class="box parable"><b>🧠 Parábola do "Homo Economicus" × "Homo Real":</b> A finança tradicional acredita no <b>Sr. Robô</b> (Homo Economicus): calcula tudo friamente, foge do risco e enxerga a carteira como um sistema único e integrado. A finança comportamental estudou o <b>Sr. Humano</b>: tem vieses, se empolga, e separa o dinheiro em "potes" mentais ("este é o da viagem, aquele é o da aposentadoria") — a tal segregação. Tradicional = robô integrado; comportamental = humano em caixinhas.</div>
+    <div class="box insight"><b>💡 Insight:</b> Viés e segregação (contabilidade mental) = SEMPRE comportamental. Racionalidade, aversão a risco e integração de carteira = tradicional. Viu "viés" ou "caixinha mental"? Não é tradicional.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Índice de poupança (recap) ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Índice de Poupança da Família (RECAP + bônus) <span class="tag">Fluxo × Patrimônio</span></div>
+  <div class="qbody">
+    <div class="enun">Mesma família da questão já estudada (salários R$ 800 mil; aluguel recebido R$ 36 mil; rendimentos de investimentos R$ 9 mil; gastos de educação R$ 84 mil, alimentação/vestuário R$ 140 mil, saúde R$ 60 mil e demais R$ 200 mil; além de imóveis, veículos, PGBL, Fundo DI, financiamentos e fatura de cartão). Qual o índice de poupança?</div>
+    <div class="answer"><span class="lbl">Resposta correta</span>42,72%</div>
+
+    <h3 class="sec">Só o FLUXO entra (patrimônio fica de fora)</h3>
+    <div class="box calc">  RENDA  = 800.000 + 36.000 + 9.000 = 845.000
+  GASTOS = 84.000 + 140.000 + 60.000 + 200.000 = 484.000
+  Poupança = 845.000 − 484.000 = 361.000
+
+  Índice de poupança = 361.000 / 845.000 = 42,72%  ✓</div>
+    <p>Ficam de fora (são <b>patrimônio</b>, não fluxo): imóveis, veículos, PGBL, Fundo DI (ativos) e financiamentos + fatura do cartão (passivos). O cartão, em especial, não entra para <b>não contar o gasto duas vezes</b> (as compras já estão nas despesas).</p>
+
+    <h3 class="sec">🎁 Bônus — Patrimônio Líquido (a "foto")</h3>
+    <div class="box calc">  ATIVOS   = PGBL 110.000 + Veículos 120.000 + Imóvel 2.000.000
+             + Imóvel alugado 400.000 + Fundo DI 150.000 = 2.780.000
+  PASSIVOS = Financ. imob. 700.000 + Financ. veíc. 35.000
+             + Fatura cartão 30.000 = 765.000
+
+  PATRIMÔNIO LÍQUIDO = 2.780.000 − 765.000 = R$ 2.015.000</div>
+    <div class="box insight"><b>💡 Insight:</b> A mesma lista de dados gera DUAS perguntas diferentes: o <b>índice de poupança</b> usa o <b>fluxo</b> (renda − gastos); o <b>patrimônio líquido</b> usa a <b>foto</b> (ativos − passivos). Saiba qual "lente" a questão pede.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — SFH x SFI ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Financiamento Imobiliário: SFH × SFI <span class="tag">Crédito imobiliário</span></div>
+  <div class="qbody">
+    <div class="enun">Sobre as diferenças entre o Sistema Financeiro da Habitação (SFH) e o Sistema de Financiamento Imobiliário (SFI), é correto afirmar que:</div>
+    <ul class="opts">
+      <li class="correct">O SFI permite a livre negociação entre clientes e instituições financeiras; já o SFH é regulamentado pelo Governo Federal e possui condições específicas para o financiamento imobiliário ✓</li>
+      <li class="wrong">(demais alternativas invertem os papéis de SFH e SFI)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>SFI = livre negociação | SFH = regulamentado, com regras específicas</div>
+
+    <h3 class="sec">Os dois sistemas lado a lado</h3>
+    <table class="cmp">
+      <tr><th></th><th>SFH (Sistema Financeiro da Habitação)</th><th>SFI (Sistema de Financiamento Imobiliário)</th></tr>
+      <tr><td>Origem</td><td>Lei 4.380/64 (mais antigo)</td><td>Lei 9.514/97 (mais novo)</td></tr>
+      <tr><td>Regras</td><td><b>Muito regulamentado</b> pelo Governo</td><td><b>Livre negociação</b> (mercado)</td></tr>
+      <tr><td>Recursos (funding)</td><td>Poupança (SBPE) e <b>FGTS</b></td><td>Mercado de capitais (<b>CRI</b>, securitização)</td></tr>
+      <tr><td>Limites</td><td>Teto de valor do imóvel e <b>teto de juros</b> (TR + até 12% a.a.)</td><td><b>Sem tetos</b> de valor ou juros</td></tr>
+      <tr><td>Público</td><td>Habitação popular / classe média</td><td>Imóveis de maior valor / comerciais</td></tr>
+    </table>
+    <div class="why">
+      <p><span class="ok">SFI livre / SFH regulamentado</span> ✓ — captura a essência: o SFH é o sistema "tutelado" (com tetos e uso de FGTS/poupança), o SFI é o sistema "de mercado" (negociação livre).</p>
+      <p><span class="no">Alternativas que invertem</span> ❌ — dizer que o SFH é livre ou que o SFI usa FGTS com tetos troca os papéis. A banca adora essa inversão.</p>
+    </div>
+    <div class="box parable"><b>🏠 Parábola do Restaurante:</b> O <b>SFH</b> é o "restaurante popular" subsidiado: o governo controla o cardápio e o preço máximo (tetos de juros e de valor do imóvel), usando uma "cozinha" de recursos dirigidos (FGTS e poupança). O <b>SFI</b> é o "restaurante à la carte": preço e condições <b>negociados livremente</b> entre cliente e banco, sem tabela do governo, financiado pelo mercado (CRI). Quem quer imóvel mais caro vai ao à la carte (SFI).</div>
+    <div class="box insight"><b>💡 Insight:</b> <b>SFH = Habitação = regrado</b> (FGTS + poupança, tetos de juros e valor). <b>SFI = livre</b> (mercado, sem teto, imóveis maiores). Associe "H de Habitação = governo controla".</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Heurística disponibilidade ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Heurística da Decisão por Notícia <span class="tag">Finanças comportamentais</span></div>
+  <div class="qbody">
+    <div class="enun">Um investidor tinha uma ordem de compra de ações da TopInvest SA colocada 6 dias atrás. Ontem, ao ler no jornal que a empresa estava sob investigação por desvio de dinheiro, decide cancelar a ordem. Qual a heurística presente nessa decisão?</div>
+    <ul class="opts">
+      <li class="wrong">Representatividade</li>
+      <li class="wrong">Auto Atribuição</li>
+      <li class="correct">Disponibilidade ✓</li>
+      <li class="wrong">Ancoragem</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Heurística da Disponibilidade</div>
+
+    <h3 class="sec">Por que disponibilidade?</h3>
+    <p>Ele decidiu com base na <b>notícia recente e marcante</b> que acabou de ler — deu peso enorme à informação "fresca na memória", sem análise mais profunda. Esse é o atalho da <b>disponibilidade</b>: o que está fácil de lembrar parece mais importante/provável.</p>
+    <div class="ascii">  HEURÍSTICAS (atalhos mentais) — diferencie!
+   DISPONIBILIDADE → decide pela informação recente/marcante (a notícia) ← aqui
+   REPRESENTATIVIDADE → julga por estereótipo/padrão
+                        ("empresa boa = ação boa", ignora estatística)
+   ANCORAGEM ......... fixa-se num NÚMERO de referência (preço de compra)
+   AUTO ATRIBUIÇÃO ... credita acertos a si e erros a fatores externos</div>
+    <div class="why">
+      <p><span class="ok">Disponibilidade</span> ✓ — reação imediata a uma notícia vívida e recente.</p>
+      <p><span class="no">Representatividade</span> ❌ — seria julgar por um padrão/estereótipo, não por uma notícia pontual.</p>
+      <p><span class="no">Auto atribuição</span> ❌ — é sobre como a pessoa explica seus próprios acertos/erros, não tem a ver com o caso.</p>
+      <p><span class="no">Ancoragem</span> ❌ — exigiria fixação num valor de referência (ex.: "comprei a R$ 50"). Não há âncora numérica aqui.</p>
+    </div>
+    <div class="box parable"><b>📰 Parábola da Manchete:</b> Você ia comprar um carro de certa marca, mas leu hoje uma manchete de recall e desistiu na hora — sem checar se aquele modelo específico tinha o problema. A imagem <b>recente e forte</b> da notícia dominou a decisão. É a disponibilidade: a manchete "disponível" na cabeça pesou mais do que uma análise fria.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Decidiu por causa de uma notícia recente/marcante" → <b>Disponibilidade</b>. "Julgou por estereótipo/semelhança" → Representatividade. "Preso a um número" → Ancoragem. "Eu acertei por talento, errei por azar" → Auto atribuição.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 5 — Suspensão de prazos ===================== -->
+<div class="q">
+  <div class="qhead">Questão 5 — Suspensão de Prazos no Processo Disciplinar (Planejar) <span class="tag">Código de Ética • recesso</span></div>
+  <div class="qbody">
+    <div class="enun">No processo disciplinar da Planejar, os prazos para informações, manifestações, alegações e defesas começam no 1º dia útil após a ciência do denunciado e encerram no dia do vencimento. Contudo, a contagem desses prazos é <b>suspensa</b> entre:</div>
+    <ul class="opts">
+      <li class="wrong">01 de dezembro e 31 de dezembro</li>
+      <li class="wrong">25 de dezembro e 31 de dezembro</li>
+      <li class="wrong">01 de janeiro e 31 de janeiro</li>
+      <li class="correct">20 de dezembro e 6 de janeiro ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>20 de dezembro a 6 de janeiro (recesso de fim de ano)</div>
+
+    <h3 class="sec">A lógica do recesso</h3>
+    <p>O Código de Conduta Ética da Planejar prevê um <b>recesso de fim de ano</b> em que os prazos do processo disciplinar ficam <b>suspensos</b> — exatamente entre <b>20 de dezembro e 6 de janeiro</b>. A ideia é garantir o direito de defesa: nesse período de festas e férias, ninguém perde prazo por estar fora.</p>
+    <div class="ascii">  LINHA DO TEMPO DO PRAZO
+   ...contando... → [20/dez ━━ SUSPENSO ━━ 6/jan] → ...volta a contar...
+                          (recesso de fim de ano)</div>
+    <div class="why">
+      <p><span class="ok">20/dez a 6/jan</span> ✓ — período exato do recesso previsto no normativo.</p>
+      <p><span class="no">01–31/dez, 25–31/dez, 01–31/jan</span> ❌ — datas inventadas para confundir; nenhuma corresponde ao recesso oficial.</p>
+    </div>
+    <div class="box parable"><b>⏸️ Parábola do "Pause" do Fim de Ano:</b> Pense no prazo como um cronômetro de jogo. Ao chegar o recesso (20/dez), o juiz aperta <b>PAUSE</b> — o relógio congela durante as festas. No dia 6 de janeiro, aperta PLAY e o tempo volta a correr de onde parou. O jogador (denunciado) não é prejudicado por estar de férias.</div>
+    <div class="box insight"><b>💡 Insight:</b> Decore o intervalo do recesso: <b>20 de dezembro → 6 de janeiro</b>. É um "pause" nos prazos disciplinares para preservar a ampla defesa nas festas de fim de ano.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<div class="pagebreak"></div>
+<h3 class="sec" style="font-size:14pt;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Tradicional × Comportamental</td><td>Tradicional = aversão a risco + integração de ativos (<b>I e IV</b>). Viés e segregação (caixinha mental) = comportamental.</td></tr>
+  <tr><td>2</td><td>Índice de poupança</td><td>(Renda − Gastos) ÷ Renda = <b>42,72%</b>. Patrimônio fica fora. Bônus: PL = ativos − passivos = <b>R$ 2.015.000</b>.</td></tr>
+  <tr><td>3</td><td>SFH × SFI</td><td><b>SFH</b> = regrado (FGTS/poupança, tetos de juros e valor). <b>SFI</b> = livre negociação, sem teto, imóveis maiores.</td></tr>
+  <tr><td>4</td><td>Heurísticas</td><td>Notícia recente = <b>Disponibilidade</b>. Estereótipo = Representatividade. Número fixo = Ancoragem. Crédito do acerto = Auto atribuição.</td></tr>
+  <tr><td>5</td><td>Prazos disciplinares</td><td>Suspensos no recesso: <b>20/dez a 6/jan</b>.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
