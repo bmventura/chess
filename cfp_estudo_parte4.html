@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 4)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 4)</h2>
+  <div>
+    <span class="chip">5 questões comentadas</span>
+    <span class="chip">Lei 4.595 • Leasing • WACC</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Lei 4.595/64 ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Constituição das Instituições Financeiras (Lei 4.595/64) <span class="tag">Forma societária</span></div>
+  <div class="qbody">
+    <div class="enun">Revisando a Lei nº 4.595/64, sobre a constituição jurídica das instituições financeiras privadas no Brasil (forma societária e composição do capital), é correto afirmar que:</div>
+    <ul class="opts">
+      <li class="correct">As IFs privadas, EXCETO as cooperativas de crédito, constituir-se-ão unicamente sob a forma de SOCIEDADE ANÔNIMA, devendo a totalidade do capital com direito a voto ser representada por AÇÕES NOMINATIVAS ✓</li>
+      <li class="wrong">(variação com "ações ao portador" / "preferenciais" — incorreta)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>S.A. + ações nominativas (texto do art. 25 da Lei 4.595/64)</div>
+
+    <h3 class="sec">Entendendo "do zero": a Lei 4.595/64</h3>
+    <p>É a <b>"Lei da Reforma Bancária"</b> — a certidão de nascimento do sistema financeiro moderno. Ela criou:</p>
+    <div class="ascii">  LEI 4.595/64 criou:
+   • SFN  — Sistema Financeiro Nacional (a estrutura toda)
+   • CMN  — Conselho Monetário Nacional (órgão NORMATIVO máximo)
+   • BACEN— Banco Central (órgão EXECUTOR/fiscalizador)</div>
+    <p>O <b>art. 25</b> diz, literalmente, que as IFs privadas (banco, financeira, corretora…) só podem ser <b>Sociedade Anônima (S.A.)</b> — com <b>uma exceção</b>: as <b>cooperativas de crédito</b> (que, por natureza, são cooperativas, não S.A.). E o capital <b>com direito a voto</b> deve ser em <b>ações nominativas</b> (com dono identificado), nunca "ao portador".</p>
+    <div class="why">
+      <p><span class="ok">S.A. + ações nominativas + exceção das cooperativas</span> ✓ — reproduz fielmente a lei.</p>
+      <p><span class="no">"Ações ao portador"</span> ❌ — a banca troca "nominativas" por "ao portador" para te pegar. Ações ao portador (sem dono identificado) são <b>proibidas</b> no Brasil — justamente por rastreabilidade/lavagem.</p>
+      <p><span class="no">Esquecer a exceção das cooperativas</span> ❌ — dizer "todas sem exceção são S.A." também erra.</p>
+    </div>
+    <div class="box parable"><b>🪪 Parábola do Crachá Obrigatório:</b> Imagine um prédio de bancos onde <b>ninguém entra sem crachá com nome e foto</b> (ação nominativa). "Ações ao portador" seriam como entrar mascarado, sem identificação — proibido, porque o regulador quer saber <b>quem é dono de cada banco</b>. A única "salinha" que segue outra regra é a das cooperativas de crédito (não precisam ser S.A.).</div>
+    <div class="box insight"><b>💡 Insight:</b> Decore o trio: <b>S.A. + ações nominativas + exceção: cooperativas de crédito</b>. E lembre: Lei 4.595/64 = nascimento do CMN e do BACEN.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Leasing / ISS ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Tributação e Regras do Leasing <span class="tag">Arrendamento mercantil • ISS</span></div>
+  <div class="qbody">
+    <div class="enun">Segundo a legislação vigente, em um contrato de arrendamento mercantil (leasing):</div>
+    <ul class="opts">
+      <li class="correct">Incide Imposto Sobre Serviços (ISS) ✓</li>
+      <li class="wrong">O prazo mínimo é de 180 dias na modalidade de leasing operacional &nbsp;←(marcada por você)</li>
+      <li class="wrong">Só é permitido para bens novos</li>
+      <li class="wrong">O arrendatário é automaticamente o proprietário do bem</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Incide ISS (imposto municipal sobre serviços)</div>
+
+    <h3 class="sec">Por que ISS?</h3>
+    <p>O leasing é juridicamente tratado como uma <b>prestação de serviço</b> (de arrendamento/financiamento). Por isso o imposto que incide é o <b>ISS</b> — tributo <b>municipal</b> sobre serviços. (O STF pacificou que sobre o leasing financeiro incide ISS, e não ICMS, pois não é "circulação de mercadoria".)</p>
+    <div class="why">
+      <p><span class="no">"Prazo mínimo de 180 dias no operacional"</span> ❌ — o prazo mínimo do leasing <b>operacional é 90 dias</b> (não 180). No <b>financeiro</b> é 2 ou 3 anos (conforme a vida útil do bem). Trocaram o número.</p>
+      <p><span class="no">"Só para bens novos"</span> ❌ — leasing aceita bens <b>novos OU usados</b>, nacionais ou importados.</p>
+      <p><span class="no">"Arrendatário é automaticamente proprietário"</span> ❌ — o dono é a <b>arrendadora</b> durante todo o contrato. O arrendatário só vira dono se exercer a <b>opção de compra (VRG)</b> no final.</p>
+    </div>
+    <div class="ascii">  LEASING — NÚMEROS QUE CAEM
+   ISS .................... imposto que incide (serviço, municipal)
+   Operacional ........... prazo mínimo 90 dias
+   Financeiro ............ 2 anos (vida útil até 5) / 3 anos (acima)
+   Propriedade ........... da ARRENDADORA até o VRG ser pago</div>
+    <div class="box parable"><b>🧾 Parábola da Diária de Hotel:</b> Quando você se hospeda num hotel, está <b>contratando um serviço</b> — e sobre serviço incide ISS. O leasing é parecido: você "se hospeda" no bem (usa) pagando contraprestações de um <b>serviço</b> de arrendamento. Você não vira dono do quarto de hotel por dormir nele — assim como o arrendatário não vira dono do bem só por usá-lo.</div>
+    <div class="box insight"><b>💡 Insight:</b> Leasing = serviço → <b>ISS</b> (municipal). Guarde os prazos: operacional <b>90 dias</b>; financeiro <b>2/3 anos</b>. E o dono é sempre a arrendadora até o VRG.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Profissional x Qualificado ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Investidor Profissional × Qualificado <span class="tag">Classificação CVM</span></div>
+  <div class="qbody">
+    <div class="enun">A diferença entre investidores profissionais e qualificados é feita pelo órgão regulador pois:</div>
+    <ul class="opts">
+      <li class="wrong">Os produtos para investidores profissionais exigem maiores valores de aporte</li>
+      <li class="wrong">O investidor profissional deve ser um profissional do mercado financeiro</li>
+      <li class="correct">Os investimentos para investidores qualificados possuem níveis de risco em geral menores ✓</li>
+      <li class="wrong">É necessária uma certificação de investimentos para ser um investidor profissional &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Investimentos de qualificados têm, em geral, risco menor que os de profissionais</div>
+
+    <h3 class="sec">A "régua de proteção" da CVM</h3>
+    <p>A CVM separa os investidores por <b>patrimônio e conhecimento</b>. A lógica: <b>quanto mais rico/preparado, menos proteção o regulador precisa dar</b> — e mais acesso a produtos sofisticados (e arriscados) você ganha.</p>
+    <div class="ascii">  MENOS proteção / MAIS acesso a risco
+        ▲
+   PROFISSIONAL  → ≥ R$ 10 milhões em aplicações (+ termo)
+                   tb.: bancos, seguradoras, fundos, agentes
+                   autônomos/gestores (no exercício). Acessa os
+                   produtos MAIS sofisticados e arriscados.
+        │
+   QUALIFICADO   → ≥ R$ 1 milhão em aplicações (+ termo)
+                   ou quem tem CERTIFICAÇÃO (CFP, CGA, CNPI...).
+                   Acessa produtos de risco EM GERAL MENOR que o
+                   profissional.
+        │
+   VAREJO (geral)→ demais investidores. MAIOR proteção.
+        ▼
+  MAIS proteção / MENOS acesso a risco</div>
+    <div class="why">
+      <p><span class="ok">Qualificados → risco em geral menor</span> ✓ — os produtos exclusivos de <b>profissionais</b> (ofertas restritas, fundos mais sofisticados) são os mais arriscados; os acessíveis a qualificados são, em média, <b>menos arriscados</b>.</p>
+      <p><span class="no">"Produtos de profissionais exigem maior aporte"</span> ❌ — a diferença é o <b>patrimônio do investidor</b> (R$10M × R$1M), não o "aporte mínimo do produto".</p>
+      <p><span class="no">"Profissional deve trabalhar no mercado"</span> ❌ — basta ter R$ 10 milhões; não precisa ser profissional do mercado.</p>
+      <p><span class="no">"Certificação faz virar profissional"</span> ❌ — certificação (CFP, CGA…) torna você <b>qualificado</b>, não profissional.</p>
+    </div>
+    <div class="box parable"><b>🎢 Parábola dos Brinquedos do Parque:</b> No parque, as crianças pequenas (varejo) só andam nos brinquedos suaves — há muitas cercas de proteção. Os adolescentes (qualificados, R$1M) liberam brinquedos mais radicais. E os adultos (profissionais, R$10M) têm acesso à montanha-russa mais extrema, sem cercas. Quanto mais "altura" (patrimônio/conhecimento), menos proteção e mais risco liberado.</div>
+    <div class="box insight"><b>💡 Insight:</b> Decore os números: <b>Profissional ≥ R$ 10 mi</b>; <b>Qualificado ≥ R$ 1 mi</b> (ou certificado). Todo profissional é também qualificado — mas nem todo qualificado é profissional. Mais patrimônio = menos proteção = acesso a mais risco.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — WACC e Beta ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Beta e WACC (Custo Médio de Capital) <span class="tag">CAPM + estrutura de capital</span></div>
+  <div class="qbody">
+    <div class="enun">Capital de terceiros R$ 600.000; Capital próprio R$ 400.000; Taxa livre de risco 9% a.a.; Retorno de mercado 15% a.a.; Juros do capital de terceiros 20% a.a.; Impostos 50%; CAPM 12,6% a.a. O beta e o WACC são:</div>
+    <ul class="opts">
+      <li class="wrong">1,5 e 9,15%</li>
+      <li class="correct">0,6 e 11,04% ✓</li>
+      <li class="wrong">1,2 e 10,09%</li>
+      <li class="wrong">0,9 e 12,25%</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Beta = 0,6 &nbsp;|&nbsp; WACC = 11,04%</div>
+
+    <h3 class="sec">Passo 1 — Achar o Beta (CAPM ao contrário)</h3>
+    <div class="box calc">  CAPM:  Ke = Rf + β × (Rm − Rf)
+  12,6% = 9% + β × (15% − 9%)
+  12,6  = 9 + 6β   →   6β = 3,6   →   β = 0,6  ✓</div>
+
+    <h3 class="sec">Passo 2 — Montar o WACC (média ponderada)</h3>
+    <p>WACC = média do custo do capital próprio (Ke) e de terceiros (Kd), ponderada pela participação de cada um. O capital de terceiros ganha o <b>benefício fiscal</b> (juros abatem imposto):</p>
+    <div class="box calc">  Pesos:  Total = 600.000 + 400.000 = 1.000.000
+          Próprio (E)    = 400.000 → 40%
+          Terceiros (D)  = 600.000 → 60%
+
+  Custo de terceiros LÍQUIDO de imposto:
+          Kd × (1 − T) = 20% × (1 − 0,50) = 10%
+
+  WACC = 40% × Ke + 60% × Kd_líq
+       = 0,40 × 12,6% + 0,60 × 10%
+       = 5,04% + 6,00% = 11,04%  ✓</div>
+    <div class="why">
+      <p><span class="no">Outras alternativas</span> ❌ — erram no Beta (dividindo errado) ou <b>esquecem o benefício fiscal</b> da dívida. Sem o (1−T), o custo de terceiros viraria 20% e o WACC dispararia para 17,04%.</p>
+      <p><span class="ok">0,6 e 11,04%</span> ✓ — Beta pelo CAPM e WACC com a dívida já líquida de imposto.</p>
+    </div>
+    <div class="box parable"><b>🏗️ Parábola do Empreiteiro:</b> O WACC é o "custo médio do dinheiro" da empresa, como uma obra financiada por duas fontes: o dinheiro dos sócios (próprio, mais caro: 12,6%) e o do banco (terceiros, 20%, mas com "desconto do leão" porque os juros abatem imposto → vira 10%). Você faz a média <b>ponderada pelo tamanho de cada fonte</b> (40% sócios, 60% banco). O segredo é lembrar que a dívida tem o "cupom de desconto fiscal".</div>
+    <div class="box insight"><b>💡 Insight:</b> Dois passos: (1) Beta sai do CAPM isolando β; (2) WACC = pesos × custos, e a <b>dívida SEMPRE entra líquida de imposto</b> [Kd×(1−T)]. Esquecer o (1−T) é o erro nº 1.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 5 — Habilidade FPSB ===================== -->
+<div class="q">
+  <div class="qhead">Questão 5 — Habilidades Profissionais (FPSB) <span class="tag">Julgamento profissional</span></div>
+  <div class="qbody">
+    <div class="enun">Mesmo quando o cliente apresenta informações incompletas ou contraditórias, o planejador CFP® precisa tomar decisões embasadas e coerentes. Segundo o Perfil de Competências do FPSB, essa é a habilidade chamada:</div>
+    <ul class="opts">
+      <li>Segue a legislação</li>
+      <li class="correct">Toma decisões fundamentadas, mesmo quando conta com informações incompletas ou incoerentes ✓</li>
+      <li class="wrong">Realiza pesquisas adequadas ao analisar e formular estratégias &nbsp;←(marcada por você)</li>
+      <li>Demonstra ter raciocínio lógico e persuasivo</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Tomar decisões fundamentadas com informações incompletas (Julgamento profissional)</div>
+
+    <h3 class="sec">As habilidades profissionais do FPSB</h3>
+    <p>Além do conhecimento técnico, o FPSB exige <b>habilidades profissionais</b> (o "como" agir). Entre elas, a capacidade de <b>julgamento</b>: decidir bem mesmo sem ter todos os dados perfeitos — porque, na vida real, o cliente quase nunca traz informação completa e organizada.</p>
+    <div class="ascii">  HABILIDADES PROFISSIONAIS (exemplos)
+   • JULGAMENTO ....... decidir de forma fundamentada e coerente
+                        mesmo com dados INCOMPLETOS/contraditórios  ← aqui
+   • PESQUISA/ANÁLISE . levantar e examinar informações
+   • COMUNICAÇÃO ...... raciocínio lógico e persuasão
+   • CONDUTA/ÉTICA .... agir conforme princípios e legislação</div>
+    <div class="why">
+      <p><span class="ok">Toma decisões fundamentadas com info incompleta</span> ✓ — é a definição exata de <b>julgamento profissional</b>, o ponto central do enunciado.</p>
+      <p><span class="no">"Realiza pesquisas adequadas"</span> ❌ — é a habilidade de <b>análise/pesquisa</b> (levantar dados), diferente de <b>julgar/decidir</b> com o que se tem.</p>
+      <p><span class="no">"Segue a legislação"</span> ❌ — é conduta/ética, não a habilidade de decidir sob incerteza.</p>
+      <p><span class="no">"Raciocínio lógico e persuasivo"</span> ❌ — é comunicação, não julgamento.</p>
+    </div>
+    <div class="box parable"><b>🚑 Parábola do Médico no Plantão:</b> Chega um paciente desacordado, sem ficha, sem exames, com sintomas confusos. O bom médico <b>não trava</b> esperando dados perfeitos — ele decide com base na experiência e no que está disponível. Esse é o <b>julgamento profissional</b>. Pesquisar/pedir exames é outra habilidade (análise); decidir sob incerteza é julgamento.</div>
+    <div class="box insight"><b>💡 Insight:</b> Palavras-gatilho: "informações incompletas/contraditórias" + "tomar decisão" → <b>Julgamento</b>. "Levantar/examinar dados" → Pesquisa/Análise. "Convencer/explicar" → Comunicação.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<div class="pagebreak"></div>
+<h3 class="sec" style="font-size:14pt;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Lei 4.595/64</td><td>IFs privadas = <b>S.A.</b> + <b>ações nominativas</b>; exceção: cooperativas de crédito. (Lei criou CMN e BACEN.)</td></tr>
+  <tr><td>2</td><td>Leasing / tributo</td><td>Incide <b>ISS</b> (serviço, municipal). Operacional mín. 90 dias; financeiro 2/3 anos. Dono = arrendadora até o VRG.</td></tr>
+  <tr><td>3</td><td>Profissional × Qualificado</td><td>Profissional ≥ <b>R$ 10 mi</b>; Qualificado ≥ <b>R$ 1 mi</b> ou certificado. + patrimônio = − proteção = + risco liberado.</td></tr>
+  <tr><td>4</td><td>Beta e WACC</td><td>β do CAPM: 12,6 = 9 + 6β → β=<b>0,6</b>. WACC = 40%×12,6 + 60%×[20×(1−0,5)] = <b>11,04%</b>. Dívida entra líquida de IR!</td></tr>
+  <tr><td>5</td><td>Habilidade FPSB</td><td>Decidir com info incompleta = <b>Julgamento</b>. Levantar dados = Pesquisa/Análise. Convencer = Comunicação.</td></tr>
+</table>
+
+<div class="box insight" style="margin-top:16px;">
+<b>🧲 Conexão de ouro:</b> nas questões de cálculo (WACC), o erro recorrente é esquecer o <b>benefício fiscal da dívida</b> [Kd×(1−T)] — exatamente a mesma lógica do leasing, que também é amado pelas empresas pela vantagem tributária. Imposto muda o custo real: tenha sempre o "(1−T)" no radar.
+</div>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
