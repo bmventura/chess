@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 3)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt;
+      color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 3)</h2>
+  <div>
+    <span class="chip">4 questões comentadas</span>
+    <span class="chip">Taxa a termo • Reinvestimento</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== INTRO TAXA A TERMO ===================== -->
+<div class="box insight" style="margin-bottom:22px;">
+<b>📚 Conceito-base destas questões: TAXA A TERMO (forward rate).</b><br>
+A taxa a termo é a taxa de juros <b>"do futuro embutida no presente"</b> — quanto rende um trecho de tempo que começa mais à frente. Ela sai da regra de ouro: <b>aplicar direto no prazo longo tem que render igual a aplicar no prazo curto e depois "rolar" pela taxa a termo.</b> A fórmula é sempre a mesma:
+<div class="box calc" style="margin-top:8px;">(1 + i_longo)^(t_longo)  =  (1 + i_curto)^(t_curto) × (1 + termo)^(t_longo − t_curto)
+
+  → onde o tempo (t) vai em ANOS:  dias úteis ÷ 252</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Taxa a termo (du) ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Taxa a Termo entre Prazos (dias úteis) <span class="tag">Forward rate • base 252</span></div>
+  <div class="qbody">
+    <div class="enun">Taxas spot: 21 d.u. = 10% a.a.; 42 d.u. = 11% a.a.; 63 d.u. = 12% a.a. A taxa a termo, na base anual, <b>entre 42 e 63 dias úteis</b>, é aproximadamente de:</div>
+    <ul class="opts">
+      <li class="wrong">12,28%</li>
+      <li class="correct">14,03% ✓</li>
+      <li class="wrong">12,50% &nbsp;←(marcada por você)</li>
+      <li class="wrong">13,97%</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>14,03% a.a.</div>
+
+    <h3 class="sec">Resolvendo passo a passo</h3>
+    <p>Queremos a taxa do trecho que vai <b>de 42 até 63 dias úteis</b> (um intervalo de 21 d.u.). Usamos as spots de 42 d.u. (11%) e 63 d.u. (12%):</p>
+    <div class="box calc">  (1,12)^(63/252) = (1,11)^(42/252) × (1 + termo)^(21/252)
+
+  Lado dos 63 d.u.:  (1,12)^0,250   = 1,028737
+  Lado dos 42 d.u.:  (1,11)^0,1667  = 1,017546
+
+  (1 + termo)^(21/252) = 1,028737 / 1,017546 = 1,010998
+
+  Anualizando (elevar a 252/21 = 12):
+  1 + termo = 1,010998^12 = 1,1403
+  termo ≈ 14,03%  ✓</div>
+    <p>Repare: a taxa a termo (14,03%) é <b>maior</b> que as spots (11% e 12%). Faz sentido — como a curva está subindo, o "pedaço final" (42→63) precisa render bem mais para puxar a média do prazo longo para cima.</p>
+    <div class="why">
+      <p><span class="no">12,50%</span> ❌ — é a "interpolação ingênua" (meio do caminho entre 11% e 12% + um tiquinho). Taxa a termo <b>não é média</b> das spots.</p>
+      <p><span class="no">12,28% e 13,97%</span> ❌ — vêm de errar a base de tempo (usar dias corridos, ou esquecer de anualizar com 252/21).</p>
+    </div>
+    <div class="box parable"><b>🚌 Parábola da Viagem com Baldeação:</b> Ir direto de ônibus até a cidade C (63 d.u.) custa um tanto. Você também pode ir até a cidade B (42 d.u.) e pegar uma <b>segunda condução</b> de B até C (o trecho a termo). Como o preço total tem que ser o mesmo pelos dois caminhos, a passagem do "trecho B→C" fica <u>determinada</u>. Se a viagem fica mais cara quanto mais longe (curva subindo), esse último trecho é o mais "salgado" — por isso 14% &gt; 12%.</div>
+    <div class="box insight"><b>💡 Insight:</b> Taxa a termo <b>não se soma nem se faz média</b> — ela sai da <b>divisão dos fatores</b> (longo ÷ curto) e depois você <b>anualiza</b> elevando a (252 ÷ dias do trecho). Curva subindo → termo acima das spots.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Taxa a termo (anos, LTN) ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Taxa a Termo entre Anos (LTN) <span class="tag">Forward rate • base anual</span></div>
+  <div class="qbody">
+    <div class="enun">Uma LTN com vencimento em 3 anos está com taxa de retorno de 16% a.a. e outra LTN com vencimento em 2 anos projeta 10% a.a. A taxa a termo entre os prazos 2 e 3 anos é:</div>
+    <ul class="opts">
+      <li class="wrong">12,33% ao ano</li>
+      <li class="wrong">28,00% ao ano</li>
+      <li class="wrong">5,45% ao ano</li>
+      <li class="correct">29,00% ao ano ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>29,00% ao ano</div>
+
+    <h3 class="sec">Resolvendo passo a passo</h3>
+    <p>Aqui os prazos já são em <b>anos inteiros</b>, então fica mais limpo. Queremos o trecho do <b>ano 2 ao ano 3</b> (1 ano):</p>
+    <div class="box calc">  (1,16)^3 = (1,10)^2 × (1 + termo)^1
+
+  (1,16)^3 = 1,560896
+  (1,10)^2 = 1,210000
+
+  1 + termo = 1,560896 / 1,210000 = 1,2900
+  termo ≈ 29,00%  ✓</div>
+    <div class="why">
+      <p><span class="no">28,00%</span> ❌ — é o atalho <b>linear</b> (errado): 3×16% − 2×10% = 48 − 20 = 28. Ignora os juros compostos. A banca adora esse distrator!</p>
+      <p><span class="no">12,33% / 5,45%</span> ❌ — resultam de inverter os prazos ou de fazer média/subtração simples das taxas.</p>
+      <p><span class="ok">29,00%</span> ✓ — método correto, com fatores compostos.</p>
+    </div>
+    <div class="box parable"><b>📈 Parábola do "Esticão" Final:</b> Imagine que a média de 3 anos é 16% e a de 2 anos é só 10%. Para a média de 3 anos ser tão maior, aquele <b>3º ano sozinho</b> teve que "puxar muito" — ele compensa os dois anos fraquinhos. Por isso o ano isolado (29%) é bem mais alto que a média (16%). É como um aluno tirar 10 na última prova para subir a média do semestre inteiro.</div>
+    <div class="box insight"><b>💡 Insight:</b> A diferença entre 28% (errado) e 29% (certo) é juros compostos vs. lineares. Na CFP, <b>sempre componha</b> (use os fatores), nunca multiplique/subtraia taxas direto.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Síntese ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Habilidades de SÍNTESE (Processo Planejar) <span class="tag">Coleta × Análise × Síntese</span></div>
+  <div class="qbody">
+    <div class="enun">Dentre as afirmativas abaixo, são relacionadas à <b>síntese</b>:<br>
+      <b>I.</b> Otimizar estratégias para fazer recomendações;<br>
+      <b>II.</b> Fazer projeções de rentabilidade da carteira anual;<br>
+      <b>III.</b> Auxiliar o cliente a implementar recomendações.
+    </div>
+    <ul class="opts">
+      <li>I, II e III</li>
+      <li class="correct">I e III ✓</li>
+      <li>Apenas I</li>
+      <li class="wrong">I e II &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>I e III</div>
+
+    <h3 class="sec">As 3 grandes habilidades do planejador</h3>
+    <p>O Perfil de Competência agrupa as habilidades em <b>três etapas em sequência</b>:</p>
+    <div class="ascii">  COLETA   → reunir dados e informações do cliente
+             (objetivos, renda, patrimônio, perfil)
+       │
+       ▼
+  ANÁLISE  → examinar e PROJETAR cenários, calcular,
+             diagnosticar pontos fortes/fracos
+             (ex.: projeções de rentabilidade da carteira)  ← item II
+       │
+       ▼
+  SÍNTESE  → transformar a análise em AÇÃO:
+             otimizar estratégias, montar e fazer
+             recomendações e ajudar a IMPLEMENTAR     ← itens I e III</div>
+    <div class="why">
+      <p><span class="ok">I — Otimizar estratégias p/ recomendações</span> ✓ — é o ato de "juntar tudo" e formular o plano = <b>síntese</b>.</p>
+      <p><span class="no">II — Fazer projeções de rentabilidade</span> ❌ — projetar/calcular é <b>análise</b>, etapa anterior. Esse é o erro da alternativa "I e II".</p>
+      <p><span class="ok">III — Auxiliar a implementar recomendações</span> ✓ — colocar o plano em prática faz parte da <b>síntese</b> (entrega/implementação).</p>
+    </div>
+    <div class="box parable"><b>👨‍🍳 Parábola do Chef de Cozinha:</b> <b>Coleta</b> = ir ao mercado comprar os ingredientes (dados do cliente). <b>Análise</b> = provar, medir, testar temperos e prever como o prato vai ficar (projeções). <b>Síntese</b> = montar o prato final e servir na mesa (otimizar a estratégia e implementar). "Fazer projeção" é provar o tempero (análise); "montar e servir" é síntese.</p></div>
+    <div class="box insight"><b>💡 Insight:</b> Verbos de <b>SÍNTESE</b>: otimizar, recomendar, formular o plano, implementar. Verbos de <b>ANÁLISE</b>: projetar, calcular, diagnosticar, avaliar. "Projeção de rentabilidade" = análise (cai como pegadinha de síntese).</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Reinvestimento ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Retorno Anualizado com Reinvestimento <span class="tag">Juros compostos • capitalização</span></div>
+  <div class="qbody">
+    <div class="enun">Kleber investe R$ 20.000 num projeto que paga R$ 10.000 por mês durante 4 meses. Ele reaplica cada parcela recebida numa aplicação que rende 8% ao mês até o final do período. Considerando o efeito dos reinvestimentos, o retorno <b>anualizado</b> obtido por Kleber será de:</div>
+    <ul class="opts">
+      <li class="wrong">3533%</li>
+      <li class="correct">1044% ✓</li>
+      <li class="wrong">22,52%</li>
+      <li class="wrong">34,90% &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>1044% ao ano</div>
+
+    <h3 class="sec">Passo 1 — Levar cada parcela para o fim (mês 4)</h3>
+    <p>Cada R$ 10.000 recebido é reaplicado a 8% a.m. até o mês 4. Quanto mais cedo recebe, mais meses rende:</p>
+    <div class="box calc">  Parcela mês 1 → rende 3 meses: 10.000 × (1,08)^3 = 12.597,12
+  Parcela mês 2 → rende 2 meses: 10.000 × (1,08)^2 = 11.664,00
+  Parcela mês 3 → rende 1 mês:   10.000 × (1,08)^1 = 10.800,00
+  Parcela mês 4 → rende 0 mês:   10.000 × (1,08)^0 = 10.000,00
+  ─────────────────────────────────────────────────────────
+  Montante final no mês 4 ....................... R$ 45.061,12</div>
+
+    <h3 class="sec">Passo 2 — Achar a taxa mensal</h3>
+    <div class="box calc">  Investiu 20.000 → virou 45.061,12 em 4 meses
+  Fator total = 45.061,12 / 20.000 = 2,2531
+
+  Taxa mensal = 2,2531^(1/4) − 1 = 1,2252 − 1 = 22,52% a.m.
+  (este é o distrator "22,52%" — é a taxa MENSAL, não a anual!)</div>
+
+    <h3 class="sec">Passo 3 — Anualizar (12 meses)</h3>
+    <div class="box calc">  (1 + 0,2252)^12 − 1 = 1,2252^12 − 1
+  = 11,44 − 1 = 10,44  →  1044% ao ano  ✓</div>
+    <div class="why">
+      <p><span class="no">22,52%</span> ❌ — é a taxa <b>mensal</b>. O enunciado pede a <b>anualizada</b>; faltou elevar à 12ª potência.</p>
+      <p><span class="no">34,90% e 3533%</span> ❌ — vêm de anualizar de forma inconsistente (misturar o período de 4 meses com 12, ou capitalizar a base errada).</p>
+      <p><span class="ok">1044%</span> ✓ — taxa mensal de 22,52% composta por 12 meses.</p>
+    </div>
+    <div class="box parable"><b>⛄ Parábola da Bola de Neve:</b> Cada parcela que Kleber recebe é uma bolinha de neve que ele joga ladeira abaixo <b>imediatamente</b> (reinveste a 8%). Quanto antes joga, mais a bola rola e cresce. Por isso a 1ª parcela (que rola 3 meses) chega bem maior que a última. No fim, juntando todas, o ganho mensal é alto (22,52%) — e <b>composto por 12 meses</b> vira um número gigante (1044%). O segredo é nunca deixar o dinheiro parado.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Anualizar" = <b>(1 + i_mensal)^12 − 1</b>, NUNCA i_mensal × 12. E cuidado: a taxa mensal correta (22,52%) costuma estar entre as alternativas justamente para você parar cedo e errar. Leia se o pedido é mensal ou anual.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<div class="pagebreak"></div>
+<h3 class="sec" style="font-size:14pt;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Taxa a termo (d.u.)</td><td>(1+i_longo)^t = (1+i_curto)^t × (1+termo)^Δt. Divide os fatores e anualiza com 252/Δdias. <b>14,03%</b>.</td></tr>
+  <tr><td>2</td><td>Taxa a termo (anos)</td><td>(1,16)³ / (1,10)² − 1 = <b>29,00%</b>. O 28% é o atalho linear ERRADO (3×16 − 2×10).</td></tr>
+  <tr><td>3</td><td>Habilidades / Síntese</td><td>Coleta → Análise (projetar/calcular) → Síntese (otimizar, recomendar, implementar). Projeção = análise. <b>I e III</b>.</td></tr>
+  <tr><td>4</td><td>Retorno c/ reinvestimento</td><td>Leva parcelas ao fim (×1,08^n) → acha taxa mensal (22,52%) → anualiza (^12) = <b>1044%</b>.</td></tr>
+</table>
+
+<div class="box insight" style="margin-top:16px;">
+<b>🧲 O fio condutor de TODAS estas questões:</b> juros se <b>multiplicam</b> (compõem), nunca se somam. Seja na taxa a termo (divide fatores), seja no reinvestimento (eleva à potência), o erro clássico é tratar juros de forma linear. Pensou "somar/média de taxa" → quase sempre é pegadinha.
+</div>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
