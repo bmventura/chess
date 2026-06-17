@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 9)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 9)</h2>
+  <div>
+    <span class="chip">5 questões comentadas</span>
+    <span class="chip">Balanço de Pagamentos • VP • Estatística</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Balanço de Pagamentos ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Balanço de Pagamentos (captação × cupons) <span class="tag">Macroeconomia</span></div>
+  <div class="qbody">
+    <div class="enun">O Brasil emitiu um título de dívida externa (Global 2030) de US$ 5 bilhões, com cupons anuais de 5%. Para registrar essas movimentações de capitais externos no Balanço de Pagamentos, a <b>captação</b> dos recursos e o <b>pagamento dos cupons</b> são contabilizados, respectivamente, nas contas:</div>
+    <ul class="opts">
+      <li class="wrong">Transações Correntes e de Capitais &nbsp;←(marcada por você)</li>
+      <li class="wrong">Renda Secundária e Serviços e Rendas</li>
+      <li class="wrong">Serviços e Rendas e Capitais</li>
+      <li class="correct">De Capitais, Serviços e Rendas ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Captação → Conta de Capitais | Cupons → Serviços e Rendas</div>
+
+    <h3 class="sec">A estrutura do Balanço de Pagamentos</h3>
+    <div class="ascii">  BALANÇO DE PAGAMENTOS
+  ├─ TRANSAÇÕES CORRENTES
+  │    • Balança comercial (bens)
+  │    • Serviços
+  │    • RENDAS (juros, lucros, dividendos)  ← cupons entram aqui
+  │    • Renda secundária (transferências)
+  └─ CONTA CAPITAL e FINANCEIRA
+       • Entrada/saída de CAPITAIS           ← captação entra aqui
+         (investimentos, empréstimos, emissão de títulos)</div>
+    <div class="why">
+      <p><span class="ok">Captação → Conta de Capitais</span> ✓ — quando estrangeiros compram nosso título, <b>entra dinheiro</b> (capital externo) → é movimentação de <b>capital</b> (Conta Financeira/de Capitais).</p>
+      <p><span class="ok">Cupons → Serviços e Rendas</b></span> ✓ — pagar juros (cupom) a estrangeiros é <b>renda</b> enviada ao exterior → conta de <b>Rendas</b> (dentro de Transações Correntes).</p>
+      <p><span class="no">"Transações Correntes e de Capitais"</span> ❌ — colocaria a <b>captação</b> em Transações Correntes. Mas captar empréstimo é <b>capital</b>, não conta corrente. Inverteu.</p>
+    </div>
+    <div class="box parable"><b>💳 Parábola do Empréstimo Pessoal:</b> Quando você <b>pega</b> um empréstimo, o dinheiro que entra na conta não é "renda" sua — é um <b>capital</b> que você terá de devolver (vai no "balanço de dívidas"). Mas os <b>juros</b> que você paga todo mês <b>são</b> uma despesa de <b>renda</b>. No país é igual: captar (emitir título) = capital; pagar cupom (juro) = renda.</div>
+    <div class="box insight"><b>💡 Insight:</b> Separe o "principal" da "renda": <b>movimento do principal</b> (captar/amortizar empréstimos, investimentos) → <b>Conta de Capitais/Financeira</b>; <b>juros, lucros e dividendos</b> → <b>Conta de Rendas</b> (Transações Correntes).</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — À vista x parcelado ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Comprar à Vista × Parcelado (Valor Presente) <span class="tag">Matemática financeira</span></div>
+  <div class="qbody">
+    <div class="enun">O cliente pode parcelar o carro em <b>36 parcelas de R$ 2.000,00</b>. Ele tem o dinheiro aplicado rendendo <b>9% a.a.</b> Qual o <b>valor máximo</b> que ele deveria propor para pagar à vista?</div>
+    <ul class="opts">
+      <li class="wrong">R$ 62.893,61</li>
+      <li class="wrong">R$ 62.892,85</li>
+      <li class="correct">R$ 63.218,07 ✓</li>
+      <li class="wrong">R$ 65.420,00</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 63.218,07</div>
+
+    <h3 class="sec">A lógica: o "preço justo à vista" = valor presente das parcelas</h3>
+    <p>O cliente só deve pagar à vista, no máximo, o <b>valor presente</b> das 36 parcelas, descontadas pela taxa que o dinheiro dele <b>renderia</b> (9% a.a.). Se a loja pedir mais que isso, é melhor financiar e deixar o dinheiro rendendo.</p>
+    <div class="box calc">  ⚠️ A taxa é 9% AO ANO, mas as parcelas são MENSAIS.
+  Use a taxa EQUIVALENTE mensal (composta), não 9/12:
+
+  i_mensal = (1,09)^(1/12) − 1 = 0,7207% a.m.
+
+  VP = PMT × [1 − (1+i)^−n] / i
+     = 2.000 × [1 − (1,007207)^−36] / 0,007207
+     = 2.000 × 31,609 = R$ 63.218,07  ✓</div>
+    <div class="why">
+      <p><span class="no">R$ 62.893,61 / 62.892,85</span> ❌ — usaram a taxa <b>proporcional</b> (9% ÷ 12 = 0,75% a.m.), que está errada para converter "a.a." em mensal. O certo é a taxa <b>equivalente</b> (composta), que dá 0,7207%.</p>
+      <p><span class="no">R$ 65.420,00</span> ❌ — perto da soma simples das parcelas sem descontar o valor do dinheiro no tempo.</p>
+      <p><span class="ok">R$ 63.218,07</span> ✓ — valor presente com a taxa equivalente mensal.</p>
+    </div>
+    <div class="box calc">  HP 12C:
+   2000  CHS  PMT
+   36  n
+   0,7207  i        (taxa equivalente mensal)
+   PV   →  63.218,07</div>
+    <div class="box parable"><b>⚖️ Parábola da Troca Justa:</b> Pagar à vista é "abrir mão" de um dinheiro que renderia 9% a.a. parado na aplicação. O valor presente responde: "quanto vale hoje a corrente de 36 pagamentos futuros?". Se a loja pede menos que R$ 63.218, vale pagar à vista; se pede mais, melhor manter o dinheiro rendendo e parcelar. É o ponto de <b>indiferença</b>.</div>
+    <div class="box insight"><b>💡 Insight:</b> Taxa <b>proporcional</b> (÷12) ≠ taxa <b>equivalente</b> (raiz 12). Para juros compostos, "a.a. → a.m." é sempre <b>(1+i)^(1/12) − 1</b>. A diferença parece pequena, mas é o que separa a resposta certa das iscas.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Inflação de equilíbrio ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Inflação Mínima para Escolher o IPCA+ <span class="tag">Fisher / breakeven</span></div>
+  <div class="qbody">
+    <div class="enun">Dois títulos: <b>A</b> = prefixado de 5,25% a.a.; <b>B</b> = 4% a.a. + IPCA. Qual o valor mínimo esperado para o IPCA que justificaria escolher o <b>título B</b>?</div>
+    <ul class="opts">
+      <li class="wrong">1,30% a.a. &nbsp;←(marcada por você)</li>
+      <li class="correct">1,20% a.a. ✓</li>
+      <li class="wrong">1,15% a.a.</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>1,20% a.a. (inflação de equilíbrio)</div>
+
+    <h3 class="sec">A inflação de equilíbrio (breakeven)</h3>
+    <p>O título B só vale a pena se render <b>mais</b> que o A. Como B é "4% + IPCA", os dois fatores se <b>multiplicam</b> (Fisher), não se somam:</p>
+    <div class="box calc">  Para B > A:
+   (1 + 0,04) × (1 + IPCA) > (1 + 0,0525)
+   1 + IPCA > 1,0525 / 1,04
+   1 + IPCA > 1,012019
+   IPCA > 1,20% a.a.   ✓  (ponto de equilíbrio)</div>
+    <p>Se o IPCA ficar <b>acima de 1,20%</b>, o título B (IPCA+) rende mais; abaixo disso, o prefixado A é melhor.</p>
+    <div class="why">
+      <p><span class="no">1,30%</span> ❌ — provável tentativa por subtração simples/aproximada (5,25 − 4 = 1,25 e arredondamento). A diferença não é linear — tem que usar Fisher (divisão dos fatores).</p>
+      <p><span class="no">1,15%</span> ❌ — está <b>abaixo</b> do ponto de equilíbrio; nesse caso o prefixado A ainda ganharia.</p>
+      <p><span class="ok">1,20%</span> ✓ — (1,0525 / 1,04) − 1 = 1,20%.</p>
+    </div>
+    <div class="box parable"><b>🏁 Parábola da Corrida Empatada:</b> Imagine dois corredores: A largou com vantagem fixa (5,25%) e B corre "4% + o vento (IPCA) nas costas". A pergunta é: de quanto precisa ser o vento para B alcançar A? A resposta (1,20%) é o ponto em que os dois cruzam a linha juntos. Vento mais forte → B ganha; mais fraco → A ganha.</div>
+    <div class="box insight"><b>💡 Insight:</b> Prefixado × (IPCA+): a "inflação de equilíbrio" = (1+prefixado)/(1+taxa real) − 1. Acima dela, escolha o IPCA+; abaixo, o prefixado. NUNCA subtraia taxas direto — use Fisher.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Seguro habitacional ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Seguro Habitacional (DFI × Residencial) <span class="tag">Gestão de Riscos e Seguros</span></div>
+  <div class="qbody">
+    <div class="enun">Sobre o seguro habitacional no financiamento imobiliário:<br>
+      <b>I –</b> Além do seguro habitacional, pode-se contratar um seguro residencial para proteger móveis e bens dentro do imóvel;<br>
+      <b>II –</b> O seguro habitacional é opcional;<br>
+      <b>III –</b> Esse seguro cobre danos físicos ao imóvel (incêndio, raio, explosão, vendaval, desmoronamento de paredes/partes estruturais).<br>
+      Está correto o que se afirma em:</div>
+    <ul class="opts">
+      <li class="correct">I e III, apenas ✓</li>
+      <li class="wrong">II e III, apenas &nbsp;←(marcada por você)</li>
+      <li class="wrong">I, II e III</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>I e III, apenas</div>
+
+    <h3 class="sec">O que cada item diz</h3>
+    <div class="why">
+      <p><span class="ok">I — CERTO</span> ✓ — o seguro <b>residencial</b> é um complemento opcional que cobre o <b>conteúdo</b> (móveis, eletrodomésticos, bens). Pode somar ao habitacional.</p>
+      <p><span class="no">II — ERRADO</span> ❌ — o seguro habitacional (MIP + DFI) é <b>OBRIGATÓRIO</b> no financiamento imobiliário, não opcional. Esse é o item que derruba a alternativa "II e III".</p>
+      <p><span class="ok">III — CERTO</span> ✓ — descreve exatamente o <b>DFI (Danos Físicos ao Imóvel)</b>: incêndio, raio, explosão, vendaval, desmoronamento estrutural.</p>
+    </div>
+    <div class="ascii">  SEGUROS NO FINANCIAMENTO IMOBILIÁRIO
+   OBRIGATÓRIOS (seguro habitacional):
+    • MIP → Morte e Invalidez Permanente (protege a PESSOA)
+    • DFI → Danos Físicos ao Imóvel    (protege a ESTRUTURA)
+   OPCIONAL (à parte):
+    • Seguro RESIDENCIAL → protege o CONTEÚDO (móveis e bens)</div>
+    <div class="box parable"><b>🏠 Parábola das Três Camadas:</b> Pense numa casa em camadas. O <b>MIP</b> protege quem <b>mora</b> (a pessoa). O <b>DFI</b> protege a <b>casca</b> (paredes, estrutura — incêndio, vendaval). O seguro <b>residencial</b> protege o <b>recheio</b> (móveis, TV, geladeira). As duas primeiras camadas são obrigatórias no financiamento; o recheio é opcional.</div>
+    <div class="box insight"><b>💡 Insight:</b> Seguro habitacional (MIP + DFI) = <b>OBRIGATÓRIO</b> (nunca "opcional"). Pegadinha clássica é dizer que é opcional. O residencial (conteúdo) é que é opcional.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 5 — Intervalo de confiança ===================== -->
+<div class="q">
+  <div class="qhead">Questão 5 — Intervalo de Confiança e Desvio-Padrão <span class="tag">Estatística • distribuição normal</span></div>
+  <div class="qbody">
+    <div class="enun">Uma ação vale R$ 20,00 com desvio-padrão de R$ 2,00. Com qual percentual de confiança podemos afirmar que a ação oscilará entre <b>R$ 16,08 e R$ 23,92</b>?</div>
+    <ul class="opts">
+      <li class="wrong">50%</li>
+      <li class="wrong">99% &nbsp;←(marcada por você)</li>
+      <li class="wrong">68%</li>
+      <li class="correct">95% ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>95% (≈ 2 desvios-padrão, mais precisamente 1,96σ)</div>
+
+    <h3 class="sec">Quantos desvios-padrão cabem no intervalo?</h3>
+    <div class="box calc">  Distância do centro até a borda:
+   23,92 − 20,00 = 3,92   (e 20,00 − 16,08 = 3,92)
+
+  Em "número de desvios-padrão":
+   3,92 / 2,00 = 1,96 σ
+
+  ±1,96 desvios-padrão  →  95% de confiança  ✓</div>
+    <p>Na distribuição normal, cada "largura" de desvio-padrão corresponde a um nível de confiança conhecido:</p>
+    <div class="ascii">  TABELA-CHAVE (decore!)
+   ±1,00 σ  →  68%
+   ±1,64 σ  →  90%
+   ±1,96 σ  →  95%     ← este caso (3,92 / 2,00 = 1,96)
+   ±2,58 σ  →  99%</div>
+    <div class="why">
+      <p><span class="no">99%</span> ❌ — exigiria ±2,58σ = ±5,16 → intervalo R$ 14,84 a R$ 25,16. Bem mais largo que o dado.</p>
+      <p><span class="no">68%</span> ❌ — seria ±1σ = ±2,00 → R$ 18,00 a R$ 22,00. Estreito demais.</p>
+      <p><span class="no">50%</span> ❌ — nem corresponde a um múltiplo padrão de σ.</p>
+      <p><span class="ok">95%</span> ✓ — exatamente ±1,96σ (3,92 = 1,96 × 2,00).</p>
+    </div>
+    <div class="box parable"><b>🎯 Parábola do Alvo de Dardos:</b> O preço médio (R$ 20) é o centro do alvo; o desvio-padrão (R$ 2) é o "tamanho do tremor" da sua mão. Quanto mais largo o anel que você desenha em volta do centro, mais dardos caem dentro. Um anel de ±1,96 "tremores" captura 95% dos dardos. Para capturar 99%, precisaria de um anel bem maior (±2,58).</div>
+    <div class="box insight"><b>💡 Insight:</b> O atalho: (borda − média) ÷ desvio = nº de σ. Depois traduza: 1σ→68%, 1,96σ→95%, 2,58σ→99%. O "1,96" é o número mágico do 95% — aparece muito em risco (VaR) e finanças.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Balanço de Pagamentos</td><td>Captar (principal) → Conta de <b>Capitais</b>. Pagar cupom (juros) → <b>Rendas</b> (Serviços e Rendas).</td></tr>
+  <tr><td>2</td><td>À vista × parcelado</td><td>Valor justo à vista = VP das parcelas. Use taxa <b>equivalente</b> [(1,09)^(1/12)−1], não 9/12. = <b>R$ 63.218,07</b>.</td></tr>
+  <tr><td>3</td><td>Inflação de equilíbrio</td><td>(1,0525 / 1,04) − 1 = <b>1,20%</b>. Acima → IPCA+; abaixo → prefixado. Fisher, não subtração.</td></tr>
+  <tr><td>4</td><td>Seguro habitacional</td><td>MIP + DFI = <b>obrigatórios</b> (não opcional!). Residencial (conteúdo) = opcional. Resposta: <b>I e III</b>.</td></tr>
+  <tr><td>5</td><td>Intervalo de confiança</td><td>nº de σ = (borda − média)/desvio. 1σ→68%, <b>1,96σ→95%</b>, 2,58σ→99%. Aqui 3,92/2 = 1,96 → <b>95%</b>.</td></tr>
+</table>
+
+<div class="box insight" style="margin-top:16px;">
+<b>🧲 Padrão que se repete:</b> em matemática financeira, juros se <b>compõem</b> (taxa equivalente, Fisher na inflação de equilíbrio) — nunca caia na tentação de dividir/subtrair taxas linearmente. É o erro que liga as questões 2 e 3 desta lista.
+</div>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Boa prova! 🎓📚</p>
+
+</body>
+</html>
