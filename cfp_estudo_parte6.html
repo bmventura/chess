@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 6)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.amort { width: 100%; border-collapse: collapse; font-size: 8.7pt; margin: 10px 0; }
+  table.amort th { background: #6a11cb; color:#fff; padding: 6px; }
+  table.amort td { border: 1px solid #e3e3ea; padding: 5px 7px; text-align: right; }
+  table.amort td.c { text-align: center; }
+  table.amort tr.hl td { background: #e7f6ec; font-weight: 700; color:#1d6e37; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 6 · final do simulado)</h2>
+  <div>
+    <span class="chip">5 questões comentadas</span>
+    <span class="chip">Tabela Price • WACC • Taxa a termo</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Tabela Price ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Tabela Price: Juros da Última Parcela <span class="tag">Sistema de amortização</span></div>
+  <div class="qbody">
+    <div class="enun">Financiamento de R$ 200.000,00 pela <b>Tabela Price</b>, taxa de 5% a.m., em 4 parcelas mensais e consecutivas. Qual o valor de <b>juros</b> pagos na <b>4ª prestação</b>?</div>
+    <ul class="opts">
+      <li class="wrong">R$ 5.243,76 &nbsp;(juros da 3ª parcela)</li>
+      <li class="wrong">R$ 10.000,00 &nbsp;(juros da 1ª parcela)</li>
+      <li class="correct">R$ 2.685,83 ✓ &nbsp;(juros da 4ª parcela)</li>
+      <li class="wrong">R$ 7.679,88 &nbsp;(juros da 2ª parcela)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 2.685,83</div>
+
+    <h3 class="sec">Como funciona a Tabela Price</h3>
+    <p>Na Price, a <b>parcela é fixa</b> (todas iguais). Dentro de cada parcela há duas partes: <b>juros</b> (sobre o saldo devedor) e <b>amortização</b> (o que abate a dívida). Como o saldo cai a cada mês, os <b>juros caem</b> e a <b>amortização cresce</b>.</p>
+    <div class="box calc">  Parcela fixa (PMT):
+  PMT = PV × i / [1 − (1+i)^−n]
+      = 200.000 × 0,05 / [1 − (1,05)^−4]
+      = 10.000 / 0,177298 = R$ 56.401,95</div>
+
+    <p>Agora a tabela de amortização (juros = 5% sobre o saldo do mês anterior):</p>
+    <table class="amort">
+      <tr><th>Mês</th><th>Saldo inicial</th><th>Juros (5%)</th><th>Amortização</th><th>Parcela</th><th>Saldo final</th></tr>
+      <tr><td class="c">1</td><td>200.000,00</td><td>10.000,00</td><td>46.401,95</td><td>56.401,95</td><td>153.598,05</td></tr>
+      <tr><td class="c">2</td><td>153.598,05</td><td>7.679,90</td><td>48.722,05</td><td>56.401,95</td><td>104.876,00</td></tr>
+      <tr><td class="c">3</td><td>104.876,00</td><td>5.243,80</td><td>51.158,15</td><td>56.401,95</td><td>53.717,85</td></tr>
+      <tr class="hl"><td class="c">4</td><td>53.717,85</td><td>2.685,83</td><td>53.716,12</td><td>56.401,95</td><td>0,00</td></tr>
+    </table>
+    <p>Os juros da 4ª parcela = 5% sobre o saldo do mês 3 (≈ R$ 53.717) = <b>R$ 2.685,83</b>. ✓</p>
+    <div class="why">
+      <p><span class="no">R$ 10.000</span> ❌ = juros da <b>1ª</b> parcela (200.000 × 5%). É o maior, porque o saldo está cheio.</p>
+      <p><span class="no">R$ 7.679,88</span> ❌ = juros da <b>2ª</b>; <span class="no">R$ 5.243,76</span> ❌ = juros da <b>3ª</b>. As bancas põem todos os juros do cronograma para você se perder na parcela.</p>
+      <p><span class="ok">R$ 2.685,83</span> ✓ = juros da <b>4ª</b> (última) — o menor de todos, pois o saldo já está quase zerado.</p>
+    </div>
+    <div class="box parable"><b>⛏️ Parábola do Mineiro na Montanha:</b> A dívida é uma montanha. Todo mês você paga a mesma "diária" (parcela fixa). No começo, a montanha é alta, então boa parte da diária vai só para o "pedágio" (juros) e pouco para cavar (amortizar). Conforme a montanha diminui, o pedágio encolhe e você cava cada vez mais rápido. Na última diária, a montanha é só um morrinho — o pedágio (juros) é o menor de todos: R$ 2.685.</div>
+    <div class="box insight"><b>💡 Insight:</b> Price = parcela FIXA, juros DECRESCENTES, amortização CRESCENTE. Juros de qualquer mês = i × saldo do mês ANTERIOR. A última parcela sempre tem o MENOR juros. (Atalho: juros da última ≈ i × última amortização ≈ 5% × 53.717 = 2.685.)</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — WACC ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — WACC (Custo Médio Ponderado de Capital) <span class="tag">Estrutura de capital + IR</span></div>
+  <div class="qbody">
+    <div class="enun">Empresa com R$ 100.000 de capital de terceiros e R$ 300.000 de capital próprio. Custo do capital próprio (Ke) = 20% a.a.; custo de terceiros (Kd) = 15% a.a.; alíquota de IR = 40%. O WACC ao ano será de:</div>
+    <ul class="opts">
+      <li class="wrong">18,75% &nbsp;(esqueceu o benefício fiscal)</li>
+      <li class="wrong">14,5%</li>
+      <li class="correct">17,25% ✓</li>
+      <li class="wrong">16,5%</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>17,25% a.a.</div>
+
+    <h3 class="sec">Montando o WACC</h3>
+    <div class="box calc">  Pesos:  Total = 100.000 + 300.000 = 400.000
+          Próprio (E) = 300.000 → 75%
+          Terceiros (D) = 100.000 → 25%
+
+  Dívida LÍQUIDA de imposto:
+          Kd × (1 − T) = 15% × (1 − 0,40) = 15% × 0,60 = 9%
+
+  WACC = 75% × Ke + 25% × Kd_líq
+       = 0,75 × 20% + 0,25 × 9%
+       = 15,00% + 2,25% = 17,25%  ✓</div>
+    <div class="why">
+      <p><span class="no">18,75%</span> ❌ = 0,75×20% + 0,25×15% — <b>esqueceu o (1−T)</b>. Esse é o distrator nº 1 (e o erro mais comum na prova).</p>
+      <p><span class="no">14,5% e 16,5%</span> ❌ — vêm de inverter os pesos (trocar próprio por terceiros) ou aplicar a alíquota no lado errado.</p>
+      <p><span class="ok">17,25%</span> ✓ — pesos corretos e dívida líquida de IR.</p>
+    </div>
+    <div class="box parable"><b>🛒 Parábola das Duas Fontes de Dinheiro:</b> A empresa "compra" dinheiro em duas lojas: a dos sócios (75% do total, custa 20%) e a do banco (25%, custa 15% — mas com "cashback do leão", pois juros abatem imposto, virando 9%). O custo médio é a média <b>ponderada pelo quanto você comprou em cada loja</b>. Quem esquece o cashback da dívida paga "caro demais" no cálculo (18,75% em vez de 17,25%).</div>
+    <div class="box insight"><b>💡 Insight:</b> Roteiro do WACC: (1) ache os pesos E/V e D/V; (2) deixe a dívida líquida de IR [Kd×(1−T)]; (3) faça a média ponderada. O capital próprio NÃO tem benefício fiscal — só a dívida.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Denúncia Código de Ética ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Denúncia ao Código de Ética (Planejar) <span class="tag">Quem pode denunciar e como</span></div>
+  <div class="qbody">
+    <div class="enun">Kleber descobre que Gabriel age em desacordo com os princípios do Código de Ética da Planejar e deseja fazer uma <b>denúncia anônima</b>. Conforme o Código de Ética e Responsabilidade Profissional, a denúncia contra violações dos Princípios pode ser feita:</div>
+    <ul class="opts">
+      <li class="wrong">Apenas por profissionais CFP®, por escrito, não sendo necessária a identificação</li>
+      <li class="wrong">Por qualquer pessoa, por escrito, não sendo necessária a identificação &nbsp;←(marcada por você)</li>
+      <li class="correct">Por qualquer pessoa, desde que por escrito e com identificação do denunciante ✓</li>
+      <li class="wrong">Apenas por profissionais CFP®, desde que por escrito e com identificação</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Qualquer pessoa, por escrito e COM identificação (não pode ser anônima)</div>
+
+    <h3 class="sec">As duas regras de ouro da denúncia</h3>
+    <div class="ascii">  QUEM pode denunciar? → QUALQUER PESSOA
+                          (não precisa ser CFP®/associado)
+  COMO?                → POR ESCRITO + COM IDENTIFICAÇÃO
+                          (NÃO é permitida denúncia anônima)</div>
+    <p>O detalhe central: Kleber queria denunciar <b>anonimamente</b> — e é justamente isso que <b>não pode</b>. A denúncia exige <b>identificação do denunciante</b> (responsabilidade por trás da acusação, evitando denúncias levianas). Em compensação, <b>não é preciso ser profissional CFP®</b> para denunciar: qualquer pessoa (um cliente, por exemplo) pode.</p>
+    <div class="why">
+      <p><span class="no">"Sem necessidade de identificação"</span> ❌ — a denúncia <b>não pode ser anônima</b>; precisa identificar quem denuncia.</p>
+      <p><span class="no">"Apenas por profissionais CFP®"</span> ❌ — restringe demais; qualquer pessoa pode denunciar.</p>
+      <p><span class="ok">Qualquer pessoa + por escrito + com identificação</span> ✓ — combina abertura (qualquer um) com responsabilidade (identificado).</p>
+    </div>
+    <div class="box parable"><b>📮 Parábola do Boletim de Ocorrência:</b> Para registrar um B.O. na delegacia, qualquer cidadão pode ir (não precisa ser policial) — mas você precisa se <b>identificar</b> e assinar. Não existe "B.O. anônimo" com valor formal, porque toda acusação séria exige um responsável por trás. A denúncia ética funciona igual: aberta a todos, mas assinada.</div>
+    <div class="box insight"><b>💡 Insight:</b> Decore o par: <b>QUALQUER pessoa</b> (inclusão) + <b>COM identificação</b>, por escrito (responsabilidade). Se a alternativa disser "anônima" ou "apenas CFP®", está errada.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Rendimento da carteira ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Rendimento da Carteira (renda × valorização) <span class="tag">Renda corrente vs ganho de capital</span></div>
+  <div class="qbody">
+    <div class="enun">Carteira de R$ 1.000.000: 30% em CDB prefixado a 10%; 15% em ações da Petrobrás que valorizaram 10% a.a. e pagam dividendos de 7% a.a.; 30% em imóveis que valorizaram 35% a.a. e rendem 10% a.a. de aluguel; 25% em debêntures que pagam 15% a.a. Qual o <b>rendimento</b> da carteira ao ano?</div>
+    <ul class="opts">
+      <li class="wrong">10,45%</li>
+      <li class="wrong">13,15%</li>
+      <li class="wrong">11,95%</li>
+      <li class="correct">10,80% ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>10,80% a.a.</div>
+
+    <h3 class="sec">A pegadinha: RENDIMENTO ≠ VALORIZAÇÃO</h3>
+    <p>"Rendimento" é a <b>renda corrente</b> que o ativo paga no bolso (juros, dividendos, aluguel). A <b>valorização</b> (ganho de capital) é a alta do <b>preço</b> do ativo — não é "rendimento" e <b>não entra</b> aqui. Por isso ignoramos os 10% das ações e os 35% dos imóveis (valorizações).</p>
+    <div class="box calc">  RENDA de cada fatia (só o que "cai na conta"):
+   30% CDB ........ 10%  (juros)      → 0,30 × 10% = 3,00%
+   15% ações ...... 7%   (dividendos) → 0,15 × 7%  = 1,05%
+   30% imóveis .... 10%  (aluguel)    → 0,30 × 10% = 3,00%
+   25% debêntures . 15%  (juros)      → 0,25 × 15% = 3,75%
+  ────────────────────────────────────────────────────────
+  RENDIMENTO TOTAL = 3,00 + 1,05 + 3,00 + 3,75 = 10,80%  ✓</div>
+    <div class="why">
+      <p><span class="no">13,15% / 11,95% / 10,45%</span> ❌ — surgem de misturar (parte da) <b>valorização</b> no cálculo, que não é rendimento. A valorização de ações (10%) e imóveis (35%) é "isca": infla a conta de quem não separa renda de ganho de capital.</p>
+      <p><span class="ok">10,80%</span> ✓ — apenas a renda corrente (juros + dividendos + aluguel), ponderada pelos pesos.</p>
+    </div>
+    <div class="box parable"><b>🐄 Parábola da Vaca Leiteira:</b> Sua vaca (o ativo) te dá <b>leite todo dia</b> (o rendimento: dividendos, aluguel, juros) e, com o tempo, também <b>engorda e vale mais</b> (a valorização). Quando perguntam "quanto a vaca <i>rende</i>?", a resposta é o <b>leite</b> — não o ganho de peso. O ganho de peso só vira dinheiro no dia em que você <b>vende</b> a vaca (ganho de capital). Rendimento = leite; valorização = engorda.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Rendimento/renda" → some só juros, dividendos e aluguéis. "Retorno total" → aí sim soma valorização + renda. Leu "valorizou X%"? Provavelmente é isca para a conta de rendimento.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 5 — Taxa a termo (curva invertida) ===================== -->
+<div class="q">
+  <div class="qhead">Questão 5 — Taxa a Termo com Curva Invertida <span class="tag">Forward rate • base 252</span></div>
+  <div class="qbody">
+    <div class="enun">Uma LTN de 200 d.u. rende 12% a.a.; outra LTN, mais curta, de 80 d.u., rende 14% a.a. A taxa a termo entre os prazos de 80 e 200 dias úteis é aproximadamente:</div>
+    <ul class="opts">
+      <li class="wrong">12,15% a.a.</li>
+      <li class="wrong">7,05% a.a.</li>
+      <li class="correct">10,69% a.a. ✓</li>
+      <li class="wrong">4,95% a.a.</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>10,69% a.a.</div>
+
+    <h3 class="sec">Resolvendo (mesma fórmula de sempre)</h3>
+    <div class="box calc">  (1,12)^(200/252) = (1,14)^(80/252) × (1 + termo)^(120/252)
+
+  (1,12)^(200/252) = 1,094112
+  (1,14)^(80/252)  = 1,042473
+
+  (1 + termo)^(120/252) = 1,094112 / 1,042473 = 1,049535
+  Anualizar (elevar a 252/120 = 2,1):
+  1 + termo = 1,049535^2,1 = 1,1069
+  termo ≈ 10,69%  ✓</div>
+    <p>⚠️ <b>Atenção à curva INVERTIDA:</b> aqui o prazo curto (14%) rende <b>mais</b> que o longo (12%) — a curva está "de cabeça para baixo". Quando isso acontece, a taxa a termo fica <b>ABAIXO</b> das duas spots (10,69% &lt; 12% &lt; 14%). É o oposto da curva normal (subindo), em que o termo fica acima.</p>
+    <div class="ascii">  CURVA NORMAL (subindo)  → termo ACIMA das spots
+  CURVA INVERTIDA (caindo) → termo ABAIXO das spots   ← este caso</div>
+    <div class="why">
+      <p><span class="no">12,15% / 7,05% / 4,95%</span> ❌ — erram a base de tempo (dias corridos em vez de 252) ou esquecem de anualizar elevando a 252/120.</p>
+      <p><span class="ok">10,69%</span> ✓ — divide os fatores e anualiza corretamente.</p>
+    </div>
+    <div class="box parable"><b>🌡️ Parábola do Termômetro Invertido:</b> Se a "febre" (juros) está alta agora (14% no curto) mas o mercado espera que ela <b>caia</b> no futuro, o pedaço futuro (80→200) já vem "mais frio" (10,69%). A taxa a termo é a temperatura <b>esperada para o trecho lá na frente</b> — e numa curva que desce, o futuro é mais ameno que o presente.</div>
+    <div class="box insight"><b>💡 Insight:</b> A fórmula é SEMPRE a mesma (divide o fator longo pelo curto e anualiza por 252/Δdias). O sinal de qualidade: curva subindo → termo &gt; spots; curva descendo → termo &lt; spots. Se deu o contrário, você errou a conta.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<div class="pagebreak"></div>
+<h3 class="sec" style="font-size:14pt;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Tabela Price</td><td>Parcela fixa; juros = i × saldo anterior (decrescentes). Última parcela = MENOR juros = <b>R$ 2.685,83</b>.</td></tr>
+  <tr><td>2</td><td>WACC</td><td>75%×20% + 25%×[15%×(1−0,4)] = <b>17,25%</b>. Esquecer o (1−T) dá 18,75% (errado).</td></tr>
+  <tr><td>3</td><td>Denúncia ética</td><td><b>Qualquer pessoa</b>, por escrito e <b>COM identificação</b>. Anônima NÃO pode; não precisa ser CFP®.</td></tr>
+  <tr><td>4</td><td>Rendimento de carteira</td><td>Só renda corrente (juros + dividendos + aluguel) = <b>10,80%</b>. Valorização é isca (ganho de capital ≠ rendimento).</td></tr>
+  <tr><td>5</td><td>Taxa a termo (invertida)</td><td>(1,12)^(200/252) ÷ (1,14)^(80/252), anualiza por 252/120 = <b>10,69%</b>. Curva caindo → termo abaixo das spots.</td></tr>
+</table>
+
+<div class="box insight" style="margin-top:16px;">
+<b>🏁 Você fechou o simulado de 20 questões!</b> Os grandes temas de cálculo que mais caem: <b>juros compostos</b> (taxa a termo, reinvestimento, Price), <b>WACC com benefício fiscal</b> e a diferença <b>renda × valorização</b>. Nos conceituais: ética da Planejar (penalidades, denúncia, prazos), heurísticas comportamentais e estrutura do SFN. Revise as colas das 6 partes e você chega afiado. 💪
+</div>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Boa prova! 🎓📚</p>
+
+</body>
+</html>
