@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 11)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 11)</h2>
+  <div>
+    <span class="chip">4 questões comentadas</span>
+    <span class="chip">Política Fiscal • TIR/Payback • PIB</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 18/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Política Fiscal ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Política Fiscal (funções do Governo) <span class="tag">Macroeconomia</span></div>
+  <div class="qbody">
+    <div class="enun">Conjunto de medidas pelas quais o Governo <b>arrecada receitas</b> e <b>realiza despesas</b>, cumprindo três funções: estabilização macroeconômica, redistribuição de renda e alocação de recursos. Trata-se da:</div>
+    <ul class="opts">
+      <li class="wrong">Política Econômica</li>
+      <li class="wrong">Política de Rendas</li>
+      <li class="correct">Política Fiscal ✓</li>
+      <li class="wrong">Política Monetária &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Política Fiscal</div>
+
+    <h3 class="sec">As 4 políticas econômicas (não confunda!)</h3>
+    <div class="ascii">  FISCAL ....... RECEITAS (tributos) e DESPESAS do governo   ← esta
+  MONETÁRIA .... controle da MOEDA e dos JUROS (Selic) — BACEN
+  CAMBIAL ...... controle da taxa de CÂMBIO (dólar)
+  DE RENDAS .... controle direto de PREÇOS e SALÁRIOS</div>
+    <p>A palavra-chave do enunciado é <b>"arrecada receitas e realiza despesas"</b> — isso é o "orçamento do governo" = <b>Política Fiscal</b>. E as <b>três funções</b> citadas são as clássicas funções fiscais (de Musgrave):</p>
+    <div class="ascii">  • ALOCATIVA   → alocar recursos (oferecer bens públicos)
+  • DISTRIBUTIVA → redistribuir renda (reduzir desigualdade)
+  • ESTABILIZADORA → estabilizar a economia (emprego, inflação)</div>
+    <div class="why">
+      <p><span class="no">Política Monetária</span> ❌ — é do BACEN, mexe em <b>juros e moeda</b>, não em arrecadação/gasto. Foi a sua marcação.</p>
+      <p><span class="no">Política de Rendas</span> ❌ — controla preços e salários diretamente.</p>
+      <p><span class="no">Política Econômica</span> ❌ — é o "guarda-chuva" geral que engloba todas; genérica demais para a definição específica de receitas/despesas.</p>
+    </div>
+    <div class="box parable"><b>🏛️ Parábola do Orçamento Doméstico:</b> A Política Fiscal é o governo cuidando do "orçamento da casa": de um lado o que <b>entra</b> (impostos = receitas), do outro o que <b>sai</b> (gastos = despesas). A Política Monetária é outra pessoa da casa: quem controla o "cartão de crédito e a poupança" (juros e moeda). Quem fala em arrecadar e gastar é o lado fiscal.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Receitas (tributos) e despesas" + "três funções (alocativa, distributiva, estabilizadora)" → <b>Política Fiscal</b>. "Juros e moeda" → Monetária. Não troque uma pela outra (erro comum).</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Diligência ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Infração ao Princípio da Diligência <span class="tag">Código de Ética CFP®</span></div>
+  <div class="qbody">
+    <div class="enun">Qual das atitudes abaixo configura uma infração ao princípio da <b>Diligência</b> do Código de Ética?</div>
+    <ul class="opts">
+      <li class="wrong">Desrespeitar publicamente um colega planejador financeiro &nbsp;←(marcada por você)</li>
+      <li class="wrong">Atender um cliente em uma área na qual não se tem conhecimentos técnicos suficientes</li>
+      <li class="wrong">Revelar a terceiros informações e operações de um cliente ao qual se está prestando serviços</li>
+      <li class="correct">Não entregar ao cliente um relatório que havia prometido na ocasião da contratação do serviço ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Não entregar o relatório prometido (falha de Diligência)</div>
+
+    <h3 class="sec">Cada atitude fere um princípio diferente</h3>
+    <p><b>Diligência</b> = agir com <b>zelo, cuidado e prudência</b>, cumprindo prazos e <b>entregando o que foi combinado</b>. Não entregar um relatório prometido é exatamente uma falha de diligência (não cumpriu o serviço com o cuidado devido).</p>
+    <div class="ascii">  ATITUDE                                  → PRINCÍPIO VIOLADO
+  Não entregar relatório prometido         → DILIGÊNCIA      ← resposta
+  Desrespeitar colega publicamente         → Conduta Profissional
+  Atuar em área sem conhecimento técnico   → Competência
+  Revelar informações do cliente           → Confidencialidade (sigilo)</div>
+    <div class="why">
+      <p><span class="ok">Não entregar o relatório prometido</span> ✓ — descumpriu o combinado, sem o zelo/cuidado esperados = <b>Diligência</b>.</p>
+      <p><span class="no">Desrespeitar colega</span> ❌ — fere a <b>Conduta Profissional</b> (dignidade da profissão), não a diligência.</p>
+      <p><span class="no">Atuar sem conhecimento</span> ❌ — fere a <b>Competência</b>.</p>
+      <p><span class="no">Revelar informações do cliente</span> ❌ — fere a <b>Confidencialidade</b>.</p>
+    </div>
+    <div class="box parable"><b>🔧 Parábola do Encanador:</b> Diligência é o encanador que <b>volta no dia combinado e termina o serviço prometido</b>, com capricho. Se ele some sem entregar o que prometeu, faltou diligência — independentemente de ser tecnicamente bom (competência) ou educado (conduta). Cumprir o prometido, no prazo e com zelo, é a essência da diligência.</div>
+    <div class="box insight"><b>💡 Insight:</b> Diligência = zelo + cumprir prazos + entregar o prometido. Sigilo = Confidencialidade. Saber técnico = Competência. Respeito/dignidade = Conduta Profissional. Encaixe a atitude no princípio certo.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — TIR e Payback (VPL=0) ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — TIR e Payback Descontado quando VPL = 0 <span class="tag">Análise de projetos</span></div>
+  <div class="qbody">
+    <div class="enun">Adriano avalia um projeto descontado a uma TMA, e o <b>VPL deu igual a ZERO</b> ao final de "n" anos. Qual alternativa descreve corretamente o comportamento da TIR e do Payback descontado?</div>
+    <ul class="opts">
+      <li class="wrong">TIR positiva e payback descontado MAIOR que "n" &nbsp;←(marcada por você)</li>
+      <li class="wrong">TIR negativa e payback descontado menor ou igual a "n"</li>
+      <li class="wrong">TIR negativa e payback descontado maior que "n"</li>
+      <li class="correct">TIR positiva e payback descontado MENOR ou IGUAL ao período "n" ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>TIR positiva e payback descontado ≤ n</div>
+
+    <h3 class="sec">O que "VPL = 0" nos diz</h3>
+    <div class="box calc">  Fato 1 — sobre a TIR:
+   VPL = 0 exatamente NA TMA  ⟹  TIR = TMA
+   Como a TMA é positiva → a TIR é POSITIVA ✓
+
+  Fato 2 — sobre o payback descontado:
+   VPL = 0 em n anos significa que os fluxos DESCONTADOS
+   recuperam o investimento EXATAMENTE no ano n
+   ⟹ payback descontado = n  (ou seja, ≤ n) ✓</div>
+    <p>Em outras palavras: se ao trazer tudo a valor presente a conta "zera" no ano n, é porque você recuperou o investimento (descontado) bem no ano n — nem antes, nem depois.</p>
+    <div class="why">
+      <p><span class="no">"Payback MAIOR que n"</span> ❌ (sua marcação) — se o payback fosse maior que n, no ano n ainda faltaria recuperar dinheiro → o VPL seria <b>negativo</b>, não zero.</p>
+      <p><span class="no">"TIR negativa"</span> ❌ — VPL = 0 na TMA positiva implica TIR = TMA > 0. TIR negativa exigiria VPL muito negativo.</p>
+      <p><span class="ok">TIR positiva + payback ≤ n</span> ✓ — coerente com VPL = 0 no ano n.</p>
+    </div>
+    <div class="ascii">  RELAÇÃO-CHAVE (decore!)
+   VPL > 0  ⟺  TIR > TMA  ⟺  payback descontado < n
+   VPL = 0  ⟺  TIR = TMA  ⟺  payback descontado = n   ← este caso
+   VPL < 0  ⟺  TIR < TMA  ⟺  payback descontado > n (ou nunca)</div>
+    <div class="box parable"><b>🎯 Parábola do Empate Técnico:</b> VPL = 0 é o "empate" do projeto: ele rende <b>exatamente</b> o mínimo exigido (a TMA). Como num jogo que termina empatado no tempo regular: a TIR "iguala" a TMA (positiva) e o investimento é recuperado bem no apito final (ano n). Não houve prejuízo (payback além de n) nem sobra (payback antes de n) — bateu no ponto exato.</div>
+    <div class="box insight"><b>💡 Insight:</b> Memorize o "trio que anda junto": VPL = 0 ⟺ TIR = TMA ⟺ payback descontado = n. Se VPL é positivo, TIR &gt; TMA e payback &lt; n. Esse encadeamento resolve qualquer questão de relação entre os indicadores.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — PIB / investimento privado ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — PIB pela Ótica da Despesa (investimento privado) <span class="tag">Macroeconomia</span></div>
+  <div class="qbody">
+    <div class="enun">PIB = R$ 2.000 bi; consumo das famílias + gasto do governo = R$ 1.500 bi; exportações líquidas = R$ 100 bi; produção industrial = R$ 900 bi; produção agrícola = R$ 800 bi; pagamento de juros da dívida = R$ 20 bi. O investimento privado é:</div>
+    <ul class="opts">
+      <li class="wrong">R$ 280 bilhões</li>
+      <li class="wrong">R$ 420 bilhões &nbsp;←(marcada por você)</li>
+      <li class="wrong">R$ 300 bilhões</li>
+      <li class="correct">R$ 400 bilhões ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 400 bilhões</div>
+
+    <h3 class="sec">A fórmula do PIB pela despesa</h3>
+    <div class="box calc">  PIB = C + I + G + (X − M)
+
+   C + G ............ 1.500  (consumo famílias + governo)
+   (X − M) .......... 100    (exportações líquidas)
+   PIB .............. 2.000
+
+  Isolando o Investimento (I):
+   2.000 = 1.500 + I + 100
+   I = 2.000 − 1.500 − 100 = R$ 400 bilhões  ✓</div>
+    <div class="why">
+      <p><span class="no">Produção industrial (900) e agrícola (800)</span> ❌ — são <b>iscas</b>! Pertencem à ótica da <b>produção</b>, não da despesa. Não entram nesta conta.</p>
+      <p><span class="no">Juros da dívida (20)</span> ❌ — também é isca; não é componente do PIB pela despesa. A alternativa <b>R$ 420</b> é o "400 + 20" de quem cai na pegadinha dos juros.</p>
+      <p><span class="ok">R$ 400 bilhões</span> ✓ — PIB − (C+G) − exportações líquidas.</p>
+    </div>
+    <div class="box parable"><b>🍽️ Parábola do Cardápio Errado:</b> A fórmula do PIB pela despesa só tem <b>4 "pratos"</b>: Consumo, Investimento, Governo e Exportações líquidas (C + I + G + NX). A questão põe na mesa "pratos de outro cardápio" (produção industrial, agrícola, juros) só para te confundir. Pegue apenas os 4 pratos certos e isole o que falta (o Investimento). Os outros números são decoração.</div>
+    <div class="box insight"><b>💡 Insight:</b> PIB pela despesa = <b>C + I + G + (X − M)</b>. Dados de "produção setorial" e "juros da dívida" são distratores — não entram. Isole o I: PIB − C − G − NX.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Política Fiscal</td><td>Receitas (tributos) e despesas do governo; funções alocativa, distributiva e estabilizadora. Monetária = juros/moeda.</td></tr>
+  <tr><td>2</td><td>Diligência</td><td>Não entregar o prometido = falha de <b>Diligência</b>. Sigilo=Confidencialidade; saber=Competência; respeito=Conduta.</td></tr>
+  <tr><td>3</td><td>TIR e Payback</td><td>VPL=0 ⟺ TIR=TMA (positiva) ⟺ payback descontado = n (≤ n).</td></tr>
+  <tr><td>4</td><td>PIB pela despesa</td><td>PIB = C + I + G + (X−M). I = 2.000 − 1.500 − 100 = <b>R$ 400 bi</b>. Produção/juros = iscas.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
