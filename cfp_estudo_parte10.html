@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 10)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.cmp { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 10px 0; }
+  table.cmp th { background: #6a11cb; color:#fff; padding: 7px; }
+  table.cmp td { border: 1px solid #e3e3ea; padding: 6px 8px; vertical-align: top; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 10)</h2>
+  <div>
+    <span class="chip">5 questões comentadas</span>
+    <span class="chip">EFPC • SAC • COAF • Ética</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 17/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — EFPC ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Características da EFPC (Previdência Fechada) <span class="tag">Previdência complementar</span></div>
+  <div class="qbody">
+    <div class="enun">Dentre as características abaixo, podemos vincular a uma <b>EFPC</b>:<br>
+      <b>I.</b> Não possuir fins lucrativos;<br>
+      <b>II.</b> Planos nas modalidades VGBL e PGBL;<br>
+      <b>III.</b> Planos CD, BD ou CV;<br>
+      <b>IV.</b> Oferecimento apenas de planos coletivos.</div>
+    <ul class="opts">
+      <li class="correct">I, III e IV ✓</li>
+      <li class="wrong">I e III</li>
+      <li class="wrong">I, II e III</li>
+      <li class="wrong">II, III e IV</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>I, III e IV</div>
+
+    <h3 class="sec">EFPC × EAPC — não confunda!</h3>
+    <table class="cmp">
+      <tr><th></th><th>EFPC (Fechada)</th><th>EAPC (Aberta)</th></tr>
+      <tr><td>Quem é</td><td>Fundo de pensão (fechado a um grupo)</td><td>Bancos e seguradoras (qualquer um)</td></tr>
+      <tr><td>Fins lucrativos</td><td><b>NÃO</b> tem (sem fins lucrativos)</td><td>SIM (visa lucro)</td></tr>
+      <tr><td>Produtos</td><td>Planos <b>CD, BD, CV</b></td><td><b>PGBL e VGBL</b></td></tr>
+      <tr><td>Acesso</td><td><b>Coletivo</b> (empregados/associados)</td><td>Individual ou coletivo</td></tr>
+      <tr><td>Fiscaliza</td><td>PREVIC</td><td>SUSEP</td></tr>
+    </table>
+    <div class="why">
+      <p><span class="ok">I — Sem fins lucrativos</span> ✓ — característica central da EFPC.</p>
+      <p><span class="no">II — VGBL e PGBL</span> ❌ — esses são produtos das entidades <b>ABERTAS (EAPC)</b>, vendidos por bancos/seguradoras. A EFPC não oferece PGBL/VGBL.</p>
+      <p><span class="ok">III — Planos CD, BD ou CV</span> ✓ — Contribuição Definida, Benefício Definido e Contribuição Variável são os planos típicos da EFPC.</p>
+      <p><span class="ok">IV — Apenas planos coletivos</span> ✓ — a EFPC é "fechada": só para empregados de uma empresa/grupo ou associados (coletivo).</p>
+    </div>
+    <div class="box parable"><b>🏢 Parábola do Clube Fechado × Loja de Rua:</b> A <b>EFPC</b> é como o <b>clube exclusivo</b> da empresa: só entra quem é funcionário (coletivo), não visa lucro e tem "regras próprias de plano" (CD/BD/CV). A <b>EAPC</b> é a <b>loja de rua</b> (banco/seguradora): qualquer um entra, visa lucro e vende os produtos de prateleira (PGBL e VGBL). Quem vê "VGBL/PGBL" está na loja de rua, não no clube fechado.</div>
+    <div class="box insight"><b>💡 Insight:</b> <b>EFPC</b> = Fechada, sem lucro, CD/BD/CV, coletiva, PREVIC. <b>EAPC</b> = Aberta, com lucro, PGBL/VGBL, SUSEP. Viu PGBL/VGBL numa questão de EFPC? É pegadinha.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — SAC ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Tabela SAC: Valor da 1ª Prestação <span class="tag">Sistema de amortização</span></div>
+  <div class="qbody">
+    <div class="enun">Casa de R$ 1.000.000 pelo SFH (SAC). Entrada de R$ 400.000, financiando o restante. Taxa de 9% a.a. + TR. Prazo de 20 anos. Qual o valor da <b>primeira prestação</b>?</div>
+    <ul class="opts">
+      <li class="correct">R$ 6.824,39 ✓</li>
+      <li class="wrong">R$ 6.181,10</li>
+      <li class="wrong">R$ 5.263,58 &nbsp;←(marcada por você)</li>
+      <li class="wrong">R$ 6.225,91</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 6.824,39</div>
+
+    <h3 class="sec">Como funciona a Tabela SAC</h3>
+    <p>No <b>SAC</b>, a <b>amortização é CONSTANTE</b> (igual todo mês) e os <b>juros decrescem</b> (incidem sobre o saldo, que cai). Logo, a <b>parcela diminui</b> ao longo do tempo — e a <b>1ª prestação é a MAIOR</b>.</p>
+    <div class="box calc">  Valor financiado = 1.000.000 − 400.000 = 600.000
+  Prazo = 20 anos = 240 meses
+
+  AMORTIZAÇÃO (constante):
+   600.000 / 240 = R$ 2.500,00 por mês
+
+  TAXA mensal equivalente (9% a.a., TR = 0):
+   i = (1,09)^(1/12) − 1 = 0,7207% a.m.
+
+  JUROS da 1ª parcela (sobre o saldo cheio):
+   600.000 × 0,007207 = R$ 4.324,39
+
+  1ª PRESTAÇÃO = Amortização + Juros
+              = 2.500,00 + 4.324,39 = R$ 6.824,39  ✓</div>
+    <div class="why">
+      <p><span class="no">R$ 5.263,58 e demais</span> ❌ — vêm de usar a taxa errada (proporcional 9/12 ou outra conversão) ou de confundir com a Tabela Price. No SAC, a 1ª parcela = amortização fixa + juros sobre o saldo total.</p>
+      <p><span class="ok">R$ 6.824,39</span> ✓ — R$ 2.500 de amortização + R$ 4.324,39 de juros (taxa equivalente sobre R$ 600 mil).</p>
+    </div>
+    <div class="box parable"><b>📉 Parábola do Boleto que Encolhe:</b> No SAC você "abate" sempre o mesmo tijolo da dívida (amortização fixa de R$ 2.500). Mas os juros são cobrados sobre o que ainda falta — e como a dívida só diminui, os juros vão minguando. Resultado: o primeiro boleto é o mais "gordo" (R$ 6.824) e eles vão emagrecendo mês a mês. (No Price seria o contrário do recheio: parcela fixa.)</div>
+    <div class="box insight"><b>💡 Insight:</b> SAC → amortização CONSTANTE, parcela DECRESCENTE, 1ª parcela é a MAIOR. Fórmula da 1ª: (PV/n) + (PV × i). Lembre de usar a taxa <b>equivalente</b> [(1,09)^(1/12)−1], não 9/12.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Rentabilidade de cota ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Rentabilidade pela Variação da Cota <span class="tag">Fundos de investimento</span></div>
+  <div class="qbody">
+    <div class="enun">Um fundo tem cota líquida de <b>1,056911</b> em certa data. Sete meses depois, a cota está em <b>1,21232</b>. Qual a rentabilidade líquida no período?</div>
+    <ul class="opts">
+      <li class="wrong">21,2%</li>
+      <li class="correct">14,7% ✓</li>
+      <li class="wrong">−12,8%</li>
+      <li class="wrong">10,1% &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>14,7%</div>
+
+    <h3 class="sec">Rentabilidade = variação da cota</h3>
+    <p>A rentabilidade de um fundo é simplesmente <b>quanto a cota variou</b>: divide a cota final pela inicial e tira 1.</p>
+    <div class="box calc">  Rentabilidade = (cota final / cota inicial) − 1
+                = (1,21232 / 1,056911) − 1
+                = 1,14704 − 1
+                = 0,14704  →  14,7%  ✓</div>
+    <div class="why">
+      <p><span class="no">21,2%</span> ❌ — é (1,21232 − 1) = 21,2%. O erro: tratar a cota inicial como se fosse <b>1,000</b>. Mas ela era <b>1,056911</b>! Sempre divida pela cota inicial real.</p>
+      <p><span class="no">10,1% / −12,8%</span> ❌ — vêm de inverter a divisão ou subtrair as cotas de forma errada.</p>
+      <p><span class="ok">14,7%</span> ✓ — razão entre as cotas, menos 1.</p>
+      <p>📌 Os <b>"sete meses"</b> são uma <b>isca</b>: a questão pede a rentabilidade <b>do período</b>, não ao ano. Não precisa anualizar nada.</p>
+    </div>
+    <div class="box parable"><b>📏 Parábola da Régua que não Começa no Zero:</b> Medir a rentabilidade pela cota é como medir um objeto com uma régua que <b>não começa no zero</b>. Se o objeto vai da marca 1,0569 até 1,2123, o tamanho NÃO é "1,2123" — é a diferença proporcional entre as marcas (14,7%). Quem lê só o número final (21,2%) esquece que a régua começou em 1,0569, não em zero.</div>
+    <div class="box insight"><b>💡 Insight:</b> Rentabilidade = (cota_fim ÷ cota_início) − 1. NUNCA use (cota_fim − 1) se a cota inicial não for 1,000. E cuidado com prazos no enunciado ("7 meses") que servem só para confundir.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — COAF ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Comunicação ao COAF (PLD/FT) <span class="tag">Prevenção à lavagem de dinheiro</span></div>
+  <div class="qbody">
+    <div class="enun">Vitor obteve informações sobre duas operações:<br>
+      <b>I –</b> Aquisição de debêntures de R$ 100.000 com remuneração de <b>60% do CDI</b> e vencimento em 10 anos;<br>
+      <b>II –</b> Compra de participação por R$ 40.000.000, <b>vendida por R$ 200.000.000 apenas 30 dias depois</b>.<br>
+      Não havendo justificativas plausíveis para as condições das operações, a instituição financeira:</div>
+    <ul class="opts">
+      <li class="wrong">Deve comunicar apenas a operação II ao COAF &nbsp;←(marcada por você)</li>
+      <li class="wrong">Deve comunicar as operações I e II ao Banco Central do Brasil</li>
+      <li class="correct">Deve comunicar as operações I e II ao COAF ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Comunicar AMBAS (I e II) ao COAF</div>
+
+    <h3 class="sec">Quando comunicar ao COAF?</h3>
+    <p>O <b>COAF</b> é a "inteligência financeira" contra lavagem de dinheiro. Toda operação <b>atípica, sem justificativa econômica plausível</b>, deve ser comunicada. Veja por que <b>as duas</b> são suspeitas:</p>
+    <div class="why">
+      <p><span class="ok">II — suspeita óbvia</span> ✓ — multiplicar R$ 40 mi por 5 (virar R$ 200 mi) em <b>30 dias</b> não tem lógica de mercado → clássico de lavagem.</p>
+      <p><span class="ok">I — suspeita "disfarçada"</span> ✓ — aceitar só <b>60% do CDI</b> por <b>10 anos</b> é um <b>péssimo negócio</b> para um investidor racional. Ninguém "abre mão" de rendimento assim sem outro motivo → também é atípico → comunicar.</p>
+      <p><span class="no">"Apenas a II"</span> ❌ — subestima a operação I, que é igualmente sem lógica econômica.</p>
+      <p><span class="no">"Ao Banco Central"</span> ❌ — suspeita de <b>lavagem</b> vai ao <b>COAF</b>, não ao BACEN.</p>
+    </div>
+    <div class="ascii">  SINAIS DE ALERTA (comunicar ao COAF)
+   • Ganhos absurdos em prazo curtíssimo (op. II)
+   • Aceitar perdas/retornos ilógicos sem motivo (op. I)
+   • Falta de justificativa econômica plausível
+   → órgão correto = COAF (não BACEN, não CVM)</div>
+    <div class="box parable"><b>🕵️ Parábola do Detetive Desconfiado:</b> Um detetive não desconfia só de quem fica <b>rico rápido demais</b> (op. II) — desconfia também de quem <b>aceita prejuízo de propósito</b> (op. I), porque os dois comportamentos "não fecham". Quando o número não tem explicação econômica, acende a luz amarela: tanto o ganho irreal quanto a perda voluntária podem ser fachada para lavar dinheiro.</div>
+    <div class="box insight"><b>💡 Insight:</b> Operação sem lógica econômica (ganho absurdo OU renúncia de rendimento) e sem justificativa = comunica ao <b>COAF</b>. Não precisa ter "certeza de crime" — basta ser <b>atípica</b>. E o destino é sempre o COAF.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 5 — Princípio ético ===================== -->
+<div class="q">
+  <div class="qhead">Questão 5 — Princípio Ético Violado <span class="tag">Código de Conduta CFP®</span></div>
+  <div class="qbody">
+    <div class="enun">Quando o profissional CFP® tenta <b>influenciar</b> seu cliente a adquirir um certo produto ou tomar uma certa decisão, qual princípio ético está sendo violado?</div>
+    <ul class="opts">
+      <li class="correct">Objetividade ✓</li>
+      <li class="wrong">Diligência &nbsp;←(marcada por você)</li>
+      <li class="wrong">Probidade</li>
+      <li class="wrong">Competência</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Objetividade</div>
+
+    <h3 class="sec">O que é cada princípio</h3>
+    <div class="ascii">  OBJETIVIDADE → ser IMPARCIAL; recomendar com base no
+                 interesse do CLIENTE, sem influência/viés próprio  ← violado
+  DILIGÊNCIA  → agir com zelo, cuidado e prudência na execução
+  PROBIDADE   → honestidade, integridade, boa-fé
+  COMPETÊNCIA → ter conhecimento técnico e se manter atualizado</div>
+    <div class="why">
+      <p><span class="ok">Objetividade</span> ✓ — "empurrar" um produto/decisão é deixar um interesse ou viés contaminar a recomendação. A recomendação deveria ser <b>imparcial</b>, voltada ao cliente — exatamente o que a objetividade exige.</p>
+      <p><span class="no">Diligência</span> ❌ — é sobre cuidado/zelo no fazer, não sobre imparcialidade.</p>
+      <p><span class="no">Probidade</span> ❌ — é honestidade geral; o foco aqui é a <b>imparcialidade</b> da recomendação (objetividade).</p>
+      <p><span class="no">Competência</span> ❌ — é sobre capacidade técnica, não sobre influenciar.</p>
+    </div>
+    <div class="box parable"><b>⚖️ Parábola do Juiz que Torce:</b> Um bom juiz julga pelos fatos, sem torcer para nenhum lado. Quando o planejador "torce" para o cliente comprar um produto específico (talvez pelo próprio interesse), ele deixa de ser o juiz imparcial e vira "torcedor" — fere a <b>objetividade</b>. A recomendação tem que servir ao cliente, não empurrar uma escolha.</div>
+    <div class="box insight"><b>💡 Insight:</b> "Influenciar / empurrar produto / falta de imparcialidade" → <b>Objetividade</b>. "Descuido na execução" → Diligência. "Mentira/desonestidade" → Probidade/Integridade. "Falta de conhecimento" → Competência.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>EFPC × EAPC</td><td>EFPC = fechada, sem lucro, CD/BD/CV, coletiva (PREVIC). VGBL/PGBL é EAPC. Resposta: <b>I, III e IV</b>.</td></tr>
+  <tr><td>2</td><td>Tabela SAC</td><td>Amortização constante; 1ª parcela = maior. (600.000/240) + (600.000 × 0,7207%) = <b>R$ 6.824,39</b>.</td></tr>
+  <tr><td>3</td><td>Rentabilidade de cota</td><td>(cota_fim ÷ cota_início) − 1 = 1,21232/1,056911 − 1 = <b>14,7%</b>. Não use (cota−1); "7 meses" é isca.</td></tr>
+  <tr><td>4</td><td>COAF</td><td>Operação atípica sem justificativa → comunicar ao <b>COAF</b> (não BACEN). Ganho absurdo E renúncia de rendimento = ambas. Resposta: <b>I e II</b>.</td></tr>
+  <tr><td>5</td><td>Princípio ético</td><td>Influenciar/empurrar produto = falta de imparcialidade = <b>Objetividade</b>.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
