@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 14)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.pl { width: 100%; border-collapse: collapse; font-size: 8.9pt; margin: 10px 0; }
+  table.pl th { background: #6a11cb; color:#fff; padding: 6px 7px; text-align: left; }
+  table.pl td { border: 1px solid #e3e3ea; padding: 5px 7px; vertical-align: top; }
+  table.pl td.r { text-align: right; }
+  .tag-a { background:#e7f6ec; color:#1d6e37; border-radius:5px; padding:1px 6px; font-weight:700; font-size:8.3pt; }
+  .tag-p { background:#fdecef; color:#c0334a; border-radius:5px; padding:1px 6px; font-weight:700; font-size:8.3pt; }
+  .tag-f { background:#eef0f3; color:#7a7a7a; border-radius:5px; padding:1px 6px; font-weight:700; font-size:8.3pt; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 14)</h2>
+  <div>
+    <span class="chip">Patrimônio Líquido item a item</span>
+    <span class="chip">Price • Câmbio fixo • Etapas</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 19/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — PL item a item ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Patrimônio Líquido: por que cada item entra (ou NÃO) <span class="tag">Ativos − Passivos</span></div>
+  <div class="qbody">
+    <div class="enun">Com base nos dados da família, qual é o <b>patrimônio líquido</b>? E, sobretudo: <b>por que cada item entra ou fica de fora?</b></div>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 2.015.000</div>
+
+    <h3 class="sec">A regra mestra: PATRIMÔNIO (estoque) × FLUXO (anual)</h3>
+    <p>O patrimônio líquido é uma <b>FOTO</b>: tudo que a família <b>TEM</b> (ativos) menos tudo que <b>DEVE</b> (passivos). Só entram <b>saldos/estoques</b>. Tudo que é <b>"por ano" (fluxo)</b> — rendas e gastos — fica de fora (isso é assunto do índice de poupança).</p>
+    <div class="ascii">  ENTRA no PL → é um SALDO (estoque): "tenho" ou "devo"
+  NÃO entra   → é um FLUXO (anual): "ganho por ano" ou "gasto por ano"</div>
+
+    <table class="pl">
+      <tr><th>Item do enunciado</th><th>Valor</th><th>Classificação</th><th>Por quê</th></tr>
+      <tr><td>Renda anual com salários</td><td class="r">800.000</td><td><span class="tag-f">FLUXO</span></td><td>É renda "por ano" → vai ao índice de poupança, não ao PL</td></tr>
+      <tr><td>Renda anual de imóvel alugado</td><td class="r">36.000</td><td><span class="tag-f">FLUXO</span></td><td>Renda recebida (o aluguel) → fluxo, não saldo</td></tr>
+      <tr><td>PGBL (saldo líquido)</td><td class="r">110.000</td><td><span class="tag-a">ATIVO</span></td><td>É um SALDO de investimento → bem que a família tem</td></tr>
+      <tr><td>Veículos (valor de mercado)</td><td class="r">120.000</td><td><span class="tag-a">ATIVO</span></td><td>Bem que a família possui (entra pelo valor de mercado)</td></tr>
+      <tr><td>Imóvel (valor de mercado)</td><td class="r">2.000.000</td><td><span class="tag-a">ATIVO</span></td><td>Bem que a família possui</td></tr>
+      <tr><td>Imóvel alugado a terceiros (valor)</td><td class="r">400.000</td><td><span class="tag-a">ATIVO</span></td><td>É um IMÓVEL que a família tem (o aluguel de 36k é o fluxo)</td></tr>
+      <tr><td>Fundo DI</td><td class="r">150.000</td><td><span class="tag-a">ATIVO</span></td><td>Saldo de investimento → bem</td></tr>
+      <tr><td>Financiamento imobiliário</td><td class="r">700.000</td><td><span class="tag-p">PASSIVO</span></td><td>Saldo de DÍVIDA → o que a família deve</td></tr>
+      <tr><td>Financiamento de veículos</td><td class="r">35.000</td><td><span class="tag-p">PASSIVO</span></td><td>Saldo de dívida</td></tr>
+      <tr><td>Fatura fechada do cartão</td><td class="r">30.000</td><td><span class="tag-p">PASSIVO</span></td><td>Dívida de CURTO prazo (saldo a pagar) → entra como passivo</td></tr>
+      <tr><td>Gastos com educação (anuais)</td><td class="r">84.000</td><td><span class="tag-f">FLUXO</span></td><td>Despesa "por ano" → não é saldo</td></tr>
+      <tr><td>Gastos alimentação/vestuário (anuais)</td><td class="r">140.000</td><td><span class="tag-f">FLUXO</span></td><td>Despesa anual</td></tr>
+      <tr><td>Gastos com saúde (anuais)</td><td class="r">60.000</td><td><span class="tag-f">FLUXO</span></td><td>Despesa anual</td></tr>
+      <tr><td>Demais gastos (anuais)</td><td class="r">200.000</td><td><span class="tag-f">FLUXO</span></td><td>Despesa anual</td></tr>
+      <tr><td>Rendimentos sobre investimentos</td><td class="r">9.000</td><td><span class="tag-f">FLUXO</span></td><td>Renda recebida → fluxo (o saldo que rende já está nos ativos)</td></tr>
+    </table>
+
+    <div class="box calc">  ATIVOS  = 110.000 + 120.000 + 2.000.000 + 400.000 + 150.000 = 2.780.000
+  PASSIVOS = 700.000 + 35.000 + 30.000                      =   765.000
+  ──────────────────────────────────────────────────────────────────────
+  PATRIMÔNIO LÍQUIDO = 2.780.000 − 765.000 = R$ 2.015.000  ✓</div>
+
+    <h3 class="sec">Os 3 "porquês" que mais confundem</h3>
+    <div class="why">
+      <p><b>① Por que o cartão ENTRA aqui, mas não entrava no índice de poupança?</b> No PL, a fatura é um <b>saldo de dívida</b> (passivo) — você realmente deve aquilo hoje. No índice de poupança ela ficava de fora para <b>não contar o gasto duas vezes</b> (as compras já estavam nas despesas). Lentes diferentes!</p>
+      <p><b>② Por que o imóvel alugado entra com R$ 400.000 e não com o aluguel?</b> O <b>imóvel</b> (R$ 400 mil) é o <b>bem</b> que você possui = ativo. O <b>aluguel</b> (R$ 36 mil/ano) é o <b>fluxo</b> que ele gera = não entra no PL. Um é a "galinha" (ativo), o outro é o "ovo" (fluxo).</p>
+      <p><b>③ Por que os veículos entram cheios (120k) se são financiados?</b> O <b>bem</b> entra pelo valor de mercado (ativo, 120k) e a <b>dívida</b> dele entra separada (passivo, 35k). O PL já faz a "conta líquida" ao subtrair os dois. Não desconte a dívida do bem você mesmo — deixe a fórmula Ativos − Passivos fazer isso.</p>
+    </div>
+    <div class="box parable"><b>📸 Parábola da Foto × Filme:</b> O patrimônio líquido é uma <b>FOTO</b> de um instante: o que você tem e o que deve, congelados. As rendas e gastos "anuais" são um <b>FILME</b> (acontecem ao longo do tempo) — não aparecem na foto. Por isso salário, aluguel recebido, gastos e rendimentos (tudo "por ano") ficam fora do PL; só imóveis, veículos, investimentos (ter) e financiamentos/cartão (dever) entram.</div>
+    <div class="box insight"><b>💡 Insight:</b> Teste rápido para cada item: <b>"isso é um SALDO ou é 'por ano'?"</b> Saldo de bem → ativo. Saldo de dívida → passivo. "Por ano" (renda/gasto) → fora do PL (vai pro fluxo). PL = Ativos − Passivos.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Implementação ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Etapa "Implementação das Recomendações" <span class="tag">Processo de planejamento</span></div>
+  <div class="qbody">
+    <div class="enun">Quanto à fase do planejamento financeiro conhecida como "Implementação das Recomendações", indique uma ação que seja dessa etapa:</div>
+    <ul class="opts">
+      <li class="wrong">Relatório indicando compra de ações de acordo com a análise do planejador &nbsp;←(marcada por você)</li>
+      <li class="wrong">Verificação da rentabilidade das ações após 12 meses da compra</li>
+      <li class="correct">Compra de ações de uma determinada empresa ✓</li>
+      <li class="wrong">Informar ao cliente que seja feita a compra de ações</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Comprar as ações (executar de fato)</div>
+
+    <h3 class="sec">Implementar = PÔR A MÃO NA MASSA</h3>
+    <p>Implementar é <b>executar</b> o que foi recomendado — ou seja, <b>efetivamente comprar</b> as ações. Recomendar, relatar ou monitorar são <b>outras</b> etapas.</p>
+    <div class="ascii">  Análise/Síntese → RECOMENDAR ("relatório indicando comprar")
+  Implementação   → EXECUTAR ("comprar as ações")            ← aqui
+  Monitoramento   → ACOMPANHAR ("verificar rentabilidade após 12 meses")</div>
+    <div class="why">
+      <p><span class="no">"Relatório indicando compra"</span> ❌ (sua marcação) — é a <b>recomendação</b> (síntese), ainda no papel. Implementar é sair do papel e <b>fazer</b>.</p>
+      <p><span class="no">"Verificar rentabilidade após 12 meses"</span> ❌ — é <b>monitoramento/revisão</b>, etapa posterior.</p>
+      <p><span class="no">"Informar ao cliente que compre"</span> ❌ — ainda é orientar/recomendar, não executar.</p>
+      <p><span class="ok">"Comprar as ações"</span> ✓ — ação concreta = implementação.</p>
+    </div>
+    <div class="box parable"><b>🍳 Parábola da Receita:</b> Recomendar é <b>escrever a receita</b>; implementar é <b>cozinhar o prato</b>; monitorar é <b>provar depois para ver se ficou bom</b>. A "compra das ações" é o ato de cozinhar — a implementação.</div>
+    <div class="box insight"><b>💡 Insight:</b> Verbo de ação concreta (comprar, contratar, aplicar) = Implementação. "Recomendar/relatório" = Síntese. "Verificar/acompanhar" = Monitoramento.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Price amortização extra ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Price com Amortização Extraordinária <span class="tag">Matemática financeira</span></div>
+  <div class="qbody">
+    <div class="enun">Financiamento Price de R$ 200.000, prazo de 4 anos (48 meses), taxa de 1,5% a.m. Após pagar a 24ª parcela, Kleber faz uma amortização extra de R$ 60.000. Mantendo o valor da prestação, em quantos meses o financiamento estará quitado?</div>
+    <ul class="opts">
+      <li class="correct">10 meses ✓ (aprox.)</li>
+      <li class="wrong">18 meses</li>
+      <li class="wrong">24 meses</li>
+      <li class="wrong">8 meses</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>≈ 10 meses</div>
+
+    <h3 class="sec">Passo a passo</h3>
+    <div class="box calc">  1) Parcela (PMT):
+     PMT = 200.000 × 0,015 / [1 − (1,015)^−48] = R$ 5.874,95
+
+  2) Saldo devedor após a 24ª parcela
+     (= valor presente das 24 parcelas restantes):
+     SD = 5.874,95 × [1 − (1,015)^−24] / 0,015 ≈ R$ 117.668
+
+  3) Aplica a amortização extra de 60.000:
+     Novo saldo = 117.668 − 60.000 = R$ 57.668
+
+  4) Com a MESMA prestação, quantas faltam? Resolve para n:
+     57.668 = 5.874,95 × [1 − (1,015)^−n] / 0,015
+     (1,015)^−n = 0,85276  →  n = ln(1,17280)/ln(1,015) ≈ 10,7
+
+  → o financiamento se encerra por volta do 10º/11º mês → ≈ 10 meses ✓</div>
+    <div class="why">
+      <p><span class="no">24 meses</span> ❌ — é o prazo que <b>faltava</b> antes da amortização extra. O pré-pagamento encurta isso.</p>
+      <p><span class="no">18 / 8 meses</span> ❌ — não batem com o novo saldo de R$ 57.668 mantendo a prestação.</p>
+      <p><span class="ok">≈ 10 meses</span> ✓ — o pré-pagamento de R$ 60 mil derruba o prazo de 24 para ~10-11 meses (mantendo a parcela).</p>
+    </div>
+    <div class="box parable"><b>✂️ Parábola do Atalho na Trilha:</b> Faltavam 24 "quilômetros" (parcelas) para o fim. A amortização extra de R$ 60 mil é um <b>atalho</b> que corta um pedação da trilha. Como você mantém o mesmo "ritmo de caminhada" (a prestação), chega ao fim muito antes — em vez de 24, uns 10 meses. Pré-pagamento sempre encurta o caminho.</div>
+    <div class="box insight"><b>💡 Insight:</b> Amortização extra mantendo a parcela → <b>encurta o PRAZO</b>. O roteiro: (1) ache o saldo devedor atual (VP das parcelas que faltam); (2) subtraia o pré-pagamento; (3) resolva para n com a mesma PMT.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Câmbio fixo / crawling peg ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Regime de Câmbio Fixo e Crawling Peg <span class="tag">Macroeconomia • câmbio</span></div>
+  <div class="qbody">
+    <div class="enun">Sobre um regime de <b>câmbio fixo</b> caso adotado no Brasil, é correto afirmar que:</div>
+    <ul class="opts">
+      <li class="wrong">As reservas internacionais deixam de ser relevantes para a política</li>
+      <li class="wrong">As operações cambiais passam a ser feitas exclusivamente entre bancos e Banco Central</li>
+      <li class="correct">O uso do crawling peg pode auxiliar na manutenção do câmbio real ✓</li>
+      <li class="wrong">A manutenção da taxa de câmbio fica a cargo dos agentes privados &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>O crawling peg ajuda a manter o câmbio REAL</div>
+
+    <h3 class="sec">Como funciona o câmbio fixo (e o crawling peg)</h3>
+    <p>No <b>câmbio fixo</b>, o <b>Banco Central</b> define e <b>defende</b> a taxa, comprando/vendendo moeda com suas <b>reservas</b>. O <b>crawling peg</b> ("banda deslizante") é uma variação: o BC faz <b>mini-ajustes graduais</b> na taxa fixa — em geral para acompanhar a inflação e manter o <b>câmbio real</b> estável.</p>
+    <div class="why">
+      <p><span class="ok">Crawling peg mantém o câmbio real</span> ✓ — ao ajustar o câmbio nominal aos poucos (acompanhando a inflação), evita que o real se valorize/desvalorize artificialmente. Mantém o poder de compra externo.</p>
+      <p><span class="no">"Manutenção fica a cargo dos agentes privados"</span> ❌ (sua marcação) — no câmbio fixo quem mantém a taxa é o <b>Banco Central</b>, não o mercado privado. (No câmbio <b>flutuante</b> é que o mercado manda.)</p>
+      <p><span class="no">"Reservas deixam de ser relevantes"</span> ❌ — ao contrário! As <b>reservas são essenciais</b> para o BC defender a paridade (sem reservas, não sustenta o câmbio fixo).</p>
+      <p><span class="no">"Operações exclusivamente entre bancos e BC"</span> ❌ — restritivo demais; não é assim que funciona.</p>
+    </div>
+    <div class="ascii">  CÂMBIO FIXO    → BANCO CENTRAL define e defende (usa RESERVAS)
+  CRAWLING PEG   → câmbio fixo com mini-ajustes graduais
+                   (mantém o câmbio REAL, acompanhando a inflação)
+  CÂMBIO FLUTUANTE → o MERCADO (agentes privados) define a taxa</div>
+    <div class="box parable"><b>🌡️ Parábola do Termostato:</b> O câmbio fixo é como um ar-condicionado que o <b>Banco Central</b> trava numa temperatura (a taxa). Para segurar essa temperatura mesmo com o "calor" do mercado, ele gasta "energia" (as reservas). O crawling peg é um termostato esperto: vai <b>ajustando de pouquinho</b> a temperatura conforme a inflação, para que a sensação térmica real (o câmbio real) fique sempre confortável. Quem controla o termostato é o BC — nunca os agentes privados.</div>
+    <div class="box insight"><b>💡 Insight:</b> Câmbio FIXO = BC controla (com reservas). FLUTUANTE = mercado controla. Crawling peg = fixo com ajustes graduais para manter o câmbio REAL. "Reservas irrelevantes" e "agentes privados controlam" = erradas no regime fixo.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Patrimônio líquido</td><td>Só SALDOS entram: bens (ativo) − dívidas (passivo). "Por ano" (renda/gasto) fica fora. PL = <b>R$ 2.015.000</b>.</td></tr>
+  <tr><td>2</td><td>Implementação</td><td>Executar de fato (comprar as ações). Recomendar=síntese; verificar=monitoramento.</td></tr>
+  <tr><td>3</td><td>Price + amortização extra</td><td>Saldo após 24ª (117.668) − 60.000 = 57.668 → mantendo PMT, quita em <b>≈ 10 meses</b>.</td></tr>
+  <tr><td>4</td><td>Câmbio fixo / crawling peg</td><td>BC controla (com reservas). Crawling peg = ajustes graduais p/ manter o câmbio <b>real</b>.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
