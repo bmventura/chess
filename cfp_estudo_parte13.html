@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 13)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 13)</h2>
+  <div>
+    <span class="chip">4 questões comentadas</span>
+    <span class="chip">WACC • Sigilo • Desconto • Crédito Rural</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 19/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — WACC sobe ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — O que AUMENTA o WACC <span class="tag">Custo de capital</span></div>
+  <div class="qbody">
+    <div class="enun">Qual dos eventos abaixo <b>necessariamente</b> aumentará o Custo Médio Ponderado de Capital (WACC) de uma empresa?</div>
+    <ul class="opts">
+      <li class="correct">Um aumento do custo de oportunidade, ou seja, da taxa livre de risco ✓</li>
+      <li class="wrong">A redução do endividamento</li>
+      <li class="wrong">Um aumento da alíquota tributária empresarial &nbsp;←(marcada por você)</li>
+      <li class="wrong">Uma redução no rating do título da empresa</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Aumento da taxa livre de risco (Rf)</div>
+
+    <h3 class="sec">Por que o aumento da Rf sobe o WACC?</h3>
+    <p>Relembre as peças: <b>WACC = (E/V)·Ke + (D/V)·Kd·(1−T)</b>, com <b>Ke = Rf + β(Rm − Rf)</b>. A taxa livre de risco (Rf) é a <b>base de TUDO</b>: ela está no custo do capital próprio (Ke) <u>e</u> no custo da dívida (Kd ≈ Rf + spread). Se a Rf sobe, <b>os dois custos sobem</b> → o WACC necessariamente sobe.</p>
+    <div class="ascii">  ↑ Rf  →  ↑ Ke  (CAPM)  ┐
+                          ├→  ↑ WACC  (necessariamente)
+          →  ↑ Kd  (base) ┘</div>
+    <div class="why">
+      <p><span class="no">Aumento da alíquota de imposto (T)</span> ❌ (sua marcação) — faz o <b>OPOSTO</b>! Imposto maior = <b>benefício fiscal maior</b> sobre a dívida [Kd×(1−T)] → custo da dívida <b>cai</b> → WACC <b>DIMINUI</b>. Esse é o erro clássico.</p>
+      <p><span class="no">Redução do endividamento</span> ❌ — tira peso da dívida (que é barata) e põe peso no capital próprio (caro), o que <i>tende</i> a subir o WACC — mas <b>não "necessariamente"</b>, pois menos dívida também reduz o risco. Não é garantido.</p>
+      <p><span class="no">Redução no rating</span> ❌ — um rebaixamento pressiona o <b>Kd</b> para cima (mais risco de crédito), o que empurra o WACC — mas afeta <b>só a parcela da dívida</b>. A banca elege a Rf por ser o fator que move <b>TODAS</b> as fontes ao mesmo tempo, de forma universal e garantida.</p>
+      <p><span class="ok">Aumento da Rf</span> ✓ — sobe Ke e Kd juntos → WACC sobe sempre.</p>
+    </div>
+    <div class="box parable"><b>🌊 Parábola da Maré:</b> A taxa livre de risco é a <b>maré</b> do oceano financeiro: quando ela sobe, <b>todos os barcos sobem juntos</b> (tanto o custo do capital próprio quanto o da dívida). Já o imposto é diferente: ele dá um "desconto" na dívida — quanto maior o imposto, maior o desconto, e mais <b>barato</b> fica o WACC. Subir imposto NÃO afunda o WACC, afunda... pra baixo!</div>
+    <div class="box insight"><b>💡 Insight:</b> ↑ Rf → ↑ WACC (sobe tudo). ↑ Imposto → ↓ WACC (benefício fiscal maior). Esses dois movimentos opostos são as pegadinhas favoritas. Lembre: o (1−T) faz imposto e WACC andarem em sentidos contrários.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Confidencialidade ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Confidencialidade: Sigilo é Condicional <span class="tag">Código de Ética CFP®</span></div>
+  <div class="qbody">
+    <div class="enun">Alcemar, em processo judicial, pede confidencialidade ao seu CFP® apelando para "privilégios da relação planejador-cliente". As informações podem afetar Ledesma, outro cliente do mesmo CFP® e parceiro de Alcemar. Como o profissional deve agir?</div>
+    <ul class="opts">
+      <li class="correct">Deve alertar Alcemar de que NÃO existem "privilégios da relação planejador-cliente", e que o sigilo das informações é CONDICIONAL ✓</li>
+      <li class="wrong">Deve certificar-se de que Alcemar assinou a política de privacidade antes de se envolver</li>
+      <li class="wrong">Deve documentar as informações, como requerido pelo código</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Não há "privilégio"; o sigilo é condicional</div>
+
+    <h3 class="sec">Sigilo profissional × "privilégio" legal</h3>
+    <p>Diferente da relação <b>advogado-cliente</b> (que tem privilégio legal de sigilo quase absoluto), a relação <b>planejador-cliente NÃO tem esse "privilégio"</b>. O dever de confidencialidade do CFP® existe, mas é <b>condicional</b>: pode (e às vezes deve) ser quebrado em situações como:</p>
+    <div class="ascii">  O SIGILO PODE SER ROMPIDO QUANDO:
+   • Há exigência LEGAL / ordem judicial
+   • Para cumprir obrigações regulatórias (ex.: COAF)
+   • Para proteger terceiros de um dano (ex.: Ledesma)
+   • Com autorização do próprio cliente
+  → Ou seja, NÃO é absoluto. É condicional.</div>
+    <div class="why">
+      <p><span class="ok">Alertar que não há "privilégio" e o sigilo é condicional</span> ✓ — o CFP® deve ser honesto: não pode prometer um sigilo absoluto que não existe na profissão.</p>
+      <p><span class="no">"Verificar se assinou política de privacidade"</span> ❌ — não resolve o ponto central (a inexistência de privilégio); é desvio.</p>
+      <p><span class="no">"Documentar as informações"</span> ❌ — não endereça o pedido de confidencialidade nem o conflito com Ledesma.</p>
+    </div>
+    <div class="box parable"><b>⚖️ Parábola do Padre × do Contador:</b> O segredo de confissão de um padre (ou o sigilo advogado-cliente) é quase inviolável — é um "privilégio". Já o planejador financeiro é mais como um contador de confiança: guarda segredo, sim, mas se a Justiça exigir, se houver risco a terceiros ou exigência legal, ele <b>não pode</b> se esconder atrás de um "privilégio" que não existe. Prometer sigilo absoluto seria enganar o cliente.</div>
+    <div class="box insight"><b>💡 Insight:</b> Relação planejador-cliente <b>não tem privilégio legal</b> de sigilo (ao contrário do advogado). Confidencialidade do CFP® = importante, mas <b>condicional</b> (cede a lei, ordem judicial, proteção de terceiros e regulação).</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — Taxa efetiva desconto ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — Taxa Efetiva de um Desconto Bancário <span class="tag">Matemática financeira</span></div>
+  <div class="qbody">
+    <div class="enun">Título de R$ 100.000 vence em 78 dias corridos (base 360). O titular quer descontá-lo hoje. Desconto bancário <b>simples</b> a 2% a.m., mais taxa bancária de 1,5% sobre o valor nominal (cobrada integralmente na liberação). A taxa efetiva de juros da operação é de aproximadamente:</div>
+    <ul class="opts">
+      <li class="wrong">6,7% ao ano</li>
+      <li class="correct">37,70% ao ano ✓</li>
+      <li class="wrong">30,92% ao ano</li>
+      <li class="wrong">5,1% ao ano</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>≈ 37,70% ao ano</div>
+
+    <h3 class="sec">Passo a passo</h3>
+    <div class="box calc">  Passo 1 — Desconto comercial simples (sobre o VALOR NOMINAL):
+   Prazo: 78 dias = 78/30 = 2,6 meses
+   D = 100.000 × 2% × 2,6 = R$ 5.200
+
+  Passo 2 — Taxa bancária (1,5% sobre o nominal):
+   100.000 × 1,5% = R$ 1.500
+
+  Passo 3 — Valor líquido que o cliente RECEBE hoje:
+   100.000 − 5.200 − 1.500 = R$ 93.300
+
+  Passo 4 — Taxa efetiva do PERÍODO (recebe 93.300, paga 100.000):
+   100.000 / 93.300 − 1 = 7,18% em 78 dias
+
+  Passo 5 — Anualizar (compor para 360 dias):
+   (1,0718)^(360/78) − 1 ≈ 37,70% a.a.  ✓</div>
+    <div class="why">
+      <p><span class="no">6,7%</span> ❌ — é só (5.200 + 1.500)/100.000 = 6,7% sobre o nominal, sem anualizar e sobre a base errada.</p>
+      <p><span class="no">5,1%</span> ❌ — perto do desconto isolado (5.200/100.000 = 5,2%).</p>
+      <p><span class="no">30,92%</span> ❌ — anualização incorreta (linear ou sobre o nominal em vez do líquido).</p>
+      <p><span class="ok">37,70%</span> ✓ — taxa do período sobre o valor LÍQUIDO recebido, depois anualizada compondo.</p>
+    </div>
+    <div class="box parable"><b>🎫 Parábola do Cambista do Ingresso:</b> Você tem um ingresso que valerá R$ 100 mil na porta do show (em 78 dias), mas precisa de dinheiro <b>hoje</b>. O cambista (banco) te dá só R$ 93.300 agora e fica com o ingresso de R$ 100 mil. O "juro real" que você pagou não é sobre os R$ 100 mil — é sobre os R$ 93.300 que você <b>realmente recebeu</b>. E como foi por só 78 dias, anualizando dá um custo alto: 37,70% a.a.</div>
+    <div class="box insight"><b>💡 Insight:</b> Taxa EFETIVA sempre se calcula sobre o que você <b>efetivamente recebeu</b> (líquido), não sobre o valor de face. E "taxa efetiva ao ano" pede <b>anualizar compondo</b> (elevar a 360/dias), não multiplicar linearmente.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Crédito Rural ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Financiamento do Produtor Rural <span class="tag">Crédito Rural × FINAME × CRA</span></div>
+  <div class="qbody">
+    <div class="enun">Adriano, produtor rural, precisa <b>renovar equipamentos agrícolas</b> E <b>obter capital para comprar insumos</b>. A alternativa que atende tanto à compra de bens de produção quanto ao custeio das atividades agrícolas é:</div>
+    <ul class="opts">
+      <li class="wrong">CDC</li>
+      <li class="wrong">CRA</li>
+      <li class="correct">Crédito Rural ✓</li>
+      <li class="wrong">FINAME &nbsp;←(marcada por você)</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>Crédito Rural</div>
+
+    <h3 class="sec">Por que Crédito Rural?</h3>
+    <p>O <b>Crédito Rural</b> é a linha desenhada para o produtor rural e cobre <b>todas as finalidades</b> da atividade — é por isso que atende aos dois pedidos de Adriano:</p>
+    <div class="ascii">  CRÉDITO RURAL — finalidades
+   • INVESTIMENTO → bens de produção (máquinas, equipamentos) ✓
+   • CUSTEIO      → insumos, sementes, despesas da safra        ✓
+   • COMERCIALIZAÇÃO → escoamento da produção</div>
+    <div class="why">
+      <p><span class="no">FINAME</span> ❌ (sua marcação) — financia <b>só máquinas e equipamentos</b> (via BNDES). Cobriria a renovação dos equipamentos, mas <b>não</b> o custeio dos insumos. Atende só metade do problema.</p>
+      <p><span class="no">CDC</span> ❌ — Crédito Direto ao Consumidor: para bens de consumo de pessoas físicas, não para produção rural.</p>
+      <p><span class="no">CRA</span> ❌ — Certificado de Recebíveis do Agronegócio é um <b>título de investimento</b> (capta recursos para o agro), não uma linha de crédito que o produtor toma.</p>
+      <p><span class="ok">Crédito Rural</span> ✓ — única opção que cobre <b>investimento + custeio</b> ao mesmo tempo.</p>
+    </div>
+    <div class="box parable"><b>🚜 Parábola do Kit Completo do Fazendeiro:</b> Adriano precisa de duas coisas: o "trator" (equipamento = investimento) e a "semente/adubo" (insumo = custeio). O FINAME é a "loja só de tratores" — ótima para a máquina, mas não vende semente. O Crédito Rural é o "kit completo do fazendeiro": cobre o trator E a semente. Quando a questão pede os dois (bens de produção + custeio), só o Crédito Rural dá conta.</div>
+    <div class="box insight"><b>💡 Insight:</b> Crédito Rural = guarda-chuva do agro (investimento + custeio + comercialização). FINAME = só máquinas/equipamentos. CRA = título de captação (investimento), não crédito ao produtor. CDC = consumo, não produção.</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>WACC sobe</td><td>↑ Rf → ↑ Ke e ↑ Kd → ↑ WACC. ↑ Imposto → ↓ WACC (benefício fiscal). Sentidos opostos!</td></tr>
+  <tr><td>2</td><td>Confidencialidade</td><td>Não há "privilégio" planejador-cliente. Sigilo é <b>condicional</b> (cede à lei, Justiça, proteção de terceiros).</td></tr>
+  <tr><td>3</td><td>Taxa efetiva (desconto)</td><td>Sobre o líquido recebido: 100.000/93.300 − 1 = 7,18% em 78d → anualiza compondo = <b>37,70%</b>.</td></tr>
+  <tr><td>4</td><td>Crédito Rural</td><td>Cobre investimento + custeio. FINAME = só máquinas; CRA = título; CDC = consumo.</td></tr>
+</table>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
