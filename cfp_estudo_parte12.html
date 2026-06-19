@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 1.8cm 1.6cm 2cm 1.6cm;
+    @bottom-center {
+      content: "Material de estudo CFP® — Planejamento Financeiro (Parte 12)  •  página " counter(page) " de " counter(pages);
+      font-size: 8.5pt; color: #8a8a8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.3pt; line-height: 1.5; color: #232323; margin: 0; }
+  .cover { background: linear-gradient(135deg, #6a11cb 0%, #c211a0 55%, #ff2e92 100%); color: #fff; border-radius: 18px; padding: 46px 38px; text-align: center; margin-bottom: 26px; }
+  .cover h1 { font-size: 30pt; margin: 0 0 6px 0; letter-spacing: .5px; }
+  .cover h2 { font-size: 14pt; font-weight: 400; margin: 0 0 22px 0; opacity: .95; }
+  .cover .chip { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); border-radius: 30px; padding: 7px 16px; font-size: 9.5pt; margin: 4px; }
+  .cover .sub { margin-top: 18px; font-size: 10pt; opacity: .9; }
+  .q { page-break-inside: avoid; margin-bottom: 26px; }
+  .qhead { background: linear-gradient(90deg, #6a11cb, #ff2e92); color: #fff; border-radius: 12px 12px 0 0; padding: 11px 16px; font-size: 12.5pt; font-weight: 700; }
+  .qhead .tag { font-size: 8.5pt; font-weight: 400; opacity: .9; display:block; }
+  .qbody { border: 1px solid #e7e7ef; border-top: none; border-radius: 0 0 12px 12px; padding: 16px 18px; }
+  .enun { background: #f6f4fc; border-left: 4px solid #6a11cb; padding: 11px 14px; border-radius: 6px; margin-bottom: 13px; font-size: 10pt; }
+  .opts { margin: 0 0 12px 0; padding: 0; list-style: none; }
+  .opts li { padding: 5px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 9.7pt; border: 1px solid #ececf2; }
+  .opts li.correct { background: #e7f6ec; border-color: #2e9e4f; font-weight: 700; color: #1d6e37; }
+  .opts li.wrong { background: #fdecef; border-color: #e0475f; color: #9e2436; }
+  .answer { background: #1d6e37; color: #fff; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-size: 10.3pt; margin: 6px 0 14px 0; }
+  .answer .lbl { font-size: 8.5pt; font-weight: 400; opacity: .85; display:block; text-transform: uppercase; letter-spacing: 1px;}
+  h3.sec { color: #6a11cb; font-size: 11pt; margin: 16px 0 6px 0; border-bottom: 2px solid #f0e9fb; padding-bottom: 3px;}
+  .why p { margin: 5px 0; }
+  .ok  { color: #1d6e37; font-weight: 700; }
+  .no  { color: #c0334a; font-weight: 700; }
+  .box { border-radius: 8px; padding: 11px 14px; margin: 11px 0; font-size: 9.7pt; }
+  .parable { background: #fff7e8; border-left: 4px solid #f0a500; }
+  .parable b { color: #b97700; }
+  .insight { background: #eaf3ff; border-left: 4px solid #2f6fed; }
+  .insight b { color: #1d51bd; }
+  .calc { background: #f4f4f8; border-left: 4px solid #555; font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; white-space: pre; }
+  .ascii { background: #2b2b3a; color: #e6e6f0; border-radius: 8px; padding: 12px 14px; font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; line-height: 1.35; white-space: pre; margin: 11px 0; }
+  table.resumo { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin-top: 8px;}
+  table.resumo th { background: #6a11cb; color: #fff; padding: 8px; text-align: left; }
+  table.resumo td { border: 1px solid #e3e3ea; padding: 7px 8px; vertical-align: top;}
+  table.resumo tr:nth-child(even) td { background: #faf8fe; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Guia de Estudos CFP®</h1>
+  <h2>Módulo 1 — Planejamento Financeiro (Parte 12)</h2>
+  <div>
+    <span class="chip">4 questões comentadas</span>
+    <span class="chip">Dólar Forward • MIRR • Estatística</span>
+    <span class="chip">Parábolas &amp; Insights</span>
+  </div>
+  <div class="sub">Preparado para Bruno • Revisão "do zero" com didática visual • 18/06/2026</div>
+</div>
+
+<!-- ===================== QUESTÃO 1 — Intervalo de confiança 68% ===================== -->
+<div class="q">
+  <div class="qhead">Questão 1 — Intervalo de Confiança de 68% <span class="tag">Estatística • 1 desvio-padrão</span></div>
+  <div class="qbody">
+    <div class="enun">Qual o intervalo de oscilação de uma ação com valor atual de <b>R$ 10,00</b> e desvio-padrão de <b>R$ 1,00</b>, com índice de confiança de <b>68%</b>?</div>
+    <ul class="opts">
+      <li class="correct">R$ 9,00 e R$ 11,00 ✓</li>
+      <li class="wrong">R$ 8,00 e R$ 12,00</li>
+      <li class="wrong">R$ 5,00 e R$ 15,00</li>
+      <li class="wrong">R$ 7,00 e R$ 13,00</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 9,00 e R$ 11,00 (média ± 1 desvio-padrão)</div>
+
+    <h3 class="sec">A tabela-chave dos desvios-padrão</h3>
+    <p>Na distribuição normal, cada nível de confiança corresponde a um número de desvios-padrão (σ). O de <b>68% é o mais fácil: ±1σ</b>.</p>
+    <div class="ascii">  ±1,00 σ  →  68%     ← este caso
+  ±1,64 σ  →  90%
+  ±1,96 σ  →  95%
+  ±2,58 σ  →  99%</div>
+    <div class="box calc">  68% → ± 1 desvio-padrão
+   Limite inferior = 10,00 − (1 × 1,00) = R$ 9,00
+   Limite superior = 10,00 + (1 × 1,00) = R$ 11,00</div>
+    <div class="why">
+      <p><span class="no">R$ 8,00 a R$ 12,00</span> ❌ — seria ±2σ (~95%), não 68%.</p>
+      <p><span class="no">R$ 7,00 a R$ 13,00</span> ❌ — ±3σ (~99,7%).</p>
+      <p><span class="no">R$ 5,00 a R$ 15,00</span> ❌ — ±5σ, sem sentido aqui.</p>
+      <p><span class="ok">R$ 9,00 a R$ 11,00</span> ✓ — exatamente ±1σ = 68%.</p>
+    </div>
+    <div class="box parable"><b>🎯 Parábola da Mira Centrada:</b> O preço médio (R$ 10) é o centro do alvo; o desvio (R$ 1) é o "raio de um anel". O anel mais apertado, de 1 raio, já captura 68% dos tiros (R$ 9 a R$ 11). Anéis mais largos (2σ, 3σ) capturam mais, mas o 68% é sempre o "primeiro anel" de 1 desvio.</div>
+    <div class="box insight"><b>💡 Insight:</b> 68% = ±1σ (decoreba direta). É o "irmão fácil" do 95% (±1,96σ). Aqui, como σ = R$ 1, o intervalo de 68% é simplesmente média ± 1.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 2 — Dólar Forward ===================== -->
+<div class="q">
+  <div class="qhead">Questão 2 — Dólar Forward (Paridade de Juros) <span class="tag">Câmbio • taxa a termo cambial</span></div>
+  <div class="qbody">
+    <div class="enun">Contrato de Dólar Forward: Dólar Spot = R$ 4,8858/US$; prazo de 150 dias corridos (105 dias úteis); Taxa Selic = 4,00% a.a.; Cupom cambial = 6,50% a.a. O valor do Dólar Forward será de aproximadamente:</div>
+    <ul class="opts">
+      <li class="correct">R$ 4,84 ✓</li>
+      <li class="wrong">R$ 4,97</li>
+      <li class="wrong">R$ 4,95</li>
+      <li class="wrong">R$ 4,85</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>≈ R$ 4,84</div>
+
+    <h3 class="sec">A lógica: paridade coberta de juros (a "taxa a termo do câmbio")</h3>
+    <p>O câmbio forward segue a <b>mesma ideia de não-arbitragem</b> da taxa a termo: aplicar em reais (Selic) tem que render igual a converter para dólar, render o <b>cupom cambial</b> (juro do dólar no Brasil) e voltar pelo forward.</p>
+    <div class="box calc">  Forward = Spot × (1 + juro R$) / (1 + juro US$)
+
+  ⚠️ Cada juro tem sua base:
+   • Selic → EXPONENCIAL em dias úteis: (1,04)^(105/252)
+   • Cupom cambial → LINEAR em dias corridos: (1 + 0,065 × 150/360)
+
+   Fator R$  = (1,04)^(105/252)        = 1,016476
+   Fator US$ = 1 + 0,065 × (150/360)   = 1,027083
+
+  Forward = 4,8858 × 1,016476 / 1,027083
+          = 4,8858 × 0,98967
+          ≈ R$ 4,84  ✓</div>
+    <div class="why">
+      <p>Como o juro do dólar (cupom 6,5%) ficou <b>acima</b> do juro do real (Selic 4%), o dólar negocia com <b>deságio</b> no forward → forward (4,84) <b>menor</b> que o spot (4,8858). Faz sentido pela paridade.</p>
+      <p><span class="no">R$ 4,95 / R$ 4,97</span> ❌ — vêm de <b>inverter</b> a razão (multiplicar pelo cupom e dividir pela Selic), o que daria forward acima do spot.</p>
+      <p><span class="no">R$ 4,85</span> ❌ — erro de base de tempo (misturar dias corridos/úteis ou 252/360).</p>
+      <p><span class="ok">R$ 4,84</span> ✓ — paridade correta, cada juro na sua base.</p>
+    </div>
+    <div class="box parable"><b>🔁 Parábola dos Dois Cofres:</b> Você tem 1 real e dois caminhos até daqui a 150 dias: deixar no "cofre do real" (rende Selic) ou trocar por dólar, deixar no "cofre do dólar" (rende cupom cambial) e voltar pelo forward. Para ninguém ganhar de graça (arbitragem), o forward tem que igualar os dois cofres. Se o cofre do dólar rende mais, o dólar tem que "valer menos lá na frente" — por isso o forward (4,84) fica abaixo do spot.</div>
+    <div class="box insight"><b>💡 Insight:</b> Câmbio forward = Spot × (1 + juro doméstico)/(1 + juro estrangeiro). No Brasil: Selic (exponencial, du/252) no numerador; cupom cambial (linear, dc/360) no denominador. Juro do dólar &gt; Selic → forward &lt; spot.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 3 — MIRR ===================== -->
+<div class="q">
+  <div class="qhead">Questão 3 — MIRR / TIR Modificada <span class="tag">Análise de projetos • reinvestimento</span></div>
+  <div class="qbody">
+    <div class="enun">Projeto TopSolar: investimento inicial de R$ 25.000. Fluxos: Ano 1 = R$ 10.000; Ano 2 = R$ 12.000; Ano 3 = R$ 14.000; Ano 4 = R$ 16.000. Os fluxos positivos são reinvestidos a uma taxa de <b>9% a.a.</b> (custo de oportunidade). Qual a <b>TIR Modificada (MIRR)</b>?</div>
+    <ul class="opts">
+      <li class="wrong">22,52% a.a.</li>
+      <li class="wrong">20,09% a.a.</li>
+      <li class="wrong">25,17% a.a.</li>
+      <li class="correct">23,66% a.a. ✓</li>
+    </ul>
+    <div class="answer"><span class="lbl">Resposta correta</span>23,66% a.a.</div>
+
+    <h3 class="sec">O que a MIRR corrige na TIR</h3>
+    <p>A <b>TIR comum</b> assume (irrealisticamente) que os fluxos são reinvestidos à <b>própria TIR</b>. A <b>MIRR</b> corrige isso: reinveste os fluxos a uma taxa <b>realista</b> (aqui, 9%), levando todos para o final, e compara com o investimento inicial.</p>
+    <div class="box calc">  Passo 1 — Levar os fluxos positivos ao ANO 4 (reinveste a 9%):
+   Ano 1: 10.000 × (1,09)³ = 12.950,29
+   Ano 2: 12.000 × (1,09)² = 14.257,20
+   Ano 3: 14.000 × (1,09)¹ = 15.260,00
+   Ano 4: 16.000 × (1,09)⁰ = 16.000,00
+   ───────────────────────────────────────
+   Valor Futuro total (FV) = R$ 58.467,49
+
+  Passo 2 — Comparar com o investimento (PV = 25.000):
+   MIRR = (FV / PV)^(1/n) − 1
+        = (58.467,49 / 25.000)^(1/4) − 1
+        = (2,33870)^0,25 − 1
+        = 1,23664 − 1  =  23,66%  ✓</div>
+    <div class="why">
+      <p><span class="no">22,52% / 25,17% / 20,09%</span> ❌ — saem de usar a taxa de reinvestimento errada, esquecer de capitalizar algum fluxo, ou calcular a TIR comum em vez da modificada.</p>
+      <p><span class="ok">23,66%</span> ✓ — FV dos fluxos a 9% dividido pelo investimento, na raiz de n.</p>
+    </div>
+    <div class="box calc">  HP 12C (atalho):
+   58467,49  ENTER  25000  ÷   →  2,33870
+   4  1/x  y^x                  →  1,23664
+   1  −                         →  0,2366  (23,66%)</div>
+    <div class="box parable"><b>⛄ Parábola da Bola de Neve Realista:</b> A TIR comum supõe que cada parcela recebida volta a render à mesma taxa altíssima do projeto — uma fantasia. A MIRR é o "pé no chão": cada fluxo é jogado na ladeira a uma taxa <b>realista</b> (9%), rola até o fim e vira uma bola só (R$ 58.467). Aí comparamos com o que foi investido (R$ 25.000) para achar a rentabilidade "de verdade" (23,66%).</div>
+    <div class="box insight"><b>💡 Insight:</b> MIRR = (FV dos fluxos reinvestidos à taxa realista ÷ Investimento)^(1/n) − 1. Ela é mais conservadora/realista que a TIR comum (que reinveste à própria TIR). Sempre capitalize cada fluxo até o último ano.</div>
+  </div>
+</div>
+
+<!-- ===================== QUESTÃO 4 — Patrimônio líquido (recap) ===================== -->
+<div class="q">
+  <div class="qhead">Questão 4 — Patrimônio Líquido da Família <span class="tag">Ativos − Passivos</span></div>
+  <div class="qbody">
+    <div class="enun">Com base nos dados da família (mesma da questão do índice de poupança), qual é o <b>patrimônio líquido</b>?</div>
+    <div class="answer"><span class="lbl">Resposta correta</span>R$ 2.015.000</div>
+
+    <h3 class="sec">Patrimônio líquido = a "foto" (Ativos − Passivos)</h3>
+    <div class="box calc">  ATIVOS (o que a família TEM):
+   PGBL ................... 110.000
+   Veículos .............. 120.000
+   Imóvel ................ 2.000.000
+   Imóvel alugado ........ 400.000
+   Fundo DI .............. 150.000
+   ───────────────────────────────
+   Total de ativos ...... 2.780.000
+
+  PASSIVOS (o que a família DEVE):
+   Financ. imobiliário ... 700.000
+   Financ. veículos ...... 35.000
+   Fatura do cartão ...... 30.000
+   ───────────────────────────────
+   Total de passivos .... 765.000
+
+  PATRIMÔNIO LÍQUIDO = 2.780.000 − 765.000 = R$ 2.015.000  ✓</div>
+    <div class="box insight"><b>💡 Insight:</b> Aqui usa-se a "foto" (patrimônio): tudo que se TEM menos tudo que se DEVE — inclusive a fatura do cartão, que agora ENTRA (como passivo). Diferente do índice de poupança, que usava só o fluxo (renda − gastos) e ignorava o cartão. Mesma família, lentes diferentes!</div>
+  </div>
+</div>
+
+<!-- ===================== RESUMO ===================== -->
+<h3 class="sec" style="font-size:14pt; margin-top:26px;">📋 Resumo Relâmpago — Cola Mental</h3>
+<table class="resumo">
+  <tr><th>#</th><th>Tema</th><th>Chave de ouro</th></tr>
+  <tr><td>1</td><td>Intervalo de confiança</td><td>68% = ±1σ. 10 ± 1 = <b>R$ 9 a R$ 11</b>. (95%=1,96σ; 99%=2,58σ.)</td></tr>
+  <tr><td>2</td><td>Dólar Forward</td><td>F = Spot × (1+Selic)^(du/252) ÷ (1 + cupom×dc/360) = <b>R$ 4,84</b>. Juro US$ &gt; Selic → forward &lt; spot.</td></tr>
+  <tr><td>3</td><td>MIRR</td><td>(FV reinvestido a 9% ÷ Investimento)^(1/n) − 1 = (58.467/25.000)^¼ − 1 = <b>23,66%</b>.</td></tr>
+  <tr><td>4</td><td>Patrimônio líquido</td><td>Ativos − Passivos = 2.780.000 − 765.000 = <b>R$ 2.015.000</b>. Cartão ENTRA (passivo).</td></tr>
+</table>
+
+<div class="box insight" style="margin-top:16px;">
+<b>🧲 Conexão de ouro:</b> a Questão 2 (Dólar Forward) é a <b>mesma paridade de juros</b> da taxa a termo: dois caminhos têm que render igual, então divide-se um fator pelo outro. Seja em juros (taxa a termo) ou em câmbio (forward), a lógica de não-arbitragem é idêntica.
+</div>
+
+<p style="margin-top:22px; text-align:center; color:#6a11cb; font-weight:700;">Bons estudos, Bruno! Chega afiado na prova. 💪📚</p>
+
+</body>
+</html>
